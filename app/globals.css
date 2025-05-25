@@ -2,23 +2,236 @@
 @tailwind components;
 @tailwind utilities;
 
-/* Infinity Zoom Animation */
-@keyframes infinityZoom {
+/* Neon Tunnel Infinite Zoom In Animation */
+@keyframes infiniteZoomIn {
   0% {
-    transform: scale(1) translateZ(0);
+    transform: scale(1);
   }
   100% {
-    transform: scale(1.5) translateZ(0);
+    transform: scale(1.5);
   }
 }
 
-@keyframes tunnelZoom {
+/* Alternative background-size approach for infinite zoom */
+@keyframes infiniteBackgroundZoom {
   0% {
-    transform: scale(1) perspective(1000px) rotateX(0deg);
+    background-size: 100% 100%;
   }
   100% {
-    transform: scale(1.2) perspective(1000px) rotateX(0deg);
+    background-size: 200% 200%;
   }
+}
+
+/* Neon Tunnel Animated Class - Infinite Zoom In */
+.neon-tunnel-animated {
+  animation: infiniteBackgroundZoom 10s linear infinite;
+}
+
+/* Layered zoom effect for more dramatic infinite tunnel */
+.neon-tunnel-animated::before {
+  content: "";
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  right: -50%;
+  bottom: -50%;
+  background-image: inherit;
+  background-size: inherit;
+  background-position: inherit;
+  background-repeat: inherit;
+  background-attachment: inherit;
+  animation: infiniteZoomIn 8s linear infinite;
+  z-index: -2;
+  opacity: 0.7;
+}
+
+/* Dynamic Service Card Backgrounds */
+@keyframes radiateLines {
+  0% {
+    transform: rotate(0deg) scale(1);
+    opacity: 0.3;
+  }
+  50% {
+    transform: rotate(180deg) scale(1.1);
+    opacity: 0.6;
+  }
+  100% {
+    transform: rotate(360deg) scale(1);
+    opacity: 0.3;
+  }
+}
+
+@keyframes energyPulse {
+  0%,
+  100% {
+    transform: scale(1);
+    opacity: 0.4;
+  }
+  50% {
+    transform: scale(1.2);
+    opacity: 0.8;
+  }
+}
+
+/* Service Card Purple - TikTok Creators */
+.service-card-purple {
+  background: linear-gradient(135deg, #8b5cf6 0%, #a855f7 25%, #c084fc 50%, #d8b4fe 75%, #8b5cf6 100%);
+  position: relative;
+  overflow: hidden;
+}
+
+.service-card-purple::before {
+  content: "";
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  right: -50%;
+  bottom: -50%;
+  background: radial-gradient(
+      circle,
+      transparent 20%,
+      rgba(255, 255, 255, 0.1) 21%,
+      rgba(255, 255, 255, 0.1) 22%,
+      transparent 23%
+    ),
+    conic-gradient(
+      from 0deg,
+      transparent,
+      rgba(255, 255, 255, 0.2),
+      transparent,
+      rgba(255, 255, 255, 0.2),
+      transparent,
+      rgba(255, 255, 255, 0.2),
+      transparent
+    );
+  animation: radiateLines 8s linear infinite;
+  z-index: 1;
+}
+
+.service-card-purple::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 200px;
+  height: 200px;
+  background: radial-gradient(circle, rgba(255, 255, 255, 0.3) 0%, transparent 70%);
+  transform: translate(-50%, -50%);
+  animation: energyPulse 4s ease-in-out infinite;
+  z-index: 1;
+}
+
+/* Service Card Cyan - TikTok Live Talent Agents */
+.service-card-cyan {
+  background: linear-gradient(135deg, #06b6d4 0%, #0891b2 25%, #0e7490 50%, #155e75 75%, #06b6d4 100%);
+  position: relative;
+  overflow: hidden;
+}
+
+.service-card-cyan::before {
+  content: "";
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  right: -50%;
+  bottom: -50%;
+  background: linear-gradient(
+      0deg,
+      transparent 48%,
+      rgba(255, 255, 255, 0.2) 49%,
+      rgba(255, 255, 255, 0.2) 51%,
+      transparent 52%
+    ),
+    linear-gradient(30deg, transparent 48%, rgba(255, 255, 255, 0.1) 49%, rgba(255, 255, 255, 0.1) 51%, transparent 52%),
+    linear-gradient(60deg, transparent 48%, rgba(255, 255, 255, 0.1) 49%, rgba(255, 255, 255, 0.1) 51%, transparent 52%),
+    linear-gradient(90deg, transparent 48%, rgba(255, 255, 255, 0.2) 49%, rgba(255, 255, 255, 0.2) 51%, transparent 52%),
+    linear-gradient(
+      120deg,
+      transparent 48%,
+      rgba(255, 255, 255, 0.1) 49%,
+      rgba(255, 255, 255, 0.1) 51%,
+      transparent 52%
+    ),
+    linear-gradient(
+      150deg,
+      transparent 48%,
+      rgba(255, 255, 255, 0.1) 49%,
+      rgba(255, 255, 255, 0.1) 51%,
+      transparent 52%
+    );
+  animation: radiateLines 6s linear infinite reverse;
+  z-index: 1;
+}
+
+.service-card-cyan::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 150px;
+  height: 150px;
+  background: radial-gradient(circle, rgba(255, 255, 255, 0.4) 0%, transparent 60%);
+  transform: translate(-50%, -50%);
+  animation: energyPulse 3s ease-in-out infinite;
+  z-index: 1;
+}
+
+/* Service Card Brand - For Brands */
+.service-card-brand {
+  background: linear-gradient(135deg, #7c3aed 0%, #8b5cf6 25%, #a855f7 50%, #c084fc 75%, #7c3aed 100%);
+  position: relative;
+  overflow: hidden;
+}
+
+.service-card-brand::before {
+  content: "";
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  right: -50%;
+  bottom: -50%;
+  background: linear-gradient(
+      45deg,
+      transparent 40%,
+      rgba(255, 255, 255, 0.3) 41%,
+      rgba(255, 255, 255, 0.3) 43%,
+      transparent 44%
+    ),
+    linear-gradient(
+      -45deg,
+      transparent 40%,
+      rgba(255, 255, 255, 0.2) 41%,
+      rgba(255, 255, 255, 0.2) 43%,
+      transparent 44%
+    ),
+    linear-gradient(
+      135deg,
+      transparent 40%,
+      rgba(255, 255, 255, 0.2) 41%,
+      rgba(255, 255, 255, 0.2) 43%,
+      transparent 44%
+    ),
+    linear-gradient(
+      -135deg,
+      transparent 40%,
+      rgba(255, 255, 255, 0.3) 41%,
+      rgba(255, 255, 255, 0.3) 43%,
+      transparent 44%
+    );
+  animation: radiateLines 10s linear infinite;
+  z-index: 1;
+}
+
+.service-card-brand::after {
+  content: "";
+  position: absolute;
+  top: 30%;
+  right: 20%;
+  width: 100px;
+  height: 100px;
+  background: radial-gradient(circle, rgba(255, 255, 255, 0.3) 0%, transparent 70%);
+  animation: energyPulse 5s ease-in-out infinite;
+  z-index: 1;
 }
 
 @keyframes swirl {
@@ -146,20 +359,6 @@
   }
 }
 
-/* Tunnel Background */
-.infinity-tunnel {
-  background-image: url("/images/neon-tunnel.png");
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-  animation: infinityZoom 8s ease-in-out infinite alternate;
-}
-
-.tunnel-overlay {
-  background: linear-gradient(45deg, rgba(255, 0, 80, 0.1) 0%, rgba(37, 244, 238, 0.1) 50%, rgba(255, 0, 80, 0.1) 100%);
-  animation: tunnelZoom 12s ease-in-out infinite;
-}
-
 /* Swirl Background */
 .tiktok-swirl {
   background-image: url("/images/tiktok-swirl.png");
@@ -221,14 +420,6 @@
 }
 
 /* Utility Classes */
-.animate-infinityZoom {
-  animation: infinityZoom 8s ease-in-out infinite alternate;
-}
-
-.animate-tunnelZoom {
-  animation: tunnelZoom 12s ease-in-out infinite;
-}
-
 .animate-swirl {
   animation: swirl 20s linear infinite;
 }
@@ -346,17 +537,6 @@
 .hero-section {
   position: relative;
   overflow: hidden;
-}
-
-.hero-section::before {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background: linear-gradient(45deg, rgba(0, 0, 0, 0.3) 0%, rgba(255, 0, 80, 0.1) 50%, rgba(0, 0, 0, 0.3) 100%);
-  z-index: 1;
 }
 
 .hero-content {

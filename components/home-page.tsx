@@ -5,28 +5,23 @@ import Image from "next/image"
 export default function HomePage() {
   return (
     <div className="relative">
-      {/* Hero Section with Neon Tunnel Background */}
-      <section className="hero-section min-h-screen flex flex-col justify-center items-center px-4 relative">
-        {/* Neon Tunnel Background */}
-        <div className="fixed inset-0 infinity-tunnel -z-10" />
-        <div className="fixed inset-0 tunnel-overlay -z-10" />
-
-        {/* Additional Neon Effects */}
-        <div className="fixed inset-0 -z-10">
-          <div className="absolute top-1/4 left-1/4 w-32 h-32 bg-pink-500/20 rounded-full blur-3xl animate-gentleFloat" />
-          <div
-            className="absolute top-3/4 right-1/4 w-24 h-24 bg-cyan-400/20 rounded-full blur-3xl animate-gentleFloat"
-            style={{ animationDelay: "2s" }}
-          />
-          <div
-            className="absolute bottom-1/4 left-1/2 w-40 h-40 bg-purple-500/20 rounded-full blur-3xl animate-gentleFloat"
-            style={{ animationDelay: "4s" }}
-          />
-        </div>
+      {/* Hero Section with Animated Neon Tunnel Background */}
+      <section
+        className="min-h-screen flex flex-col justify-center items-center px-4 relative neon-tunnel-animated"
+        style={{
+          backgroundImage: "url('/images/neon-tunnel.png')",
+          backgroundSize: "cover",
+          backgroundPosition: "center",
+          backgroundRepeat: "no-repeat",
+          backgroundAttachment: "fixed",
+        }}
+      >
+        {/* Simple dark overlay for text readability */}
+        <div className="absolute inset-0 bg-black/30 -z-10" />
 
         <div className="hero-content text-center z-10 max-w-6xl animate-fadeInUp">
           {/* Hero Logo */}
-          <div className="mb-8 flex justify-center">
+          <div className="mt-48 mb-8 flex justify-center">
             <Image
               src="/images/vortex-icon.png"
               alt="VORTEX Logo"
@@ -53,6 +48,8 @@ export default function HomePage() {
             <Image src="/images/vortex-icon.png" alt="VORTEX" width={24} height={24} className="rounded-full" />
             Get Started
           </button>
+          <div className="mb-8 flex justify-center">
+          </div>
         </div>
       </section>
 
@@ -91,7 +88,7 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* Services Section with Flowing Background */}
+      {/* Services Section with Dynamic Background Cards */}
       <section className="py-24 px-4 relative overflow-hidden">
         {/* Flowing TikTok Background */}
         <div className="absolute inset-0 tiktok-swirl opacity-80 -z-10" />
@@ -112,6 +109,7 @@ export default function HomePage() {
                 title: "TikTok Creators",
                 features: ["Content Enhancement", "Live Traffic Support", "Monetization Strategies", "Official Events"],
                 gradient: "from-pink-500 to-red-500",
+                bgClass: "service-card-purple",
               },
               {
                 icon: (
@@ -125,6 +123,7 @@ export default function HomePage() {
                   "Professional Development",
                 ],
                 gradient: "from-cyan-400 to-teal-400",
+                bgClass: "service-card-cyan",
               },
               {
                 icon: (
@@ -135,28 +134,38 @@ export default function HomePage() {
                 title: "For Brands",
                 features: ["Influencer Affiliation", "Ads Management", "Content Production", "Live Event Promotions"],
                 gradient: "from-pink-400 to-cyan-400",
+                bgClass: "service-card-brand",
               },
             ].map((service, index) => (
-              <div key={index} className="glass-effect p-8 rounded-3xl modern-card group">
-                <div
-                  className={`w-16 h-16 bg-gradient-to-r ${service.gradient} rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300`}
-                >
-                  {service.icon}
+              <div
+                key={index}
+                className={`relative p-8 rounded-3xl modern-card group overflow-hidden ${service.bgClass}`}
+              >
+                {/* Dynamic Background Effects */}
+                <div className="absolute inset-0 opacity-20 -z-10">
+                  <div className="absolute inset-0 bg-gradient-radial from-white/10 via-transparent to-transparent animate-pulse" />
                 </div>
-                <h3 className="text-2xl font-bold text-white mb-6">{service.title}</h3>
-                <div className="space-y-3 mb-8">
-                  {service.features.map((feature, i) => (
-                    <div key={i} className="flex items-center text-gray-300">
-                      <div className="w-2 h-2 bg-gradient-to-r from-pink-400 to-cyan-400 rounded-full mr-3" />
-                      {feature}
-                    </div>
-                  ))}
+
+                {/* Content */}
+                <div className="relative z-10">
+                  <div
+                    className={`w-16 h-16 bg-gradient-to-r ${service.gradient} rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300`}
+                  >
+                    {service.icon}
+                  </div>
+                  <h3 className="text-2xl font-bold text-white mb-6">{service.title}</h3>
+                  <div className="space-y-3 mb-8">
+                    {service.features.map((feature, i) => (
+                      <div key={i} className="flex items-center text-gray-200">
+                        <div className="w-2 h-2 bg-gradient-to-r from-white to-gray-300 rounded-full mr-3" />
+                        {feature}
+                      </div>
+                    ))}
+                  </div>
+                  <button className="w-full bg-black/50 backdrop-blur-sm border border-white/20 hover:bg-black/70 text-white py-3 rounded-xl font-semibold transition-all duration-300 transform hover:scale-105 cursor-pointer">
+                    Learn More
+                  </button>
                 </div>
-                <button
-                  className={`w-full bg-gradient-to-r ${service.gradient} hover:shadow-lg text-white py-3 rounded-xl font-semibold transition-all duration-300 transform hover:scale-105 border-none cursor-pointer`}
-                >
-                  Learn More
-                </button>
               </div>
             ))}
           </div>
