@@ -11,50 +11,63 @@
   position: relative;
 }
 
-/* Desktop Animation - Smooth zoom effect */
-@media (min-width: 768px) {
-  .neon-tunnel-responsive {
-    background-attachment: fixed;
-    animation: desktopTunnelZoom 15s ease-in-out infinite;
-  }
-}
-
-/* Mobile - Static background, no animation to prevent crashes */
+/* Mobile Animation - Gentle zoom with proper cropping */
 @media (max-width: 767px) {
   .neon-tunnel-responsive {
     background-attachment: scroll;
     background-size: cover;
-    /* No animation on mobile for better performance */
+    animation: mobileTunnelZoom 12s ease-in-out infinite;
   }
 }
 
-/* Smooth desktop animation */
-@keyframes desktopTunnelZoom {
+/* Mobile gentle animation - keeps cover, no stretching */
+@keyframes mobileTunnelZoom {
   0%,
   100% {
-    background-size: 100% 100%;
     transform: scale(1);
   }
   50% {
-    background-size: 110% 110%;
-    transform: scale(1.02);
+    transform: scale(1.05);
   }
 }
 
-/* Alternative gentle animation for tablets */
+/* Tablet Animation - Medium intensity */
 @media (min-width: 768px) and (max-width: 1024px) {
   .neon-tunnel-responsive {
-    animation: tabletTunnelZoom 20s ease-in-out infinite;
+    background-attachment: fixed;
+    animation: tabletTunnelZoom 15s ease-in-out infinite;
   }
 }
 
 @keyframes tabletTunnelZoom {
   0%,
   100% {
-    background-size: 100% 100%;
+    transform: scale(1);
+    background-size: cover;
   }
   50% {
+    transform: scale(1.08);
     background-size: 105% 105%;
+  }
+}
+
+/* Desktop Animation - Full intensity */
+@media (min-width: 1025px) {
+  .neon-tunnel-responsive {
+    background-attachment: fixed;
+    animation: desktopTunnelZoom 18s ease-in-out infinite;
+  }
+}
+
+@keyframes desktopTunnelZoom {
+  0%,
+  100% {
+    transform: scale(1);
+    background-size: cover;
+  }
+  50% {
+    transform: scale(1.1);
+    background-size: 110% 110%;
   }
 }
 
