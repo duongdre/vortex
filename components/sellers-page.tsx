@@ -3,16 +3,8 @@
 export default function SellersPage() {
   return (
     <div className="relative min-h-screen">
-      {/* TikTok Background */}
-      <div className="fixed inset-0 bg-black -z-10" />
-      <div className="fixed inset-0 tiktok-bg-pattern -z-10" />
-
-      {/* Floating Elements */}
-      <div className="fixed top-40 right-20 w-24 h-24 bg-gradient-to-r from-pink-400/20 to-red-400/20 rounded-full blur-xl animate-gentleFloat -z-10" />
-      <div
-        className="fixed bottom-32 left-20 w-32 h-32 bg-gradient-to-r from-cyan-400/20 to-teal-400/20 rounded-full blur-xl animate-gentleFloat -z-10"
-        style={{ animationDelay: "2s" }}
-      />
+      {/* Sellers Gradient Background - Same as Creators */}
+      <div className="fixed inset-0 bg-gradient-to-br from-pink-600 via-purple-700 to-indigo-800 -z-10" />
 
       <div className="flex justify-center items-center min-h-screen px-4 pt-20">
         <div className="w-full max-w-2xl">

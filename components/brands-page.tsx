@@ -3,16 +3,8 @@
 export default function BrandsPage() {
   return (
     <div className="relative">
-      {/* TikTok Background */}
-      <div className="fixed inset-0 bg-black -z-10" />
-      <div className="fixed inset-0 tiktok-bg-pattern -z-10" />
-
-      {/* Subtle Floating Elements */}
-      <div className="fixed top-20 left-1/4 w-32 h-32 bg-gradient-to-r from-pink-400/20 to-red-400/20 rounded-full blur-xl animate-gentleFloat -z-10" />
-      <div
-        className="fixed bottom-32 right-1/4 w-24 h-24 bg-gradient-to-r from-cyan-400/20 to-teal-400/20 rounded-full blur-xl animate-gentleFloat -z-10"
-        style={{ animationDelay: "2s" }}
-      />
+      {/* Brands Gradient Background - Same as Creators */}
+      <div className="fixed inset-0 bg-gradient-to-br from-pink-600 via-purple-700 to-indigo-800 -z-10" />
 
       {/* Hero Section */}
       <section className="min-h-screen flex items-center justify-center px-4 pt-20">

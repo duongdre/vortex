@@ -12,7 +12,7 @@ export default function VortexWebsite() {
   const [currentPage, setCurrentPage] = useState("home")
 
   return (
-    <div className="min-h-screen bg-[#0a0a0f] text-white overflow-x-hidden">
+    <div className="min-h-screen text-white overflow-x-hidden">
       <Header currentPage={currentPage} setCurrentPage={setCurrentPage} />
 
       {currentPage === "home" && <HomePage />}

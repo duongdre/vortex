@@ -3,16 +3,8 @@
 export default function StoryPage() {
   return (
     <div className="relative">
-      {/* TikTok Background */}
-      <div className="fixed inset-0 bg-black -z-10" />
-      <div className="fixed inset-0 tiktok-bg-pattern -z-10" />
-
-      {/* Floating Elements */}
-      <div className="fixed top-32 left-20 w-24 h-24 bg-gradient-to-r from-pink-400/20 to-red-400/20 rounded-full blur-xl animate-gentleFloat -z-10" />
-      <div
-        className="fixed bottom-40 right-32 w-32 h-32 bg-gradient-to-r from-cyan-400/20 to-teal-400/20 rounded-full blur-xl animate-gentleFloat -z-10"
-        style={{ animationDelay: "3s" }}
-      />
+      {/* Story Gradient Background - Same as Creators */}
+      <div className="fixed inset-0 bg-gradient-to-br from-pink-600 via-purple-700 to-indigo-800 -z-10" />
 
       {/* Hero Images */}
       <section className="pt-32 px-4">
