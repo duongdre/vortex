@@ -2,47 +2,60 @@
 @tailwind components;
 @tailwind utilities;
 
-/* Neon Tunnel Infinite Zoom In Animation */
-@keyframes infiniteZoomIn {
-  0% {
+/* Responsive Neon Tunnel Background */
+.neon-tunnel-responsive {
+  background-image: url("/images/neon-tunnel.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  position: relative;
+}
+
+/* Desktop Animation - Smooth zoom effect */
+@media (min-width: 768px) {
+  .neon-tunnel-responsive {
+    background-attachment: fixed;
+    animation: desktopTunnelZoom 15s ease-in-out infinite;
+  }
+}
+
+/* Mobile - Static background, no animation to prevent crashes */
+@media (max-width: 767px) {
+  .neon-tunnel-responsive {
+    background-attachment: scroll;
+    background-size: cover;
+    /* No animation on mobile for better performance */
+  }
+}
+
+/* Smooth desktop animation */
+@keyframes desktopTunnelZoom {
+  0%,
+  100% {
+    background-size: 100% 100%;
     transform: scale(1);
   }
-  100% {
-    transform: scale(1.5);
+  50% {
+    background-size: 110% 110%;
+    transform: scale(1.02);
   }
 }
 
-/* Alternative background-size approach for infinite zoom */
-@keyframes infiniteBackgroundZoom {
-  0% {
+/* Alternative gentle animation for tablets */
+@media (min-width: 768px) and (max-width: 1024px) {
+  .neon-tunnel-responsive {
+    animation: tabletTunnelZoom 20s ease-in-out infinite;
+  }
+}
+
+@keyframes tabletTunnelZoom {
+  0%,
+  100% {
     background-size: 100% 100%;
   }
-  100% {
-    background-size: 200% 200%;
+  50% {
+    background-size: 105% 105%;
   }
-}
-
-/* Neon Tunnel Animated Class - Infinite Zoom In */
-.neon-tunnel-animated {
-  animation: infiniteBackgroundZoom 10s linear infinite;
-}
-
-/* Layered zoom effect for more dramatic infinite tunnel */
-.neon-tunnel-animated::before {
-  content: "";
-  position: absolute;
-  top: -50%;
-  left: -50%;
-  right: -50%;
-  bottom: -50%;
-  background-image: inherit;
-  background-size: inherit;
-  background-position: inherit;
-  background-repeat: inherit;
-  background-attachment: inherit;
-  animation: infiniteZoomIn 8s linear infinite;
-  z-index: -2;
-  opacity: 0.7;
 }
 
 /* Dynamic Service Card Backgrounds */
@@ -357,30 +370,6 @@
   70% {
     box-shadow: 0 0 0 10px rgba(255, 0, 80, 0);
   }
-}
-
-/* Swirl Background */
-.tiktok-swirl {
-  background-image: url("/images/tiktok-swirl.png");
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-color: #1a0b2e; /* Fallback dark purple */
-  animation: swirl 20s linear infinite;
-  min-height: 100vh;
-}
-
-.flowing-wave {
-  background: linear-gradient(
-    45deg,
-    rgba(255, 0, 80, 0.3) 0%,
-    rgba(37, 244, 238, 0.3) 25%,
-    rgba(255, 0, 80, 0.3) 50%,
-    rgba(37, 244, 238, 0.3) 75%,
-    rgba(255, 0, 80, 0.3) 100%
-  );
-  background-size: 400% 400%;
-  animation: flowingWave 15s ease-in-out infinite;
 }
 
 /* TikTok Glass Effect */

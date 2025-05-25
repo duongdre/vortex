@@ -5,17 +5,8 @@ import Image from "next/image"
 export default function HomePage() {
   return (
     <div className="relative">
-      {/* Hero Section with Animated Neon Tunnel Background */}
-      <section
-        className="min-h-screen flex flex-col justify-center items-center px-4 relative neon-tunnel-animated"
-        style={{
-          backgroundImage: "url('/images/neon-tunnel.png')",
-          backgroundSize: "cover",
-          backgroundPosition: "center",
-          backgroundRepeat: "no-repeat",
-          backgroundAttachment: "fixed",
-        }}
-      >
+      {/* Hero Section with Responsive Neon Tunnel Background */}
+      <section className="min-h-screen flex flex-col justify-center items-center px-4 relative neon-tunnel-responsive">
         {/* Simple dark overlay for text readability */}
         <div className="absolute inset-0 bg-black/30 -z-10" />
 
