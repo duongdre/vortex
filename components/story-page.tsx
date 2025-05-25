@@ -3,8 +3,8 @@
 export default function StoryPage() {
   return (
     <div className="relative">
-      {/* Story Gradient Background - Same as Creators */}
-      <div className="fixed inset-0 bg-gradient-to-br from-pink-600 via-purple-700 to-indigo-800 -z-10" />
+      {/* Story Blue-Pink Balanced Gradient Background */}
+      <div className="fixed inset-0 bg-gradient-to-br from-sky-500 via-pink-500 to-blue-600 -z-10" />
 
       {/* Hero Images */}
       <section className="pt-32 px-4">
@@ -12,7 +12,7 @@ export default function StoryPage() {
           {[1, 2, 3].map((i) => (
             <div
               key={i}
-              className="h-64 glass-effect rounded-3xl modern-card bg-gradient-to-br from-pink-500/20 to-cyan-500/20 flex items-center justify-center"
+              className="h-64 glass-effect-vortex rounded-3xl modern-card bg-gradient-to-br from-sky-500/20 to-pink-500/20 flex items-center justify-center"
             >
               <span className="text-4xl">📸</span>
             </div>
@@ -23,8 +23,8 @@ export default function StoryPage() {
       {/* Content Sections */}
       <div className="max-w-4xl mx-auto px-4 pb-24 space-y-16">
         {/* Our Story */}
-        <section className="glass-effect p-8 rounded-3xl modern-card">
-          <h2 className="text-4xl font-bold text-center mb-8 bg-gradient-to-r from-pink-400 to-cyan-400 bg-clip-text text-transparent">
+        <section className="glass-effect-vortex p-8 rounded-3xl modern-card">
+          <h2 className="text-4xl font-bold text-center mb-8 bg-gradient-to-r from-pink-400 via-sky-400 to-pink-400 bg-clip-text text-transparent">
             Our Story
           </h2>
           <div className="space-y-6 text-gray-300 leading-relaxed">
@@ -41,12 +41,12 @@ export default function StoryPage() {
         </section>
 
         {/* Brand Introduction */}
-        <section className="glass-effect p-8 rounded-3xl modern-card">
-          <h2 className="text-4xl font-bold text-center mb-8 bg-gradient-to-r from-cyan-400 to-pink-400 bg-clip-text text-transparent">
+        <section className="glass-effect-vortex p-8 rounded-3xl modern-card">
+          <h2 className="text-4xl font-bold text-center mb-8 bg-gradient-to-r from-sky-400 via-pink-400 to-cyan-400 bg-clip-text text-transparent">
             INTRODUCING...
           </h2>
           <div className="text-center mb-8">
-            <div className="text-5xl font-bold bg-gradient-to-r from-pink-400 to-cyan-400 bg-clip-text text-transparent mb-6">
+            <div className="text-5xl font-bold bg-gradient-to-r from-pink-400 via-sky-400 to-pink-400 bg-clip-text text-transparent mb-6">
               ⚡ New Beginnings Creator Network
             </div>
           </div>
@@ -59,13 +59,13 @@ export default function StoryPage() {
             </p>
             <div className="text-center space-y-2">
               <p>
-                This is our <span className="text-orange-400 font-bold">vision</span>.
+                This is our <span className="text-sky-400 font-bold">vision</span>.
               </p>
               <p>
                 Our <span className="text-pink-400 font-bold">passion</span>.
               </p>
               <p>
-                Our <span className="text-cyan-400 font-bold">rebellion</span> against the notion that being 'different'
+                Our <span className="text-pink-400 font-bold">rebellion</span> against the notion that being 'different'
                 means being less. 🔥
               </p>
             </div>
@@ -73,8 +73,8 @@ export default function StoryPage() {
         </section>
 
         {/* Our Rules */}
-        <section className="glass-effect p-8 rounded-3xl modern-card">
-          <h2 className="text-4xl font-bold text-center mb-8 bg-gradient-to-r from-pink-400 to-cyan-400 bg-clip-text text-transparent">
+        <section className="glass-effect-vortex p-8 rounded-3xl modern-card">
+          <h2 className="text-4xl font-bold text-center mb-8 bg-gradient-to-r from-pink-400 via-sky-400 to-pink-400 bg-clip-text text-transparent">
             At New Beginnings Creator Network, we're writing our own rules:
           </h2>
           <div className="space-y-4">
@@ -83,7 +83,7 @@ export default function StoryPage() {
               "Progress demands welcoming new views.",
               "Sisterhood is our superpower.",
             ].map((rule, index) => (
-              <div key={index} className="glass-effect p-6 rounded-2xl border-l-4 border-pink-400 modern-card">
+              <div key={index} className="glass-effect-vortex p-6 rounded-2xl border-l-4 border-pink-400 modern-card">
                 <p className="text-gray-300">
                   <span className="text-pink-400 font-bold">{index + 1}.</span> {rule}
                 </p>
@@ -93,7 +93,7 @@ export default function StoryPage() {
         </section>
 
         {/* Final Message */}
-        <section className="glass-effect p-8 rounded-3xl modern-card text-center">
+        <section className="glass-effect-vortex p-8 rounded-3xl modern-card text-center">
           <div className="space-y-6">
             <div className="space-y-4">
               <p className="text-3xl font-bold text-white">We won't stay quiet.</p>
@@ -114,7 +114,7 @@ export default function StoryPage() {
       </div>
 
       {/* Contact Button */}
-      <button className="fixed bottom-8 right-8 tiktok-button text-white p-4 rounded-full shadow-2xl border-none cursor-pointer z-50 animate-tiktokPulse">
+      <button className="fixed bottom-8 right-8 vortex-button text-white p-4 rounded-full shadow-2xl border-none cursor-pointer z-50 animate-vortexPulse">
         Contact Us
       </button>
     </div>

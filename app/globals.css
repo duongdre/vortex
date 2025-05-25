@@ -71,7 +71,7 @@
   }
 }
 
-/* Dynamic Service Card Backgrounds */
+/* Vortex Service Card Backgrounds - Blue Dominant with More Pink */
 @keyframes radiateLines {
   0% {
     transform: rotate(0deg) scale(1);
@@ -99,14 +99,14 @@
   }
 }
 
-/* Service Card Purple - TikTok Creators */
-.service-card-purple {
-  background: linear-gradient(135deg, #8b5cf6 0%, #a855f7 25%, #c084fc 50%, #d8b4fe 75%, #8b5cf6 100%);
+/* Service Card Blue - Blue with Pink Highlights */
+.service-card-blue {
+  background: linear-gradient(135deg, #60a5fa 0%, #ec4899 20%, #3b82f6 40%, #f472b6 60%, #2563eb 80%, #60a5fa 100%);
   position: relative;
   overflow: hidden;
 }
 
-.service-card-purple::before {
+.service-card-blue::before {
   content: "";
   position: absolute;
   top: -50%;
@@ -123,38 +123,38 @@
     conic-gradient(
       from 0deg,
       transparent,
-      rgba(255, 255, 255, 0.2),
+      rgba(236, 72, 153, 0.3),
       transparent,
-      rgba(255, 255, 255, 0.2),
+      rgba(96, 165, 250, 0.2),
       transparent,
-      rgba(255, 255, 255, 0.2),
+      rgba(244, 114, 182, 0.3),
       transparent
     );
   animation: radiateLines 8s linear infinite;
   z-index: 1;
 }
 
-.service-card-purple::after {
+.service-card-blue::after {
   content: "";
   position: absolute;
   top: 50%;
   left: 50%;
   width: 200px;
   height: 200px;
-  background: radial-gradient(circle, rgba(255, 255, 255, 0.3) 0%, transparent 70%);
+  background: radial-gradient(circle, rgba(236, 72, 153, 0.2) 0%, rgba(96, 165, 250, 0.3) 50%, transparent 70%);
   transform: translate(-50%, -50%);
   animation: energyPulse 4s ease-in-out infinite;
   z-index: 1;
 }
 
-/* Service Card Cyan - TikTok Live Talent Agents */
-.service-card-cyan {
-  background: linear-gradient(135deg, #06b6d4 0%, #0891b2 25%, #0e7490 50%, #155e75 75%, #06b6d4 100%);
+/* Service Card Cyan-Blue - More Pink Integration */
+.service-card-cyan-blue {
+  background: linear-gradient(135deg, #22d3ee 0%, #ec4899 25%, #06b6d4 50%, #f472b6 75%, #22d3ee 100%);
   position: relative;
   overflow: hidden;
 }
 
-.service-card-cyan::before {
+.service-card-cyan-blue::before {
   content: "";
   position: absolute;
   top: -50%;
@@ -164,52 +164,46 @@
   background: linear-gradient(
       0deg,
       transparent 48%,
-      rgba(255, 255, 255, 0.2) 49%,
-      rgba(255, 255, 255, 0.2) 51%,
+      rgba(244, 114, 182, 0.2) 49%,
+      rgba(244, 114, 182, 0.2) 51%,
       transparent 52%
     ),
-    linear-gradient(30deg, transparent 48%, rgba(255, 255, 255, 0.1) 49%, rgba(255, 255, 255, 0.1) 51%, transparent 52%),
-    linear-gradient(60deg, transparent 48%, rgba(255, 255, 255, 0.1) 49%, rgba(255, 255, 255, 0.1) 51%, transparent 52%),
-    linear-gradient(90deg, transparent 48%, rgba(255, 255, 255, 0.2) 49%, rgba(255, 255, 255, 0.2) 51%, transparent 52%),
+    linear-gradient(30deg, transparent 48%, rgba(34, 211, 238, 0.1) 49%, rgba(34, 211, 238, 0.1) 51%, transparent 52%),
+    linear-gradient(60deg, transparent 48%, rgba(236, 72, 153, 0.1) 49%, rgba(236, 72, 153, 0.1) 51%, transparent 52%),
+    linear-gradient(90deg, transparent 48%, rgba(34, 211, 238, 0.2) 49%, rgba(34, 211, 238, 0.2) 51%, transparent 52%),
     linear-gradient(
       120deg,
       transparent 48%,
-      rgba(255, 255, 255, 0.1) 49%,
-      rgba(255, 255, 255, 0.1) 51%,
+      rgba(244, 114, 182, 0.1) 49%,
+      rgba(244, 114, 182, 0.1) 51%,
       transparent 52%
     ),
-    linear-gradient(
-      150deg,
-      transparent 48%,
-      rgba(255, 255, 255, 0.1) 49%,
-      rgba(255, 255, 255, 0.1) 51%,
-      transparent 52%
-    );
+    linear-gradient(150deg, transparent 48%, rgba(34, 211, 238, 0.1) 49%, rgba(34, 211, 238, 0.1) 51%, transparent 52%);
   animation: radiateLines 6s linear infinite reverse;
   z-index: 1;
 }
 
-.service-card-cyan::after {
+.service-card-cyan-blue::after {
   content: "";
   position: absolute;
   top: 50%;
   left: 50%;
   width: 150px;
   height: 150px;
-  background: radial-gradient(circle, rgba(255, 255, 255, 0.4) 0%, transparent 60%);
+  background: radial-gradient(circle, rgba(244, 114, 182, 0.3) 0%, rgba(34, 211, 238, 0.4) 60%, transparent 80%);
   transform: translate(-50%, -50%);
   animation: energyPulse 3s ease-in-out infinite;
   z-index: 1;
 }
 
-/* Service Card Brand - For Brands */
-.service-card-brand {
-  background: linear-gradient(135deg, #7c3aed 0%, #8b5cf6 25%, #a855f7 50%, #c084fc 75%, #7c3aed 100%);
+/* Service Card Blue-Pink - Balanced Blue-Pink */
+.service-card-blue-pink {
+  background: linear-gradient(135deg, #ec4899 0%, #60a5fa 20%, #f472b6 40%, #7c3aed 60%, #ec4899 80%, #60a5fa 100%);
   position: relative;
   overflow: hidden;
 }
 
-.service-card-brand::before {
+.service-card-blue-pink::before {
   content: "";
   position: absolute;
   top: -50%;
@@ -219,63 +213,33 @@
   background: linear-gradient(
       45deg,
       transparent 40%,
-      rgba(255, 255, 255, 0.3) 41%,
-      rgba(255, 255, 255, 0.3) 43%,
+      rgba(236, 72, 153, 0.3) 41%,
+      rgba(236, 72, 153, 0.3) 43%,
       transparent 44%
     ),
-    linear-gradient(
-      -45deg,
-      transparent 40%,
-      rgba(255, 255, 255, 0.2) 41%,
-      rgba(255, 255, 255, 0.2) 43%,
-      transparent 44%
-    ),
+    linear-gradient(-45deg, transparent 40%, rgba(96, 165, 250, 0.2) 41%, rgba(96, 165, 250, 0.2) 43%, transparent 44%),
     linear-gradient(
       135deg,
       transparent 40%,
-      rgba(255, 255, 255, 0.2) 41%,
-      rgba(255, 255, 255, 0.2) 43%,
+      rgba(244, 114, 182, 0.2) 41%,
+      rgba(244, 114, 182, 0.2) 43%,
       transparent 44%
     ),
-    linear-gradient(
-      -135deg,
-      transparent 40%,
-      rgba(255, 255, 255, 0.3) 41%,
-      rgba(255, 255, 255, 0.3) 43%,
-      transparent 44%
-    );
+    linear-gradient(-135deg, transparent 40%, rgba(236, 72, 153, 0.3) 41%, rgba(236, 72, 153, 0.3) 43%, transparent 44%);
   animation: radiateLines 10s linear infinite;
   z-index: 1;
 }
 
-.service-card-brand::after {
+.service-card-blue-pink::after {
   content: "";
   position: absolute;
   top: 30%;
   right: 20%;
   width: 100px;
   height: 100px;
-  background: radial-gradient(circle, rgba(255, 255, 255, 0.3) 0%, transparent 70%);
+  background: radial-gradient(circle, rgba(236, 72, 153, 0.4) 0%, rgba(96, 165, 250, 0.2) 70%, transparent 90%);
   animation: energyPulse 5s ease-in-out infinite;
   z-index: 1;
-}
-
-@keyframes swirl {
-  0% {
-    transform: rotate(0deg) scale(1);
-  }
-  100% {
-    transform: rotate(360deg) scale(1.1);
-  }
-}
-
-@keyframes flowingWave {
-  0% {
-    transform: translateX(-100%) rotate(0deg);
-  }
-  100% {
-    transform: translateX(100%) rotate(360deg);
-  }
 }
 
 /* Modern Animations */
@@ -375,26 +339,26 @@
   }
 }
 
-@keyframes tiktokPulse {
+@keyframes vortexPulse {
   0%,
   100% {
-    box-shadow: 0 0 0 0 rgba(255, 0, 80, 0.7);
+    box-shadow: 0 0 0 0 rgba(236, 72, 153, 0.7);
   }
   70% {
-    box-shadow: 0 0 0 10px rgba(255, 0, 80, 0);
+    box-shadow: 0 0 0 10px rgba(236, 72, 153, 0);
   }
 }
 
-/* TikTok Glass Effect */
-.glass-effect {
+/* Vortex Glass Effect - Blue with Pink Accents */
+.glass-effect-vortex {
   background: rgba(0, 0, 0, 0.3);
   backdrop-filter: blur(20px);
-  border: 1px solid rgba(255, 0, 80, 0.2);
+  border: 1px solid rgba(236, 72, 153, 0.3);
 }
 
-/* TikTok Gradient Text */
-.gradient-text {
-  background: linear-gradient(135deg, #ff0050 0%, #25f4ee 100%);
+/* Vortex Gradient Text - More Pink */
+.gradient-text-vortex {
+  background: linear-gradient(135deg, #60a5fa 0%, #ec4899 50%, #f472b6 100%);
   background-size: 200% 200%;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -402,34 +366,26 @@
   animation: gradientShift 3s ease infinite;
 }
 
-/* TikTok Glow */
-.tiktok-glow {
-  box-shadow: 0 0 20px rgba(255, 0, 80, 0.3);
+/* Vortex Glow Effects */
+.vortex-glow {
+  box-shadow: 0 0 20px rgba(96, 165, 250, 0.3);
 }
 
-.tiktok-cyan-glow {
-  box-shadow: 0 0 20px rgba(37, 244, 238, 0.3);
+.vortex-pink-glow {
+  box-shadow: 0 0 20px rgba(236, 72, 153, 0.4);
 }
 
-/* Modern Card Hover */
+/* Modern Card Hover - Pink-Blue Mix */
 .modern-card {
   transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .modern-card:hover {
   transform: translateY(-8px);
-  box-shadow: 0 20px 40px rgba(255, 0, 80, 0.2);
+  box-shadow: 0 20px 40px rgba(236, 72, 153, 0.2), 0 10px 20px rgba(96, 165, 250, 0.1);
 }
 
 /* Utility Classes */
-.animate-swirl {
-  animation: swirl 20s linear infinite;
-}
-
-.animate-flowingWave {
-  animation: flowingWave 15s ease-in-out infinite;
-}
-
 .animate-gentleFloat {
   animation: gentleFloat 6s ease-in-out infinite;
 }
@@ -466,11 +422,11 @@
   animation: orb 8s ease-in-out infinite;
 }
 
-.animate-tiktokPulse {
-  animation: tiktokPulse 2s infinite;
+.animate-vortexPulse {
+  animation: vortexPulse 2s infinite;
 }
 
-/* Custom Scrollbar - TikTok Style */
+/* Custom Scrollbar - Pink-Blue Mix */
 ::-webkit-scrollbar {
   width: 6px;
 }
@@ -480,59 +436,47 @@
 }
 
 ::-webkit-scrollbar-thumb {
-  background: linear-gradient(135deg, #ff0050, #25f4ee);
+  background: linear-gradient(135deg, #60a5fa, #ec4899, #f472b6);
   border-radius: 3px;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background: linear-gradient(135deg, #25f4ee, #ff0050);
+  background: linear-gradient(135deg, #ec4899, #60a5fa, #f472b6);
 }
 
 /* Selection */
 ::selection {
-  background: rgba(255, 0, 80, 0.3);
+  background: rgba(236, 72, 153, 0.3);
   color: white;
 }
 
 /* Focus styles */
 *:focus {
-  outline: 2px solid #ff0050;
+  outline: 2px solid #ec4899;
   outline-offset: 2px;
 }
 
-/* TikTok Background Patterns */
-.tiktok-bg-pattern {
-  background-image: radial-gradient(circle at 25% 25%, rgba(255, 0, 80, 0.1) 0%, transparent 50%),
-    radial-gradient(circle at 75% 75%, rgba(37, 244, 238, 0.1) 0%, transparent 50%);
-}
-
-.tiktok-grid-pattern {
-  background-image: linear-gradient(rgba(255, 0, 80, 0.05) 1px, transparent 1px),
-    linear-gradient(90deg, rgba(37, 244, 238, 0.05) 1px, transparent 1px);
-  background-size: 50px 50px;
-}
-
-/* TikTok Button Styles */
-.tiktok-button {
-  background: linear-gradient(135deg, #ff0050, #fe2c55);
+/* Vortex Button Styles - Blue with Pink Highlights */
+.vortex-button {
+  background: linear-gradient(135deg, #60a5fa, #ec4899, #3b82f6);
   transition: all 0.3s ease;
 }
 
-.tiktok-button:hover {
-  background: linear-gradient(135deg, #fe2c55, #ff0050);
+.vortex-button:hover {
+  background: linear-gradient(135deg, #ec4899, #60a5fa, #f472b6);
   transform: translateY(-2px);
-  box-shadow: 0 10px 25px rgba(255, 0, 80, 0.4);
+  box-shadow: 0 10px 25px rgba(236, 72, 153, 0.4);
 }
 
-.tiktok-cyan-button {
-  background: linear-gradient(135deg, #25f4ee, #00f2ea);
+.vortex-pink-button {
+  background: linear-gradient(135deg, #ec4899, #60a5fa, #be185d);
   transition: all 0.3s ease;
 }
 
-.tiktok-cyan-button:hover {
-  background: linear-gradient(135deg, #00f2ea, #25f4ee);
+.vortex-pink-button:hover {
+  background: linear-gradient(135deg, #f472b6, #ec4899, #60a5fa);
   transform: translateY(-2px);
-  box-shadow: 0 10px 25px rgba(37, 244, 238, 0.4);
+  box-shadow: 0 10px 25px rgba(236, 72, 153, 0.4);
 }
 
 /* Hero Section Specific */

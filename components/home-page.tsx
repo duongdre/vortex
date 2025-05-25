@@ -22,7 +22,7 @@ export default function HomePage() {
             />
           </div>
 
-          <h1 className="text-6xl lg:text-8xl font-bold mb-8 bg-gradient-to-r from-white via-pink-200 to-cyan-200 bg-clip-text text-transparent animate-textShimmer bg-[length:200%_auto] drop-shadow-2xl">
+          <h1 className="text-6xl lg:text-8xl font-bold mb-8 bg-gradient-to-r from-white via-pink-300 to-blue-300 bg-clip-text text-transparent animate-textShimmer bg-[length:200%_auto] drop-shadow-2xl">
             VORTEX
           </h1>
           <h2 className="text-2xl lg:text-4xl mb-8 text-white font-light drop-shadow-lg flex items-center justify-center gap-3">
@@ -35,7 +35,7 @@ export default function HomePage() {
             With a clear-cut mission to empower creators, we help TikTok creators and shop partners amplify audience
             reach, elevate content quality, and turn passions into profitable ventures.
           </p>
-          <button className="tiktok-button text-white px-8 py-4 rounded-full text-lg font-semibold border-none cursor-pointer shadow-2xl flex items-center gap-3 mx-auto">
+          <button className="vortex-button text-white px-8 py-4 rounded-full text-lg font-semibold border-none cursor-pointer shadow-2xl flex items-center gap-3 mx-auto">
             <Image src="/images/vortex-icon.png" alt="VORTEX" width={24} height={24} className="rounded-full" />
             Get Started
           </button>
@@ -43,18 +43,18 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* All other sections with Creators gradient background */}
-      <div className="bg-gradient-to-br from-pink-600 via-purple-700 to-indigo-800">
+      {/* All other sections with Blue-Pink Balanced gradient background */}
+      <div className="bg-gradient-to-br from-sky-500 via-pink-500 to-blue-600">
         {/* Achievements Section */}
         <section className="py-24 px-4 relative overflow-hidden">
           <div className="max-w-7xl mx-auto relative z-10">
-            <h2 className="text-4xl lg:text-6xl font-bold text-center mb-16 bg-gradient-to-r from-pink-400 to-cyan-400 bg-clip-text text-transparent">
+            <h2 className="text-4xl lg:text-6xl font-bold text-center mb-16 bg-gradient-to-r from-pink-400 via-sky-400 to-pink-400 bg-clip-text text-transparent">
               Our Achievements
             </h2>
 
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 max-w-5xl mx-auto">
-              <div className="glass-effect p-8 rounded-3xl modern-card group">
-                <div className="w-16 h-16 bg-gradient-to-r from-pink-500 to-red-500 rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300">
+              <div className="glass-effect-vortex p-8 rounded-3xl modern-card group">
+                <div className="w-16 h-16 bg-gradient-to-r from-sky-500 to-pink-500 rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300">
                   <Image src="/images/tiktok-logo.png" alt="TikTok" width={32} height={32} />
                 </div>
                 <h3 className="text-2xl font-bold text-white mb-4">TikTok Live Achievement</h3>
@@ -63,8 +63,8 @@ export default function HomePage() {
                 </p>
               </div>
 
-              <div className="glass-effect p-8 rounded-3xl modern-card group">
-                <div className="w-16 h-16 bg-gradient-to-r from-cyan-400 to-teal-400 rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300">
+              <div className="glass-effect-vortex p-8 rounded-3xl modern-card group">
+                <div className="w-16 h-16 bg-gradient-to-r from-pink-500 to-sky-500 rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300">
                   <Image src="/images/vortex-icon.png" alt="VORTEX" width={32} height={32} className="rounded-full" />
                 </div>
                 <h3 className="text-2xl font-bold text-white mb-4">TikTok E-commerce Achievement</h3>
@@ -79,7 +79,7 @@ export default function HomePage() {
         {/* Services Section */}
         <section className="py-24 px-4 relative overflow-hidden">
           <div className="max-w-7xl mx-auto relative z-10">
-            <h2 className="text-4xl lg:text-6xl font-bold text-center mb-16 bg-gradient-to-r from-cyan-400 to-pink-400 bg-clip-text text-transparent">
+            <h2 className="text-4xl lg:text-6xl font-bold text-center mb-16 bg-gradient-to-r from-sky-400 via-pink-400 to-cyan-400 bg-clip-text text-transparent">
               Our Services
             </h2>
 
@@ -94,8 +94,8 @@ export default function HomePage() {
                     "Monetization Strategies",
                     "Official Events",
                   ],
-                  gradient: "from-pink-500 to-red-500",
-                  bgClass: "service-card-purple",
+                  gradient: "from-sky-500 to-pink-500",
+                  bgClass: "service-card-blue",
                 },
                 {
                   icon: (
@@ -108,8 +108,8 @@ export default function HomePage() {
                     "Monetize Your Passion",
                     "Professional Development",
                   ],
-                  gradient: "from-cyan-400 to-teal-400",
-                  bgClass: "service-card-cyan",
+                  gradient: "from-pink-400 to-sky-500",
+                  bgClass: "service-card-cyan-blue",
                 },
                 {
                   icon: (
@@ -119,8 +119,8 @@ export default function HomePage() {
                   ),
                   title: "For Brands",
                   features: ["Influencer Affiliation", "Ads Management", "Content Production", "Live Event Promotions"],
-                  gradient: "from-pink-400 to-cyan-400",
-                  bgClass: "service-card-brand",
+                  gradient: "from-pink-400 to-sky-400",
+                  bgClass: "service-card-blue-pink",
                 },
               ].map((service, index) => (
                 <div
@@ -143,12 +143,12 @@ export default function HomePage() {
                     <div className="space-y-3 mb-8">
                       {service.features.map((feature, i) => (
                         <div key={i} className="flex items-center text-gray-200">
-                          <div className="w-2 h-2 bg-gradient-to-r from-white to-gray-300 rounded-full mr-3" />
+                          <div className="w-2 h-2 bg-gradient-to-r from-pink-300 to-sky-300 rounded-full mr-3" />
                           {feature}
                         </div>
                       ))}
                     </div>
-                    <button className="w-full bg-black/50 backdrop-blur-sm border border-white/20 hover:bg-black/70 text-white py-3 rounded-xl font-semibold transition-all duration-300 transform hover:scale-105 cursor-pointer">
+                    <button className="w-full bg-black/50 backdrop-blur-sm border border-pink-400/30 hover:bg-black/70 text-white py-3 rounded-xl font-semibold transition-all duration-300 transform hover:scale-105 cursor-pointer">
                       Learn More
                     </button>
                   </div>
@@ -161,7 +161,7 @@ export default function HomePage() {
         {/* Contact Section */}
         <section className="py-24 px-4 relative overflow-hidden">
           <div className="max-w-7xl mx-auto text-center relative z-10">
-            <h2 className="text-4xl lg:text-6xl font-bold mb-8 bg-gradient-to-r from-pink-400 to-cyan-400 bg-clip-text text-transparent">
+            <h2 className="text-4xl lg:text-6xl font-bold mb-8 bg-gradient-to-r from-pink-400 via-sky-400 to-pink-400 bg-clip-text text-transparent">
               Talk with us for more opportunities
             </h2>
 
@@ -170,7 +170,7 @@ export default function HomePage() {
                 <button
                   key={index}
                   className={`${
-                    index % 2 === 0 ? "tiktok-button" : "tiktok-cyan-button"
+                    index % 2 === 0 ? "vortex-button" : "vortex-pink-button"
                   } px-8 py-4 rounded-full text-white font-semibold border-none cursor-pointer flex items-center gap-3`}
                 >
                   {index === 0 && <Image src="/images/tiktok-logo.png" alt="TikTok" width={20} height={20} />}
@@ -187,7 +187,7 @@ export default function HomePage() {
               ))}
             </div>
 
-            <div className="glass-effect rounded-3xl overflow-hidden max-w-5xl mx-auto mb-12">
+            <div className="glass-effect-vortex rounded-3xl overflow-hidden max-w-5xl mx-auto mb-12">
               <iframe
                 src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2483.5430622456!2d-0.12775842346!3d51.50735097181!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x487604b900d26973%3A0x4291f3172409ea92!2slondon%20eye!5e0!3m2!1sen!2suk!4v1647891234567!5m2!1sen!2suk"
                 width="100%"
@@ -221,7 +221,7 @@ export default function HomePage() {
                 <a
                   key={index}
                   href={social.href}
-                  className="w-14 h-14 glass-effect rounded-2xl flex items-center justify-center text-xl transition-all duration-300 hover:scale-110 hover:bg-pink-500/20 border border-pink-500/30"
+                  className="w-14 h-14 glass-effect-vortex rounded-2xl flex items-center justify-center text-xl transition-all duration-300 hover:scale-110 hover:bg-pink-500/20 border border-pink-500/30"
                   title={social.title}
                 >
                   {typeof social.icon === "string" ? social.icon : social.icon}
