@@ -1,0 +1,365 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Infinity Zoom Animation */
+@keyframes infinityZoom {
+  0% {
+    transform: scale(1) translateZ(0);
+  }
+  100% {
+    transform: scale(1.5) translateZ(0);
+  }
+}
+
+@keyframes tunnelZoom {
+  0% {
+    transform: scale(1) perspective(1000px) rotateX(0deg);
+  }
+  100% {
+    transform: scale(1.2) perspective(1000px) rotateX(0deg);
+  }
+}
+
+@keyframes swirl {
+  0% {
+    transform: rotate(0deg) scale(1);
+  }
+  100% {
+    transform: rotate(360deg) scale(1.1);
+  }
+}
+
+@keyframes flowingWave {
+  0% {
+    transform: translateX(-100%) rotate(0deg);
+  }
+  100% {
+    transform: translateX(100%) rotate(360deg);
+  }
+}
+
+/* Modern Animations */
+@keyframes gentleFloat {
+  0%,
+  100% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+}
+
+@keyframes subtleGlow {
+  0%,
+  100% {
+    opacity: 0.3;
+  }
+  50% {
+    opacity: 0.6;
+  }
+}
+
+@keyframes modernPulse {
+  0%,
+  100% {
+    transform: scale(1);
+    opacity: 0.8;
+  }
+  50% {
+    transform: scale(1.05);
+    opacity: 1;
+  }
+}
+
+@keyframes gradientShift {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes slideInFromLeft {
+  from {
+    opacity: 0;
+    transform: translateX(-30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes slideInFromRight {
+  from {
+    opacity: 0;
+    transform: translateX(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes textShimmer {
+  0% {
+    background-position: -200% center;
+  }
+  100% {
+    background-position: 200% center;
+  }
+}
+
+@keyframes orb {
+  0%,
+  100% {
+    transform: translateY(0px) scale(1);
+  }
+  50% {
+    transform: translateY(-20px) scale(1.1);
+  }
+}
+
+@keyframes tiktokPulse {
+  0%,
+  100% {
+    box-shadow: 0 0 0 0 rgba(255, 0, 80, 0.7);
+  }
+  70% {
+    box-shadow: 0 0 0 10px rgba(255, 0, 80, 0);
+  }
+}
+
+/* Tunnel Background */
+.infinity-tunnel {
+  background-image: url("/images/neon-tunnel.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  animation: infinityZoom 8s ease-in-out infinite alternate;
+}
+
+.tunnel-overlay {
+  background: linear-gradient(45deg, rgba(255, 0, 80, 0.1) 0%, rgba(37, 244, 238, 0.1) 50%, rgba(255, 0, 80, 0.1) 100%);
+  animation: tunnelZoom 12s ease-in-out infinite;
+}
+
+/* Swirl Background */
+.tiktok-swirl {
+  background-image: url("/images/tiktok-swirl.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-color: #1a0b2e; /* Fallback dark purple */
+  animation: swirl 20s linear infinite;
+  min-height: 100vh;
+}
+
+.flowing-wave {
+  background: linear-gradient(
+    45deg,
+    rgba(255, 0, 80, 0.3) 0%,
+    rgba(37, 244, 238, 0.3) 25%,
+    rgba(255, 0, 80, 0.3) 50%,
+    rgba(37, 244, 238, 0.3) 75%,
+    rgba(255, 0, 80, 0.3) 100%
+  );
+  background-size: 400% 400%;
+  animation: flowingWave 15s ease-in-out infinite;
+}
+
+/* TikTok Glass Effect */
+.glass-effect {
+  background: rgba(0, 0, 0, 0.3);
+  backdrop-filter: blur(20px);
+  border: 1px solid rgba(255, 0, 80, 0.2);
+}
+
+/* TikTok Gradient Text */
+.gradient-text {
+  background: linear-gradient(135deg, #ff0050 0%, #25f4ee 100%);
+  background-size: 200% 200%;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  animation: gradientShift 3s ease infinite;
+}
+
+/* TikTok Glow */
+.tiktok-glow {
+  box-shadow: 0 0 20px rgba(255, 0, 80, 0.3);
+}
+
+.tiktok-cyan-glow {
+  box-shadow: 0 0 20px rgba(37, 244, 238, 0.3);
+}
+
+/* Modern Card Hover */
+.modern-card {
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.modern-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 20px 40px rgba(255, 0, 80, 0.2);
+}
+
+/* Utility Classes */
+.animate-infinityZoom {
+  animation: infinityZoom 8s ease-in-out infinite alternate;
+}
+
+.animate-tunnelZoom {
+  animation: tunnelZoom 12s ease-in-out infinite;
+}
+
+.animate-swirl {
+  animation: swirl 20s linear infinite;
+}
+
+.animate-flowingWave {
+  animation: flowingWave 15s ease-in-out infinite;
+}
+
+.animate-gentleFloat {
+  animation: gentleFloat 6s ease-in-out infinite;
+}
+
+.animate-subtleGlow {
+  animation: subtleGlow 4s ease-in-out infinite;
+}
+
+.animate-modernPulse {
+  animation: modernPulse 3s ease-in-out infinite;
+}
+
+.animate-gradientShift {
+  animation: gradientShift 3s ease infinite;
+}
+
+.animate-fadeInUp {
+  animation: fadeInUp 0.8s ease-out;
+}
+
+.animate-slideInFromLeft {
+  animation: slideInFromLeft 0.8s ease-out;
+}
+
+.animate-slideInFromRight {
+  animation: slideInFromRight 0.8s ease-out;
+}
+
+.animate-textShimmer {
+  animation: textShimmer 2s linear infinite;
+}
+
+.animate-orb {
+  animation: orb 8s ease-in-out infinite;
+}
+
+.animate-tiktokPulse {
+  animation: tiktokPulse 2s infinite;
+}
+
+/* Custom Scrollbar - TikTok Style */
+::-webkit-scrollbar {
+  width: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: rgba(0, 0, 0, 0.2);
+}
+
+::-webkit-scrollbar-thumb {
+  background: linear-gradient(135deg, #ff0050, #25f4ee);
+  border-radius: 3px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: linear-gradient(135deg, #25f4ee, #ff0050);
+}
+
+/* Selection */
+::selection {
+  background: rgba(255, 0, 80, 0.3);
+  color: white;
+}
+
+/* Focus styles */
+*:focus {
+  outline: 2px solid #ff0050;
+  outline-offset: 2px;
+}
+
+/* TikTok Background Patterns */
+.tiktok-bg-pattern {
+  background-image: radial-gradient(circle at 25% 25%, rgba(255, 0, 80, 0.1) 0%, transparent 50%),
+    radial-gradient(circle at 75% 75%, rgba(37, 244, 238, 0.1) 0%, transparent 50%);
+}
+
+.tiktok-grid-pattern {
+  background-image: linear-gradient(rgba(255, 0, 80, 0.05) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(37, 244, 238, 0.05) 1px, transparent 1px);
+  background-size: 50px 50px;
+}
+
+/* TikTok Button Styles */
+.tiktok-button {
+  background: linear-gradient(135deg, #ff0050, #fe2c55);
+  transition: all 0.3s ease;
+}
+
+.tiktok-button:hover {
+  background: linear-gradient(135deg, #fe2c55, #ff0050);
+  transform: translateY(-2px);
+  box-shadow: 0 10px 25px rgba(255, 0, 80, 0.4);
+}
+
+.tiktok-cyan-button {
+  background: linear-gradient(135deg, #25f4ee, #00f2ea);
+  transition: all 0.3s ease;
+}
+
+.tiktok-cyan-button:hover {
+  background: linear-gradient(135deg, #00f2ea, #25f4ee);
+  transform: translateY(-2px);
+  box-shadow: 0 10px 25px rgba(37, 244, 238, 0.4);
+}
+
+/* Hero Section Specific */
+.hero-section {
+  position: relative;
+  overflow: hidden;
+}
+
+.hero-section::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(45deg, rgba(0, 0, 0, 0.3) 0%, rgba(255, 0, 80, 0.1) 50%, rgba(0, 0, 0, 0.3) 100%);
+  z-index: 1;
+}
+
+.hero-content {
+  position: relative;
+  z-index: 2;
+}
