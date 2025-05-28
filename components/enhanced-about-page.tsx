@@ -250,7 +250,7 @@ export default function EnhancedAboutPage() {
           <div className="relative">
             <div className="w-full h-[600px] rounded-3xl overflow-hidden shadow-2xl">
               <Image
-                src="/images/ash-davis-portrait.png"
+                src="/placeholder.svg?height=600&width=400&text=Ash+Davis+Portrait"
                 alt="Ash Davis - Founder of VORTEX"
                 fill
                 className="object-cover"
@@ -273,29 +273,42 @@ export default function EnhancedAboutPage() {
               <p>
                 <strong className="text-white">My journey began during college,</strong> when I was working part-time as
                 a social media manager for local businesses. I started going live on TikTok just for fun—as a way to
-                unwind and connect with others. At the time, I had no idea how TikTok worked. It was everything I
-                thought it was and more.
+                unwind and connect with others. At the time, I had no idea how TikTok worked, but I was fascinated by
+                the authentic connections people were making through short-form content.
               </p>
 
               <p>
                 <strong className="text-sky-400">
-                  That moment made me realize the true potential of the platform.
+                  What started as casual experimentation quickly became an obsession.
                 </strong>{" "}
-                I quickly fell in love with entertaining others during my lives. I was having so much fun making people
-                laugh and building genuine connections. Before I knew it, my following started to grow, and I found
-                myself rising up the TikTok rankings.
+                I spent countless hours studying the platform, understanding what made content go viral, and most
+                importantly, what made creators successful. I noticed a disturbing pattern: talented creators were being
+                exploited by agencies that promised everything but delivered nothing.
               </p>
 
               <p>
-                <strong className="text-pink-400">With their encouragement and energy,</strong> I decided the UK live
-                space and new consistently played in the top 10, including 2nd, 3rd, and top 20 rankings throughout my
-                TikTok creator career.
+                <strong className="text-pink-400">
+                  That's when I realized my true calling wasn't just creating content—it was empowering other creators.
+                </strong>{" "}
+                I started helping fellow students optimize their TikTok strategies, and within months, I was seeing
+                incredible results. My friends were gaining thousands of followers and actually making money from their
+                passion projects.
               </p>
 
               <p>
-                <strong className="text-cyan-400">Eventually, I was able to leave my day job</strong> and become a
-                full-time professional live host. In time, TikTok approached me directly and invited me to help new
-                creators by partnering with them—and that's how Jimstar Creator Network was born.
+                <strong className="text-cyan-400">
+                  The breakthrough moment came when I developed the zero-commission model.
+                </strong>{" "}
+                Instead of taking a cut from creators' earnings like traditional agencies, I found a way to get paid
+                directly by platforms and brands based on creator success metrics. This meant creators could keep 100%
+                of their earnings while still getting professional support and guidance.
+              </p>
+
+              <p>
+                <strong className="text-white">From that small dorm room experiment, VORTEX was born.</strong> What
+                started as helping a few college friends has now grown into a global network of over 4,000 creators
+                who've collectively earned more than $50 million. But the mission remains the same: put creators first,
+                always.
               </p>
             </div>
 
@@ -313,15 +326,22 @@ export default function EnhancedAboutPage() {
             <h2 className="text-4xl lg:text-5xl font-bold text-white mb-6">Identify Your Goals & Achieve Them</h2>
 
             <p className="text-xl text-gray-300 leading-relaxed">
-              <strong className="text-sky-400">After we help you discover what you want to achieve</strong> from being a
-              live host, we'll work together to find the very best way of achieving it.
+              <strong className="text-sky-400">Every creator's journey is unique,</strong> and that's exactly how it
+              should be. At VORTEX, we don't believe in one-size-fits-all solutions. Instead, we work closely with each
+              creator to understand their individual goals, strengths, and vision for success.
             </p>
 
             <p className="text-lg text-gray-300 leading-relaxed">
-              As an experienced Live Host on the app for the last 4 years, I am going to share my knowledge to help you
-              achieve the same success. TikTok have chosen to directly work with me and my team to enable us to coach
-              and support you, professionalizing your live Jimstar agency is paid directly from TikTok, and you will not
-              have to pay us directly for our services.
+              Whether you're looking to build a personal brand, launch a product line, or simply turn your passion into
+              a sustainable income stream, our team of experts will develop a customized strategy tailored specifically
+              to your needs. We provide the tools, resources, and guidance you need to transform your creative vision
+              into measurable results.
+            </p>
+
+            <p className="text-lg text-gray-300 leading-relaxed">
+              <strong className="text-pink-400">Our proven framework has helped thousands of creators</strong> achieve
+              their dreams while maintaining complete creative control. From content strategy and audience development
+              to brand partnerships and revenue optimization, we're with you every step of the way.
             </p>
 
             <button className="vortex-pink-button text-white px-8 py-4 rounded-full font-semibold border-none cursor-pointer">
@@ -347,7 +367,12 @@ export default function EnhancedAboutPage() {
 
             {/* Lifestyle Photo */}
             <div className="relative w-full h-80 rounded-3xl overflow-hidden shadow-xl">
-              <Image src="/images/ash-davis-lifestyle.png" alt="Ash Davis Lifestyle" fill className="object-cover" />
+              <Image
+                src="/placeholder.svg?height=320&width=400&text=Creator+Success+Story"
+                alt="Ash Davis Lifestyle"
+                fill
+                className="object-cover"
+              />
               <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent" />
               <div className="absolute bottom-4 left-4">
                 <p className="text-white font-semibold">Living the Creator Life</p>
@@ -369,45 +394,30 @@ export default function EnhancedAboutPage() {
 
             <p className="text-gray-300 mb-8">To be eligible to join, you must meet the following criteria:</p>
 
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-8">
-              <div className="space-y-4">
-                <div className="flex items-center gap-3">
-                  <div className="w-2 h-2 bg-sky-400 rounded-full"></div>
-                  <span className="text-gray-300">Be 18 or over</span>
-                </div>
-                <div className="flex items-center gap-3">
-                  <div className="w-2 h-2 bg-sky-400 rounded-full"></div>
-                  <span className="text-gray-300">Live in the U.K or one of our other designated regions</span>
-                </div>
-                <div className="flex items-center gap-3">
-                  <div className="w-2 h-2 bg-sky-400 rounded-full"></div>
-                  <span className="text-gray-300">Willing to follow the live community guidelines</span>
-                </div>
-                <div className="flex items-center gap-3">
-                  <div className="w-2 h-2 bg-sky-400 rounded-full"></div>
-                  <span className="text-gray-300">Willing to go live at least 15 - 20 hours a week</span>
-                </div>
-                <div className="flex items-center gap-3">
-                  <div className="w-2 h-2 bg-sky-400 rounded-full"></div>
-                  <span className="text-gray-300">Have a smartphone or tablet with internet access</span>
-                </div>
+            <div className="space-y-4 mb-8">
+              <div className="flex items-center gap-3">
+                <div className="w-2 h-2 bg-sky-400 rounded-full"></div>
+                <span className="text-gray-300">Be 18 or over</span>
               </div>
-
-              <div className="space-y-4">
-                <div className="flex items-center gap-3">
-                  <div className="w-2 h-2 bg-pink-400 rounded-full"></div>
-                  <span className="text-gray-300">Available Regions:</span>
-                </div>
-                <div className="ml-6 space-y-2 text-sm text-gray-400">
-                  <div>🇬🇧 United Kingdom</div>
-                  <div>🇮🇪 Ireland</div>
-                  <div>🇺🇸 United States</div>
-                  <div>🇨🇦 Canada</div>
-                  <div>🇦🇺 Australia</div>
-                  <div>🇩🇪 Germany</div>
-                  <div>🇫🇷 France</div>
-                  <div>🇪🇸 Spain</div>
-                </div>
+              <div className="flex items-center gap-3">
+                <div className="w-2 h-2 bg-sky-400 rounded-full"></div>
+                <span className="text-gray-300">Live in an eligible region (contact us for details)</span>
+              </div>
+              <div className="flex items-center gap-3">
+                <div className="w-2 h-2 bg-sky-400 rounded-full"></div>
+                <span className="text-gray-300">Willing to follow community guidelines</span>
+              </div>
+              <div className="flex items-center gap-3">
+                <div className="w-2 h-2 bg-sky-400 rounded-full"></div>
+                <span className="text-gray-300">Committed to consistent content creation</span>
+              </div>
+              <div className="flex items-center gap-3">
+                <div className="w-2 h-2 bg-sky-400 rounded-full"></div>
+                <span className="text-gray-300">Have access to reliable internet and recording equipment</span>
+              </div>
+              <div className="flex items-center gap-3">
+                <div className="w-2 h-2 bg-sky-400 rounded-full"></div>
+                <span className="text-gray-300">Passionate about building authentic audience connections</span>
               </div>
             </div>
 
