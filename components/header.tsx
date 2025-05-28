@@ -109,7 +109,7 @@ export default function Header({ currentPage, setCurrentPage }: HeaderProps) {
 
       {/* Mobile Navigation Menu */}
       <div
-        className={`md:hidden absolute top-full left-0 right-0 glass-effect-vortex border-b border-sky-500/20 transition-all duration-300 ease-in-out ${
+        className={`md:hidden absolute top-full left-0 right-0 bg-slate-900 border-b border-sky-500/20 transition-all duration-300 ease-in-out ${
           isMobileMenuOpen
             ? "opacity-100 translate-y-0 pointer-events-auto"
             : "opacity-0 -translate-y-2 pointer-events-none"
@@ -123,7 +123,7 @@ export default function Header({ currentPage, setCurrentPage }: HeaderProps) {
               className={`w-full text-left px-4 py-3 rounded-xl transition-all duration-300 border-none cursor-pointer ${
                 currentPage === item.id
                   ? "bg-gradient-to-r from-sky-500 to-pink-500 text-white shadow-lg"
-                  : "text-gray-300 hover:text-white hover:bg-white/10"
+                  : "text-gray-300 hover:text-white hover:bg-slate-800"
               }`}
             >
               {item.label}
