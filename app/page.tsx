@@ -3,7 +3,7 @@
 import { useState, useEffect } from "react"
 import Header from "@/components/header"
 import HomePage from "@/components/home-page"
-import AboutPage from "@/components/about-page"
+import EnhancedAboutPage from "@/components/enhanced-about-page"
 import CreatorsPage from "@/components/creators-page"
 import BrandsPage from "@/components/brands-page"
 import SellersPage from "@/components/sellers-page"
@@ -23,7 +23,7 @@ export default function VortexWebsite() {
       <Header currentPage={currentPage} setCurrentPage={setCurrentPage} />
 
       {currentPage === "home" && <HomePage setCurrentPage={setCurrentPage} />}
-      {currentPage === "about" && <AboutPage />}
+      {currentPage === "about" && <EnhancedAboutPage />}
       {currentPage === "creators" && <CreatorsPage />}
       {currentPage === "brands" && <BrandsPage />}
       {currentPage === "sellers" && <SellersPage />}
