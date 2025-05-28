@@ -382,20 +382,37 @@ export default function EnhancedAboutPage() {
           </div>
 
           <div className="space-y-6">
-            {/* Welcome to VORTEX Video */}
+            {/* Welcome to VORTEX Video with Custom Thumbnail */}
             <div className="relative w-full h-80 rounded-3xl overflow-hidden group cursor-pointer shadow-xl">
-              <video
-                className="w-full h-full object-cover"
-                controls
-                poster="/placeholder.svg?height=320&width=400&text=Welcome+to+VORTEX"
-              >
-                <source src="/videos/welcome-to-vortex.mp4" type="video/mp4" />
-                Your browser does not support the video tag.
-              </video>
-              <div className="absolute bottom-4 left-4 right-4">
-                <div className="bg-black/50 backdrop-blur-sm rounded-lg p-3">
-                  <h3 className="text-white font-bold">Welcome to VORTEX</h3>
-                  <p className="text-gray-300 text-sm">Discover the VORTEX difference</p>
+              <div className="relative w-full h-full">
+                {/* Video Thumbnail */}
+                <video className="w-full h-full object-cover" muted playsInline preload="metadata">
+                  <source src="/videos/welcome-to-vortex.mp4#t=0.1" type="video/mp4" />
+                </video>
+
+                {/* Dark Overlay */}
+                <div className="absolute inset-0 bg-black/30 group-hover:bg-black/50 transition-all duration-300" />
+
+                {/* Play Button Overlay */}
+                <div className="absolute inset-0 flex items-center justify-center">
+                  <div className="w-20 h-20 bg-white/20 backdrop-blur-sm rounded-full flex items-center justify-center group-hover:scale-110 group-hover:bg-white/30 transition-all duration-300 border-2 border-white/50">
+                    <svg width="32" height="32" viewBox="0 0 24 24" fill="white" className="ml-1">
+                      <path d="M8 5v14l11-7z" />
+                    </svg>
+                  </div>
+                </div>
+
+                {/* Video Info Overlay */}
+                <div className="absolute bottom-4 left-4 right-4">
+                  <div className="bg-black/50 backdrop-blur-sm rounded-lg p-3">
+                    <h3 className="text-white font-bold">Welcome to VORTEX</h3>
+                    <p className="text-gray-300 text-sm">Discover the VORTEX difference</p>
+                  </div>
+                </div>
+
+                {/* Duration Badge */}
+                <div className="absolute top-4 right-4">
+                  <div className="bg-black/70 text-white px-2 py-1 rounded text-xs font-medium">2:15</div>
                 </div>
               </div>
             </div>
