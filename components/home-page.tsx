@@ -2,13 +2,21 @@
 
 import Image from "next/image"
 
-export default function HomePage() {
+interface HomePageProps {
+  setCurrentPage: (page: string) => void
+}
+
+export default function HomePage({ setCurrentPage }: HomePageProps) {
+  const handlePageNavigation = (page: string) => {
+    setCurrentPage(page)
+    window.scrollTo({ top: 0, behavior: "smooth" })
+  }
+
   return (
     <div className="relative">
       {/* Hero Section with Responsive Neon Tunnel Background */}
       <section className="min-h-screen flex flex-col justify-center items-center px-4 relative neon-tunnel-responsive">
-        {/* Simple dark overlay for text readability */}
-        <div className="absolute inset-0 bg-black/30 -z-10" />
+        <div className="absolute inset-0 bg-black/40 -z-10" />
 
         <div className="hero-content text-center z-10 max-w-6xl animate-fadeInUp">
           {/* Hero Logo */}
@@ -22,211 +30,193 @@ export default function HomePage() {
             />
           </div>
 
-          <h1 className="text-6xl lg:text-8xl font-bold mb-8 bg-gradient-to-r from-white via-pink-300 to-blue-300 bg-clip-text text-transparent animate-textShimmer bg-[length:200%_auto] drop-shadow-2xl">
+          <h1 className="text-6xl lg:text-8xl font-bold mb-8 bg-gradient-to-r from-white via-blue-300 to-pink-200 bg-clip-text text-transparent animate-textShimmer bg-[length:200%_auto] drop-shadow-2xl">
             VORTEX
           </h1>
           <h2 className="text-2xl lg:text-4xl mb-8 text-white font-light drop-shadow-lg flex items-center justify-center gap-3">
             <Image src="/images/tiktok-logo.png" alt="TikTok" width={40} height={40} />
-            TikTok Creator Network
+            Where Creators Become Legends
           </h2>
-          <p className="max-w-4xl text-lg lg:text-xl leading-relaxed text-gray-200 mb-12 drop-shadow-lg">
-            VORTEX was founded with the vision of helping TikTok CREATORS thrive in the digital landscape. Our
-            ever-expanding community is home to over 4,000+ vibrant creators, each making waves in the TikTok universe.
-            With a clear-cut mission to empower creators, we help TikTok creators and shop partners amplify audience
-            reach, elevate content quality, and turn passions into profitable ventures.
+          <p className="max-w-4xl text-lg lg:text-xl leading-relaxed text-gray-200 mb-8 drop-shadow-lg">
+            Founded by visionary entrepreneur <span className="text-sky-400 font-semibold">Ash Davis</span>, VORTEX has
+            revolutionized the creator economy. From humble beginnings to managing 4,000+ elite creators, Ash's journey
+            proves that with the right vision, passion, and relentless dedication, anyone can transform the digital
+            landscape.
           </p>
-          <button className="vortex-button text-white px-8 py-4 rounded-full text-lg font-semibold border-none cursor-pointer shadow-2xl flex items-center gap-3 mx-auto">
-            <Image src="/images/vortex-icon.png" alt="VORTEX" width={24} height={24} className="rounded-full" />
-            Get Started
-          </button>
-          <div className="mb-8 flex justify-center"></div>
+          <div className="flex flex-wrap gap-4 justify-center mb-12">
+            <button
+              onClick={() => handlePageNavigation("about")}
+              className="vortex-button text-white px-8 py-4 rounded-full text-lg font-semibold border-none cursor-pointer shadow-2xl flex items-center gap-3"
+            >
+              <Image src="/images/vortex-icon.png" alt="VORTEX" width={24} height={24} className="rounded-full" />
+              Meet Ash Davis
+            </button>
+            <button
+              onClick={() => handlePageNavigation("creators")}
+              className="glass-effect-vortex border border-sky-400/50 text-white px-8 py-4 rounded-full text-lg font-semibold transition-all duration-300 hover:bg-sky-400/10 hover:border-sky-400"
+            >
+              Join Our Network
+            </button>
+          </div>
         </div>
       </section>
 
-      {/* All other sections with Blue-Pink Balanced gradient background */}
-      <div className="bg-gradient-to-br from-sky-500 via-pink-500 to-blue-600">
-        {/* Achievements Section */}
+      {/* All other sections with Lighter Vortex blue-pink gradient background */}
+      <div className="bg-gradient-to-br from-sky-500 via-blue-600 to-indigo-700">
+        {/* Ash's Vision Section */}
         <section className="py-24 px-4 relative overflow-hidden">
           <div className="max-w-7xl mx-auto relative z-10">
-            <h2 className="text-4xl lg:text-6xl font-bold text-center mb-16 bg-gradient-to-r from-pink-400 via-sky-400 to-pink-400 bg-clip-text text-transparent">
-              Our Achievements
-            </h2>
-
-            <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 max-w-5xl mx-auto">
-              <div className="glass-effect-vortex p-8 rounded-3xl modern-card group">
-                <div className="w-16 h-16 bg-gradient-to-r from-sky-500 to-pink-500 rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300">
-                  <Image src="/images/tiktok-logo.png" alt="TikTok" width={32} height={32} />
-                </div>
-                <h3 className="text-2xl font-bold text-white mb-4">TikTok Live Achievement</h3>
-                <p className="text-gray-300 leading-relaxed">
-                  Leading the industry with unprecedented live streaming success rates and audience engagement metrics.
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+              <div className="animate-slideInFromLeft">
+                <h2 className="text-4xl lg:text-6xl font-bold mb-8 bg-gradient-to-r from-sky-400 to-pink-400 bg-clip-text text-transparent">
+                  The Ash Davis Vision
+                </h2>
+                <p className="text-xl text-gray-300 mb-6 leading-relaxed">
+                  "I didn't just want to create another agency. I wanted to build a movement that puts creators first,
+                  where success is shared, not hoarded."
                 </p>
+                <p className="text-lg text-gray-400 mb-8 leading-relaxed">
+                  Ash Davis saw the broken promises in the creator economy and decided to fix them. With zero commission
+                  fees, transparent partnerships, and genuine care for creator success, VORTEX became the agency
+                  creators actually wanted to join.
+                </p>
+                <button
+                  onClick={() => handlePageNavigation("story")}
+                  className="vortex-pink-button text-white px-6 py-3 rounded-full font-semibold border-none cursor-pointer"
+                >
+                  Read Our Full Story
+                </button>
               </div>
 
-              <div className="glass-effect-vortex p-8 rounded-3xl modern-card group">
-                <div className="w-16 h-16 bg-gradient-to-r from-pink-500 to-sky-500 rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300">
-                  <Image src="/images/vortex-icon.png" alt="VORTEX" width={32} height={32} className="rounded-full" />
+              <div className="animate-slideInFromRight">
+                <div className="glass-effect-vortex p-8 rounded-3xl modern-card">
+                  <div className="w-full h-80 bg-gradient-to-br from-sky-500/20 to-pink-500/20 rounded-2xl flex items-center justify-center mb-6">
+                    <div className="text-center">
+                      <div className="w-24 h-24 bg-gradient-to-r from-sky-500 to-pink-500 rounded-full flex items-center justify-center mx-auto mb-4">
+                        <span className="text-3xl">👨‍💼</span>
+                      </div>
+                      <h3 className="text-2xl font-bold text-white">Ash Davis</h3>
+                      <p className="text-sky-400">Founder & CEO</p>
+                    </div>
+                  </div>
+                  <div className="text-center">
+                    <p className="text-gray-300 italic">
+                      "Every creator deserves a partner who believes in their potential as much as they do."
+                    </p>
+                  </div>
                 </div>
-                <h3 className="text-2xl font-bold text-white mb-4">TikTok E-commerce Achievement</h3>
-                <p className="text-gray-300 leading-relaxed">
-                  Driving millions in revenue through innovative e-commerce strategies and creator partnerships.
-                </p>
               </div>
             </div>
           </div>
         </section>
 
-        {/* Services Section */}
+        {/* Quick Stats Section */}
         <section className="py-24 px-4 relative overflow-hidden">
           <div className="max-w-7xl mx-auto relative z-10">
-            <h2 className="text-4xl lg:text-6xl font-bold text-center mb-16 bg-gradient-to-r from-sky-400 via-pink-400 to-cyan-400 bg-clip-text text-transparent">
-              Our Services
+            <h2 className="text-4xl lg:text-6xl font-bold text-center mb-16 bg-gradient-to-r from-cyan-400 to-pink-400 bg-clip-text text-transparent">
+              The VORTEX Impact
             </h2>
 
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
+              {[
+                { number: "4,000+", label: "Active Creators", icon: "👥" },
+                { number: "$50M+", label: "Creator Earnings", icon: "💰" },
+                { number: "500M+", label: "Total Views", icon: "👁️" },
+                { number: "0%", label: "Commission Fees", icon: "🎯" },
+              ].map((stat, index) => (
+                <div key={index} className="glass-effect-vortex p-8 rounded-3xl modern-card text-center">
+                  <div className="text-4xl mb-4">{stat.icon}</div>
+                  <div className="text-4xl font-bold bg-gradient-to-r from-sky-400 to-pink-400 bg-clip-text text-transparent mb-2">
+                    {stat.number}
+                  </div>
+                  <div className="text-xl text-gray-300">{stat.label}</div>
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        {/* Services Preview */}
+        <section className="py-24 px-4 relative overflow-hidden">
+          <div className="max-w-7xl mx-auto relative z-10">
+            <h2 className="text-4xl lg:text-6xl font-bold text-center mb-16 bg-gradient-to-r from-sky-400 to-pink-400 bg-clip-text text-transparent">
+              How We Transform Creators
+            </h2>
+
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
               {[
                 {
                   icon: <Image src="/images/tiktok-logo.png" alt="TikTok" width={32} height={32} />,
-                  title: "TikTok Creators",
-                  features: [
-                    "Content Enhancement",
-                    "Live Traffic Support",
-                    "Monetization Strategies",
-                    "Official Events",
-                  ],
-                  gradient: "from-sky-500 to-pink-500",
-                  bgClass: "service-card-blue",
+                  title: "TikTok LIVE Mastery",
+                  description: "Advanced streaming strategies that turn viewers into loyal fans and revenue streams.",
+                  cta: "For Creators",
+                  page: "creators",
                 },
                 {
-                  icon: (
-                    <Image src="/images/vortex-icon.png" alt="VORTEX" width={32} height={32} className="rounded-full" />
-                  ),
-                  title: "TikTok Live Talent Agents",
-                  features: [
-                    "Earn Lifetime Commissions",
-                    "Grow Your Own Business",
-                    "Monetize Your Passion",
-                    "Professional Development",
-                  ],
-                  gradient: "from-pink-400 to-sky-500",
-                  bgClass: "service-card-cyan-blue",
+                  icon: "🤝",
+                  title: "Brand Partnerships",
+                  description: "Connect with premium brands through our exclusive network of trusted partners.",
+                  cta: "For Brands",
+                  page: "brands",
                 },
                 {
-                  icon: (
-                    <svg width="32" height="32" viewBox="0 0 24 24" fill="white">
-                      <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" />
-                    </svg>
-                  ),
-                  title: "For Brands",
-                  features: ["Influencer Affiliation", "Ads Management", "Content Production", "Live Event Promotions"],
-                  gradient: "from-pink-400 to-sky-400",
-                  bgClass: "service-card-blue-pink",
+                  icon: "⭐",
+                  title: "Success Stories",
+                  description: "Real creators, real results. See how VORTEX has changed lives and careers.",
+                  cta: "Read Stories",
+                  page: "testimonials",
                 },
               ].map((service, index) => (
-                <div
-                  key={index}
-                  className={`relative p-8 rounded-3xl modern-card group overflow-hidden ${service.bgClass}`}
-                >
-                  {/* Dynamic Background Effects */}
-                  <div className="absolute inset-0 opacity-20 -z-10">
-                    <div className="absolute inset-0 bg-gradient-radial from-white/10 via-transparent to-transparent animate-pulse" />
+                <div key={index} className="glass-effect-vortex p-8 rounded-3xl modern-card group">
+                  <div className="w-16 h-16 bg-gradient-to-r from-sky-500 to-pink-500 rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300">
+                    {typeof service.icon === "string" ? <span className="text-2xl">{service.icon}</span> : service.icon}
                   </div>
-
-                  {/* Content */}
-                  <div className="relative z-10">
-                    <div
-                      className={`w-16 h-16 bg-gradient-to-r ${service.gradient} rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300`}
-                    >
-                      {service.icon}
-                    </div>
-                    <h3 className="text-2xl font-bold text-white mb-6">{service.title}</h3>
-                    <div className="space-y-3 mb-8">
-                      {service.features.map((feature, i) => (
-                        <div key={i} className="flex items-center text-gray-200">
-                          <div className="w-2 h-2 bg-gradient-to-r from-pink-300 to-sky-300 rounded-full mr-3" />
-                          {feature}
-                        </div>
-                      ))}
-                    </div>
-                    <button className="w-full bg-black/50 backdrop-blur-sm border border-pink-400/30 hover:bg-black/70 text-white py-3 rounded-xl font-semibold transition-all duration-300 transform hover:scale-105 cursor-pointer">
-                      Learn More
-                    </button>
-                  </div>
+                  <h3 className="text-2xl font-bold text-white mb-4">{service.title}</h3>
+                  <p className="text-gray-300 leading-relaxed mb-6">{service.description}</p>
+                  <button
+                    onClick={() => handlePageNavigation(service.page)}
+                    className="w-full bg-black/50 backdrop-blur-sm border border-white/20 hover:bg-black/70 text-white py-3 rounded-xl font-semibold transition-all duration-300 transform hover:scale-105 cursor-pointer"
+                  >
+                    {service.cta}
+                  </button>
                 </div>
               ))}
             </div>
           </div>
         </section>
 
-        {/* Contact Section */}
+        {/* CTA Section */}
         <section className="py-24 px-4 relative overflow-hidden">
           <div className="max-w-7xl mx-auto text-center relative z-10">
-            <h2 className="text-4xl lg:text-6xl font-bold mb-8 bg-gradient-to-r from-pink-400 via-sky-400 to-pink-400 bg-clip-text text-transparent">
-              Talk with us for more opportunities
+            <h2 className="text-4xl lg:text-6xl font-bold mb-8 bg-gradient-to-r from-sky-400 to-pink-400 bg-clip-text text-transparent">
+              Ready to Join the VORTEX Family?
             </h2>
+            <p className="text-xl text-gray-300 mb-12 max-w-3xl mx-auto">
+              Whether you're a creator looking to scale, a brand seeking authentic partnerships, or someone with a story
+              to tell, Ash Davis and the VORTEX team are here to help you succeed.
+            </p>
 
-            <div className="flex flex-wrap gap-6 justify-center mb-16">
-              {["TikTok Livestream Partnership", "TikTok Live Agents", "Brands and E-commerce"].map((item, index) => (
-                <button
-                  key={index}
-                  className={`${
-                    index % 2 === 0 ? "vortex-button" : "vortex-pink-button"
-                  } px-8 py-4 rounded-full text-white font-semibold border-none cursor-pointer flex items-center gap-3`}
-                >
-                  {index === 0 && <Image src="/images/tiktok-logo.png" alt="TikTok" width={20} height={20} />}
-                  {index === 1 && (
-                    <Image src="/images/vortex-icon.png" alt="VORTEX" width={20} height={20} className="rounded-full" />
-                  )}
-                  {index === 2 && (
-                    <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
-                      <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" />
-                    </svg>
-                  )}
-                  {item}
-                </button>
-              ))}
-            </div>
-
-            <div className="glass-effect-vortex rounded-3xl overflow-hidden max-w-5xl mx-auto mb-12">
-              <iframe
-                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2483.5430622456!2d-0.12775842346!3d51.50735097181!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x487604b900d26973%3A0x4291f3172409ea92!2slondon%20eye!5e0!3m2!1sen!2suk!4v1647891234567!5m2!1sen!2suk"
-                width="100%"
-                height="400"
-                style={{ border: 0 }}
-                allowFullScreen
-                loading="lazy"
-              />
-            </div>
-
-            <p className="text-gray-400 mb-8">📍 Located in the heart of London, United Kingdom</p>
-
-            <div className="flex gap-4 justify-center">
-              {[
-                { icon: "📧", title: "Email", href: "mailto:contact@nbcn.com" },
-                {
-                  icon: <Image src="/images/tiktok-logo.png" alt="TikTok" width={20} height={20} />,
-                  title: "TikTok",
-                  href: "#tiktok",
-                },
-                { icon: "📱", title: "Telegram", href: "#telegram" },
-                { icon: "📷", title: "Instagram", href: "#instagram" },
-                {
-                  icon: (
-                    <Image src="/images/vortex-icon.png" alt="VORTEX" width={20} height={20} className="rounded-full" />
-                  ),
-                  title: "VORTEX",
-                  href: "#vortex",
-                },
-              ].map((social, index) => (
-                <a
-                  key={index}
-                  href={social.href}
-                  className="w-14 h-14 glass-effect-vortex rounded-2xl flex items-center justify-center text-xl transition-all duration-300 hover:scale-110 hover:bg-pink-500/20 border border-pink-500/30"
-                  title={social.title}
-                >
-                  {typeof social.icon === "string" ? social.icon : social.icon}
-                </a>
-              ))}
+            <div className="flex flex-wrap gap-6 justify-center">
+              <button
+                onClick={() => handlePageNavigation("creators")}
+                className="vortex-button px-8 py-4 rounded-full text-white font-semibold border-none cursor-pointer flex items-center gap-3"
+              >
+                <Image src="/images/tiktok-logo.png" alt="TikTok" width={20} height={20} />
+                Apply as Creator
+              </button>
+              <button
+                onClick={() => handlePageNavigation("brands")}
+                className="vortex-pink-button px-8 py-4 rounded-full text-white font-semibold border-none cursor-pointer flex items-center gap-3"
+              >
+                <span className="text-xl">🤝</span>
+                Partner with Us
+              </button>
+              <button
+                onClick={() => handlePageNavigation("sellers")}
+                className="glass-effect-vortex border border-sky-400/50 text-white px-8 py-4 rounded-full font-semibold transition-all duration-300 hover:bg-sky-400/10 hover:border-sky-400"
+              >
+                Contact Ash Directly
+              </button>
             </div>
           </div>
         </section>

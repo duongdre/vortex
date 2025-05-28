@@ -5,8 +5,7 @@ import Image from "next/image"
 export default function CreatorsPage() {
   return (
     <div className="relative">
-      {/* Creators Blue-Pink Balanced Gradient Background */}
-      <div className="fixed inset-0 bg-gradient-to-br from-sky-500 via-pink-500 to-blue-600 -z-10" />
+      <div className="fixed inset-0 bg-gradient-to-br from-sky-500 via-blue-600 to-indigo-700 -z-10" />
 
       {/* Hero Section */}
       <section className="min-h-screen flex items-center px-4 pt-20">
@@ -22,25 +21,26 @@ export default function CreatorsPage() {
               />
               <Image src="/images/tiktok-logo.png" alt="TikTok" width={40} height={40} />
             </div>
-            <h1 className="text-5xl lg:text-7xl font-bold mb-8 bg-gradient-to-r from-white via-pink-200 to-sky-200 bg-clip-text text-transparent">
-              TikTok Livestream Creator Program
+            <h1 className="text-5xl lg:text-7xl font-bold mb-8 bg-gradient-to-r from-white to-sky-200 bg-clip-text text-transparent">
+              Join Ash's Elite Creator Network
             </h1>
             <p className="text-xl text-gray-300 mb-8 leading-relaxed">
-              As TikTok Live's <span className="text-sky-400 font-semibold">official partner</span>, NBCN helps creators
-              livestream on their TikTok account in our{" "}
-              <span className="text-pink-400 font-semibold">LA content studio</span>, grow a following, and monetize
-              their talent with our <span className="text-sky-400 font-semibold">FREE creator partnership</span>.
+              Experience the <span className="text-sky-400 font-semibold">Ash Davis difference</span>—where creators
+              aren't just clients, they're family. As TikTok's{" "}
+              <span className="text-pink-400 font-semibold">most trusted partner</span>, VORTEX provides exclusive
+              access to Ash's proven strategies, premium brand collaborations, and
+              <span className="text-sky-400 font-semibold">zero-commission earnings</span> that put your success first.
             </p>
             <button className="vortex-button text-white px-8 py-4 rounded-full text-lg font-semibold border-none cursor-pointer flex items-center gap-3">
               <Image src="/images/vortex-icon.png" alt="VORTEX" width={24} height={24} className="rounded-full" />
-              Program Overview
+              Apply to Join Ash's Network
             </button>
           </div>
 
           <div className="animate-slideInFromRight flex justify-center">
             <div className="relative">
               <div className="w-80 h-[600px] glass-effect-vortex rounded-[3rem] p-6 transform rotate-3 hover:rotate-0 transition-transform duration-500">
-                <div className="w-full h-full bg-gradient-to-b from-pink-500 to-sky-600 rounded-[2.5rem] relative overflow-hidden">
+                <div className="w-full h-full bg-gradient-to-b from-sky-500 to-cyan-600 rounded-[2.5rem] relative overflow-hidden">
                   <div className="absolute top-6 right-6 bg-pink-500 text-white px-4 py-2 rounded-full text-sm font-bold animate-vortexPulse">
                     LIVE
                   </div>
@@ -54,8 +54,8 @@ export default function CreatorsPage() {
                         className="rounded-full"
                       />
                     </div>
-                    <h3 className="text-white text-xl font-bold">New Beginnings</h3>
-                    <p className="text-white/80">Creator Network</p>
+                    <h3 className="text-white text-xl font-bold">VORTEX Creator</h3>
+                    <p className="text-white/80">Ash Davis Network</p>
                   </div>
                 </div>
               </div>
@@ -64,16 +64,16 @@ export default function CreatorsPage() {
         </div>
       </section>
 
-      {/* What We Offer Section */}
+      {/* What Ash Offers Section */}
       <section className="py-24 px-4">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16 animate-fadeInUp">
-            <h2 className="text-4xl lg:text-6xl font-bold mb-6 bg-gradient-to-r from-pink-400 via-sky-400 to-pink-400 bg-clip-text text-transparent">
-              What We Offer
+            <h2 className="text-4xl lg:text-6xl font-bold mb-6 bg-gradient-to-r from-sky-400 to-pink-400 bg-clip-text text-transparent">
+              The Ash Davis Advantage
             </h2>
             <p className="text-2xl text-gray-400 flex items-center justify-center gap-3">
               <Image src="/images/tiktok-logo.png" alt="TikTok" width={30} height={30} />
-              TikTok LIVE Creator Partnership
+              Personal mentorship from a proven industry leader
             </p>
           </div>
 
@@ -81,27 +81,20 @@ export default function CreatorsPage() {
             {[
               {
                 number: "01",
-                title: "Livestream on TikTok",
+                title: "Direct Access to Ash",
                 description:
-                  "Personal team + professional studio. Guiding creators through everything they need to know about TikTok Live.",
-                gradient: "from-sky-500 to-pink-500",
-                icon: <Image src="/images/tiktok-logo.png" alt="TikTok" width={24} height={24} />,
-              },
-              {
-                number: "02",
-                title: "Exclusive Events",
-                description:
-                  "Get exclusive traffic boosts and access to TikTok LIVE's official campaigns to maximize reach.",
-                gradient: "from-pink-500 to-sky-500",
+                  "Unlike other agencies where you never meet the founder, Ash personally reviews every creator application and provides ongoing strategic guidance. Monthly one-on-one sessions ensure you're always on the right track.",
+                gradient: "from-sky-500 to-cyan-500",
                 icon: (
                   <Image src="/images/vortex-icon.png" alt="VORTEX" width={24} height={24} className="rounded-full" />
                 ),
               },
               {
-                number: "03",
-                title: "Monetization Assistance",
-                description: "NBCN helps creators align their content with TikTok LIVE's monetization models.",
-                gradient: "from-sky-400 to-pink-400",
+                number: "02",
+                title: "Zero Commission Promise",
+                description:
+                  "Ash's revolutionary model means you keep 100% of your earnings. VORTEX gets paid by platforms and brands based on your success, creating true partnership where everyone wins when you win.",
+                gradient: "from-pink-500 to-rose-500",
                 icon: (
                   <svg width="24" height="24" viewBox="0 0 24 24" fill="white">
                     <path d="M12 2v20M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6" />
@@ -109,13 +102,23 @@ export default function CreatorsPage() {
                 ),
               },
               {
-                number: "04",
-                title: "Content Guidance",
+                number: "03",
+                title: "Exclusive Brand Network",
                 description:
-                  "Creators will receive personalized guidance on content production teams to help with logistics.",
-                gradient: "from-pink-500 to-sky-500",
+                  "Access Ash's personal relationships with premium brands built over years of trust and results. Get first priority on high-value campaigns that align with your content and values.",
+                gradient: "from-sky-400 to-pink-400",
+                icon: <Image src="/images/tiktok-logo.png" alt="TikTok" width={24} height={24} />,
+              },
+              {
+                number: "04",
+                title: "Proven Success Framework",
+                description:
+                  "Learn the exact strategies Ash used to build VORTEX and help 4,000+ creators succeed. From content optimization to audience psychology, get insider knowledge that actually works.",
+                gradient: "from-cyan-500 to-sky-500",
                 icon: (
-                  <Image src="/images/vortex-icon.png" alt="VORTEX" width={24} height={24} className="rounded-full" />
+                  <svg width="24" height="24" viewBox="0 0 24 24" fill="white">
+                    <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" />
+                  </svg>
                 ),
               },
             ].map((feature, index) => (
@@ -133,11 +136,56 @@ export default function CreatorsPage() {
         </div>
       </section>
 
-      {/* FAQ Section */}
+      {/* Application Process */}
+      <section className="py-24 px-4">
+        <div className="max-w-7xl mx-auto">
+          <h2 className="text-4xl lg:text-6xl font-bold text-center mb-16 bg-gradient-to-r from-cyan-400 to-pink-400 bg-clip-text text-transparent">
+            How to Join Ash's Network
+          </h2>
+
+          <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
+            {[
+              {
+                step: "01",
+                title: "Submit Application",
+                description: "Complete our creator application with your content samples and goals",
+                icon: "📝",
+              },
+              {
+                step: "02",
+                title: "Ash's Review",
+                description: "Ash personally reviews every application within 48 hours",
+                icon: "👨‍💼",
+              },
+              {
+                step: "03",
+                title: "Strategy Call",
+                description: "Qualified creators get a personal strategy session with Ash's team",
+                icon: "📞",
+              },
+              {
+                step: "04",
+                title: "Welcome to VORTEX",
+                description: "Start your journey with immediate access to all creator resources",
+                icon: "🚀",
+              },
+            ].map((step, index) => (
+              <div key={index} className="glass-effect-vortex p-6 rounded-2xl modern-card text-center">
+                <div className="text-4xl mb-4">{step.icon}</div>
+                <div className="text-2xl font-bold text-sky-400 mb-2">{step.step}</div>
+                <h3 className="text-lg font-bold text-white mb-3">{step.title}</h3>
+                <p className="text-gray-300 text-sm leading-relaxed">{step.description}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Enhanced FAQ Section */}
       <section className="py-24 px-4">
         <div className="max-w-4xl mx-auto">
-          <h2 className="text-4xl lg:text-6xl font-bold text-center mb-16 bg-gradient-to-r from-sky-400 via-pink-400 to-cyan-400 bg-clip-text text-transparent">
-            FAQ
+          <h2 className="text-4xl lg:text-6xl font-bold text-center mb-16 bg-gradient-to-r from-cyan-400 to-pink-400 bg-clip-text text-transparent">
+            Creator FAQ
           </h2>
 
           <div className="space-y-6">
@@ -145,29 +193,58 @@ export default function CreatorsPage() {
               {
                 question: "What's in it for me? Do you take a cut of my profits?",
                 answer:
-                  "You keep 100% of what you make on the platform. TikTok pays us directly proportional to what our streamers make. So, the bigger you are and the better you perform in your streams, the better it is for us :)",
+                  "You keep 100% of what you make on the platform. Ash built VORTEX on a revolutionary model where we get paid directly by TikTok and brand partners based on your success metrics. The bigger you grow and the better you perform, the more successful we become together.",
               },
               {
-                question: "Can I leave the NBCN anytime I want or am I stuck in a contract?",
+                question: "Can I leave VORTEX anytime or am I stuck in a contract?",
                 answer:
-                  "This partnership is completely voluntary. We offer a 14-day trial period with the option to remove yourself from our roster. After the 14 days, either party can remove themselves from the partnership.",
+                  "Ash believes in choice, not contracts. We offer a 14-day trial period with complete freedom to leave. After that, either party can end the partnership with 30 days' notice. We believe if we're not adding massive value to your creator journey, you should be free to explore other options.",
               },
               {
-                question: "What if I don't live in Los Angeles?",
+                question: "Do I get to actually work with Ash Davis personally?",
                 answer:
-                  "We welcome creators from all locations! While our main studio is in LA, we provide remote support and guidance for creators worldwide.",
+                  "Ash maintains personal involvement through monthly strategy sessions, quarterly business reviews, and direct access via our creator portal. While day-to-day support comes from our expert team, Ash personally guides major strategic decisions and creator development.",
+              },
+              {
+                question: "What if I don't live near your studios?",
+                answer:
+                  "VORTEX supports creators globally! While our flagship studios are in major cities, remote creators receive comprehensive digital support, virtual coaching with Ash's team, and full access to our brand partnership network. Location never limits your potential with us.",
               },
             ].map((faq, index) => (
               <div key={index} className="glass-effect-vortex rounded-2xl overflow-hidden modern-card">
-                <div className="p-6 cursor-pointer hover:bg-pink-500/5 transition-colors duration-300">
+                <div className="p-6 cursor-pointer hover:bg-sky-500/5 transition-colors duration-300">
                   <div className="flex justify-between items-center">
                     <h3 className="text-lg font-semibold text-white pr-4">{faq.question}</h3>
-                    <span className="text-pink-400 text-xl">+</span>
+                    <span className="text-sky-400 text-xl">+</span>
                   </div>
                   <p className="text-gray-300 mt-4 leading-relaxed">{faq.answer}</p>
                 </div>
               </div>
             ))}
+          </div>
+        </div>
+      </section>
+
+      {/* CTA Section */}
+      <section className="py-24 px-4">
+        <div className="max-w-4xl mx-auto text-center">
+          <div className="glass-effect-vortex p-12 rounded-3xl modern-card">
+            <h2 className="text-4xl lg:text-5xl font-bold mb-8 bg-gradient-to-r from-sky-400 to-pink-400 bg-clip-text text-transparent">
+              Ready to Work with Ash?
+            </h2>
+            <p className="text-xl text-gray-300 mb-8">
+              Join the exclusive network of creators who work directly with industry visionary Ash Davis. Your success
+              story starts with one application.
+            </p>
+            <div className="flex flex-wrap gap-4 justify-center">
+              <button className="vortex-button text-white px-8 py-4 rounded-full font-semibold border-none cursor-pointer flex items-center gap-3">
+                <Image src="/images/vortex-icon.png" alt="VORTEX" width={24} height={24} className="rounded-full" />
+                Apply Now
+              </button>
+              <button className="glass-effect-vortex border border-sky-400/50 text-sky-400 px-8 py-4 rounded-full font-semibold transition-all duration-300 hover:bg-sky-400/10">
+                Schedule Call with Ash
+              </button>
+            </div>
           </div>
         </div>
       </section>
