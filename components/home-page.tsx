@@ -22,7 +22,7 @@ export default function HomePage() {
             />
           </div>
 
-          <h1 className="text-6xl lg:text-8xl font-bold mb-8 bg-gradient-to-r from-white via-pink-300 to-blue-300 bg-clip-text text-transparent animate-textShimmer bg-[length:200%_auto] drop-shadow-2xl">
+          <h1 className="text-6xl lg:text-8xl font-bold mb-8 bg-gradient-to-r from-white via-blue-300 to-pink-200 bg-clip-text text-transparent animate-textShimmer bg-[length:200%_auto] drop-shadow-2xl">
             VORTEX
           </h1>
           <h2 className="text-2xl lg:text-4xl mb-8 text-white font-light drop-shadow-lg flex items-center justify-center gap-3">
@@ -43,18 +43,18 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* All other sections with Blue-Pink Balanced gradient background */}
-      <div className="bg-gradient-to-br from-sky-500 via-pink-500 to-blue-600">
+      {/* All other sections with Lighter Vortex blue-pink gradient background */}
+      <div className="bg-gradient-to-br from-sky-500 via-blue-600 to-indigo-700">
         {/* Achievements Section */}
         <section className="py-24 px-4 relative overflow-hidden">
           <div className="max-w-7xl mx-auto relative z-10">
-            <h2 className="text-4xl lg:text-6xl font-bold text-center mb-16 bg-gradient-to-r from-pink-400 via-sky-400 to-pink-400 bg-clip-text text-transparent">
+            <h2 className="text-4xl lg:text-6xl font-bold text-center mb-16 bg-gradient-to-r from-sky-400 to-pink-400 bg-clip-text text-transparent">
               Our Achievements
             </h2>
 
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 max-w-5xl mx-auto">
               <div className="glass-effect-vortex p-8 rounded-3xl modern-card group">
-                <div className="w-16 h-16 bg-gradient-to-r from-sky-500 to-pink-500 rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300">
+                <div className="w-16 h-16 bg-gradient-to-r from-sky-500 to-cyan-500 rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300">
                   <Image src="/images/tiktok-logo.png" alt="TikTok" width={32} height={32} />
                 </div>
                 <h3 className="text-2xl font-bold text-white mb-4">TikTok Live Achievement</h3>
@@ -64,7 +64,7 @@ export default function HomePage() {
               </div>
 
               <div className="glass-effect-vortex p-8 rounded-3xl modern-card group">
-                <div className="w-16 h-16 bg-gradient-to-r from-pink-500 to-sky-500 rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300">
+                <div className="w-16 h-16 bg-gradient-to-r from-pink-500 to-rose-500 rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300">
                   <Image src="/images/vortex-icon.png" alt="VORTEX" width={32} height={32} className="rounded-full" />
                 </div>
                 <h3 className="text-2xl font-bold text-white mb-4">TikTok E-commerce Achievement</h3>
@@ -79,7 +79,7 @@ export default function HomePage() {
         {/* Services Section */}
         <section className="py-24 px-4 relative overflow-hidden">
           <div className="max-w-7xl mx-auto relative z-10">
-            <h2 className="text-4xl lg:text-6xl font-bold text-center mb-16 bg-gradient-to-r from-sky-400 via-pink-400 to-cyan-400 bg-clip-text text-transparent">
+            <h2 className="text-4xl lg:text-6xl font-bold text-center mb-16 bg-gradient-to-r from-cyan-400 to-pink-400 bg-clip-text text-transparent">
               Our Services
             </h2>
 
@@ -94,7 +94,7 @@ export default function HomePage() {
                     "Monetization Strategies",
                     "Official Events",
                   ],
-                  gradient: "from-sky-500 to-pink-500",
+                  gradient: "from-sky-500 to-cyan-500",
                   bgClass: "service-card-blue",
                 },
                 {
@@ -108,7 +108,7 @@ export default function HomePage() {
                     "Monetize Your Passion",
                     "Professional Development",
                   ],
-                  gradient: "from-pink-400 to-sky-500",
+                  gradient: "from-cyan-400 to-sky-500",
                   bgClass: "service-card-cyan-blue",
                 },
                 {
@@ -119,7 +119,7 @@ export default function HomePage() {
                   ),
                   title: "For Brands",
                   features: ["Influencer Affiliation", "Ads Management", "Content Production", "Live Event Promotions"],
-                  gradient: "from-pink-400 to-sky-400",
+                  gradient: "from-sky-400 to-pink-400",
                   bgClass: "service-card-blue-pink",
                 },
               ].map((service, index) => (
@@ -143,12 +143,12 @@ export default function HomePage() {
                     <div className="space-y-3 mb-8">
                       {service.features.map((feature, i) => (
                         <div key={i} className="flex items-center text-gray-200">
-                          <div className="w-2 h-2 bg-gradient-to-r from-pink-300 to-sky-300 rounded-full mr-3" />
+                          <div className="w-2 h-2 bg-gradient-to-r from-white to-gray-300 rounded-full mr-3" />
                           {feature}
                         </div>
                       ))}
                     </div>
-                    <button className="w-full bg-black/50 backdrop-blur-sm border border-pink-400/30 hover:bg-black/70 text-white py-3 rounded-xl font-semibold transition-all duration-300 transform hover:scale-105 cursor-pointer">
+                    <button className="w-full bg-black/50 backdrop-blur-sm border border-white/20 hover:bg-black/70 text-white py-3 rounded-xl font-semibold transition-all duration-300 transform hover:scale-105 cursor-pointer">
                       Learn More
                     </button>
                   </div>
@@ -161,7 +161,7 @@ export default function HomePage() {
         {/* Contact Section */}
         <section className="py-24 px-4 relative overflow-hidden">
           <div className="max-w-7xl mx-auto text-center relative z-10">
-            <h2 className="text-4xl lg:text-6xl font-bold mb-8 bg-gradient-to-r from-pink-400 via-sky-400 to-pink-400 bg-clip-text text-transparent">
+            <h2 className="text-4xl lg:text-6xl font-bold mb-8 bg-gradient-to-r from-sky-400 to-pink-400 bg-clip-text text-transparent">
               Talk with us for more opportunities
             </h2>
 
@@ -221,7 +221,7 @@ export default function HomePage() {
                 <a
                   key={index}
                   href={social.href}
-                  className="w-14 h-14 glass-effect-vortex rounded-2xl flex items-center justify-center text-xl transition-all duration-300 hover:scale-110 hover:bg-pink-500/20 border border-pink-500/30"
+                  className="w-14 h-14 glass-effect-vortex rounded-2xl flex items-center justify-center text-xl transition-all duration-300 hover:scale-110 hover:bg-sky-500/20 border border-sky-500/30"
                   title={social.title}
                 >
                   {typeof social.icon === "string" ? social.icon : social.icon}

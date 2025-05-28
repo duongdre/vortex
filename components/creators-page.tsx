@@ -5,8 +5,8 @@ import Image from "next/image"
 export default function CreatorsPage() {
   return (
     <div className="relative">
-      {/* Creators Blue-Pink Balanced Gradient Background */}
-      <div className="fixed inset-0 bg-gradient-to-br from-sky-500 via-pink-500 to-blue-600 -z-10" />
+      {/* Creators Lighter Vortex Blue-Pink Gradient Background */}
+      <div className="fixed inset-0 bg-gradient-to-br from-sky-500 via-blue-600 to-indigo-700 -z-10" />
 
       {/* Hero Section */}
       <section className="min-h-screen flex items-center px-4 pt-20">
@@ -22,7 +22,7 @@ export default function CreatorsPage() {
               />
               <Image src="/images/tiktok-logo.png" alt="TikTok" width={40} height={40} />
             </div>
-            <h1 className="text-5xl lg:text-7xl font-bold mb-8 bg-gradient-to-r from-white via-pink-200 to-sky-200 bg-clip-text text-transparent">
+            <h1 className="text-5xl lg:text-7xl font-bold mb-8 bg-gradient-to-r from-white to-sky-200 bg-clip-text text-transparent">
               TikTok Livestream Creator Program
             </h1>
             <p className="text-xl text-gray-300 mb-8 leading-relaxed">
@@ -40,7 +40,7 @@ export default function CreatorsPage() {
           <div className="animate-slideInFromRight flex justify-center">
             <div className="relative">
               <div className="w-80 h-[600px] glass-effect-vortex rounded-[3rem] p-6 transform rotate-3 hover:rotate-0 transition-transform duration-500">
-                <div className="w-full h-full bg-gradient-to-b from-pink-500 to-sky-600 rounded-[2.5rem] relative overflow-hidden">
+                <div className="w-full h-full bg-gradient-to-b from-sky-500 to-cyan-600 rounded-[2.5rem] relative overflow-hidden">
                   <div className="absolute top-6 right-6 bg-pink-500 text-white px-4 py-2 rounded-full text-sm font-bold animate-vortexPulse">
                     LIVE
                   </div>
@@ -68,7 +68,7 @@ export default function CreatorsPage() {
       <section className="py-24 px-4">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16 animate-fadeInUp">
-            <h2 className="text-4xl lg:text-6xl font-bold mb-6 bg-gradient-to-r from-pink-400 via-sky-400 to-pink-400 bg-clip-text text-transparent">
+            <h2 className="text-4xl lg:text-6xl font-bold mb-6 bg-gradient-to-r from-sky-400 to-pink-400 bg-clip-text text-transparent">
               What We Offer
             </h2>
             <p className="text-2xl text-gray-400 flex items-center justify-center gap-3">
@@ -84,7 +84,7 @@ export default function CreatorsPage() {
                 title: "Livestream on TikTok",
                 description:
                   "Personal team + professional studio. Guiding creators through everything they need to know about TikTok Live.",
-                gradient: "from-sky-500 to-pink-500",
+                gradient: "from-sky-500 to-cyan-500",
                 icon: <Image src="/images/tiktok-logo.png" alt="TikTok" width={24} height={24} />,
               },
               {
@@ -92,7 +92,7 @@ export default function CreatorsPage() {
                 title: "Exclusive Events",
                 description:
                   "Get exclusive traffic boosts and access to TikTok LIVE's official campaigns to maximize reach.",
-                gradient: "from-pink-500 to-sky-500",
+                gradient: "from-pink-500 to-rose-500",
                 icon: (
                   <Image src="/images/vortex-icon.png" alt="VORTEX" width={24} height={24} className="rounded-full" />
                 ),
@@ -113,7 +113,7 @@ export default function CreatorsPage() {
                 title: "Content Guidance",
                 description:
                   "Creators will receive personalized guidance on content production teams to help with logistics.",
-                gradient: "from-pink-500 to-sky-500",
+                gradient: "from-cyan-500 to-sky-500",
                 icon: (
                   <Image src="/images/vortex-icon.png" alt="VORTEX" width={24} height={24} className="rounded-full" />
                 ),
@@ -136,7 +136,7 @@ export default function CreatorsPage() {
       {/* FAQ Section */}
       <section className="py-24 px-4">
         <div className="max-w-4xl mx-auto">
-          <h2 className="text-4xl lg:text-6xl font-bold text-center mb-16 bg-gradient-to-r from-sky-400 via-pink-400 to-cyan-400 bg-clip-text text-transparent">
+          <h2 className="text-4xl lg:text-6xl font-bold text-center mb-16 bg-gradient-to-r from-cyan-400 to-pink-400 bg-clip-text text-transparent">
             FAQ
           </h2>
 
@@ -159,10 +159,10 @@ export default function CreatorsPage() {
               },
             ].map((faq, index) => (
               <div key={index} className="glass-effect-vortex rounded-2xl overflow-hidden modern-card">
-                <div className="p-6 cursor-pointer hover:bg-pink-500/5 transition-colors duration-300">
+                <div className="p-6 cursor-pointer hover:bg-sky-500/5 transition-colors duration-300">
                   <div className="flex justify-between items-center">
                     <h3 className="text-lg font-semibold text-white pr-4">{faq.question}</h3>
-                    <span className="text-pink-400 text-xl">+</span>
+                    <span className="text-sky-400 text-xl">+</span>
                   </div>
                   <p className="text-gray-300 mt-4 leading-relaxed">{faq.answer}</p>
                 </div>

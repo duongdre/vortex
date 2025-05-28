@@ -3,13 +3,13 @@
 export default function SellersPage() {
   return (
     <div className="relative min-h-screen">
-      {/* Sellers Blue-Pink Balanced Gradient Background */}
-      <div className="fixed inset-0 bg-gradient-to-br from-sky-500 via-pink-500 to-blue-600 -z-10" />
+      {/* Sellers Lighter Vortex Blue-Pink Gradient Background */}
+      <div className="fixed inset-0 bg-gradient-to-br from-sky-500 via-blue-600 to-indigo-700 -z-10" />
 
       <div className="flex justify-center items-center min-h-screen px-4 pt-20">
         <div className="w-full max-w-2xl">
           <div className="glass-effect-vortex p-8 rounded-3xl">
-            <h2 className="text-3xl font-bold text-center mb-8 bg-gradient-to-r from-pink-400 via-sky-400 to-pink-400 bg-clip-text text-transparent">
+            <h2 className="text-3xl font-bold text-center mb-8 bg-gradient-to-r from-sky-400 to-pink-400 bg-clip-text text-transparent">
               Request a Quote
             </h2>
 
@@ -19,7 +19,7 @@ export default function SellersPage() {
                   <label className="block text-gray-300 font-medium mb-2">First Name *</label>
                   <input
                     type="text"
-                    className="w-full p-4 glass-effect-vortex rounded-xl text-white placeholder-gray-400 border border-pink-500/20 focus:border-pink-400 focus:outline-none transition-colors duration-300"
+                    className="w-full p-4 glass-effect-vortex rounded-xl text-white placeholder-gray-400 border border-sky-500/20 focus:border-sky-400 focus:outline-none transition-colors duration-300"
                     placeholder="Enter your first name"
                     required
                   />
@@ -28,7 +28,7 @@ export default function SellersPage() {
                   <label className="block text-gray-300 font-medium mb-2">Last Name *</label>
                   <input
                     type="text"
-                    className="w-full p-4 glass-effect-vortex rounded-xl text-white placeholder-gray-400 border border-pink-500/20 focus:border-pink-400 focus:outline-none transition-colors duration-300"
+                    className="w-full p-4 glass-effect-vortex rounded-xl text-white placeholder-gray-400 border border-sky-500/20 focus:border-sky-400 focus:outline-none transition-colors duration-300"
                     placeholder="Enter your last name"
                     required
                   />
@@ -39,7 +39,7 @@ export default function SellersPage() {
                 <label className="block text-gray-300 font-medium mb-2">Email *</label>
                 <input
                   type="email"
-                  className="w-full p-4 glass-effect-vortex rounded-xl text-white placeholder-gray-400 border border-pink-500/20 focus:border-pink-400 focus:outline-none transition-colors duration-300"
+                  className="w-full p-4 glass-effect-vortex rounded-xl text-white placeholder-gray-400 border border-sky-500/20 focus:border-sky-400 focus:outline-none transition-colors duration-300"
                   placeholder="your.email@example.com"
                   required
                 />
@@ -49,7 +49,7 @@ export default function SellersPage() {
                 <label className="block text-gray-300 font-medium mb-2">Company</label>
                 <input
                   type="text"
-                  className="w-full p-4 glass-effect-vortex rounded-xl text-white placeholder-gray-400 border border-pink-500/20 focus:border-pink-400 focus:outline-none transition-colors duration-300"
+                  className="w-full p-4 glass-effect-vortex rounded-xl text-white placeholder-gray-400 border border-sky-500/20 focus:border-sky-400 focus:outline-none transition-colors duration-300"
                   placeholder="Your company name"
                 />
               </div>
@@ -57,7 +57,7 @@ export default function SellersPage() {
               <div>
                 <label className="block text-gray-300 font-medium mb-2">Phone Number</label>
                 <div className="flex gap-3">
-                  <select className="p-4 glass-effect-vortex rounded-xl text-white border border-pink-500/20 focus:border-pink-400 focus:outline-none transition-colors duration-300">
+                  <select className="p-4 glass-effect-vortex rounded-xl text-white border border-sky-500/20 focus:border-sky-400 focus:outline-none transition-colors duration-300">
                     <option value="+1">🇺🇸 +1</option>
                     <option value="+44">🇬🇧 +44</option>
                     <option value="+91">🇮🇳 +91</option>
@@ -65,7 +65,7 @@ export default function SellersPage() {
                   </select>
                   <input
                     type="tel"
-                    className="flex-1 p-4 glass-effect-vortex rounded-xl text-white placeholder-gray-400 border border-pink-500/20 focus:border-pink-400 focus:outline-none transition-colors duration-300"
+                    className="flex-1 p-4 glass-effect-vortex rounded-xl text-white placeholder-gray-400 border border-sky-500/20 focus:border-sky-400 focus:outline-none transition-colors duration-300"
                     placeholder="Your phone number"
                   />
                 </div>
@@ -74,7 +74,7 @@ export default function SellersPage() {
               <div>
                 <label className="block text-gray-300 font-medium mb-2">Service Type *</label>
                 <select
-                  className="w-full p-4 glass-effect-vortex rounded-xl text-white border border-pink-500/20 focus:border-pink-400 focus:outline-none transition-colors duration-300"
+                  className="w-full p-4 glass-effect-vortex rounded-xl text-white border border-sky-500/20 focus:border-sky-400 focus:outline-none transition-colors duration-300"
                   required
                 >
                   <option value="">Choose a service</option>
@@ -90,7 +90,7 @@ export default function SellersPage() {
               <div>
                 <label className="block text-gray-300 font-medium mb-2">Project Details</label>
                 <textarea
-                  className="w-full h-32 p-4 glass-effect-vortex rounded-xl text-white placeholder-gray-400 border border-pink-500/20 focus:border-pink-400 focus:outline-none transition-colors duration-300 resize-none"
+                  className="w-full h-32 p-4 glass-effect-vortex rounded-xl text-white placeholder-gray-400 border border-sky-500/20 focus:border-sky-400 focus:outline-none transition-colors duration-300 resize-none"
                   placeholder="Tell us about your project requirements, timeline, and any specific needs..."
                 />
               </div>

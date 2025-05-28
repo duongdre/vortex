@@ -71,7 +71,7 @@
   }
 }
 
-/* Vortex Service Card Backgrounds - Blue Dominant with More Pink */
+/* Vortex Service Card Backgrounds - Lighter Blue Dominant with Pink Accents */
 @keyframes radiateLines {
   0% {
     transform: rotate(0deg) scale(1);
@@ -99,9 +99,9 @@
   }
 }
 
-/* Service Card Blue - Blue with Pink Highlights */
+/* Service Card Blue - Lighter Primary Blue Theme */
 .service-card-blue {
-  background: linear-gradient(135deg, #60a5fa 0%, #ec4899 20%, #3b82f6 40%, #f472b6 60%, #2563eb 80%, #60a5fa 100%);
+  background: linear-gradient(135deg, #60a5fa 0%, #3b82f6 25%, #2563eb 50%, #1d4ed8 75%, #60a5fa 100%);
   position: relative;
   overflow: hidden;
 }
@@ -123,11 +123,11 @@
     conic-gradient(
       from 0deg,
       transparent,
-      rgba(236, 72, 153, 0.3),
+      rgba(255, 255, 255, 0.2),
       transparent,
-      rgba(96, 165, 250, 0.2),
+      rgba(255, 255, 255, 0.2),
       transparent,
-      rgba(244, 114, 182, 0.3),
+      rgba(255, 255, 255, 0.2),
       transparent
     );
   animation: radiateLines 8s linear infinite;
@@ -141,15 +141,15 @@
   left: 50%;
   width: 200px;
   height: 200px;
-  background: radial-gradient(circle, rgba(236, 72, 153, 0.2) 0%, rgba(96, 165, 250, 0.3) 50%, transparent 70%);
+  background: radial-gradient(circle, rgba(96, 165, 250, 0.3) 0%, transparent 70%);
   transform: translate(-50%, -50%);
   animation: energyPulse 4s ease-in-out infinite;
   z-index: 1;
 }
 
-/* Service Card Cyan-Blue - More Pink Integration */
+/* Service Card Cyan-Blue - Lighter Secondary Blue Theme */
 .service-card-cyan-blue {
-  background: linear-gradient(135deg, #22d3ee 0%, #ec4899 25%, #06b6d4 50%, #f472b6 75%, #22d3ee 100%);
+  background: linear-gradient(135deg, #22d3ee 0%, #06b6d4 25%, #0891b2 50%, #0e7490 75%, #22d3ee 100%);
   position: relative;
   overflow: hidden;
 }
@@ -164,21 +164,27 @@
   background: linear-gradient(
       0deg,
       transparent 48%,
-      rgba(244, 114, 182, 0.2) 49%,
-      rgba(244, 114, 182, 0.2) 51%,
+      rgba(255, 255, 255, 0.2) 49%,
+      rgba(255, 255, 255, 0.2) 51%,
       transparent 52%
     ),
-    linear-gradient(30deg, transparent 48%, rgba(34, 211, 238, 0.1) 49%, rgba(34, 211, 238, 0.1) 51%, transparent 52%),
-    linear-gradient(60deg, transparent 48%, rgba(236, 72, 153, 0.1) 49%, rgba(236, 72, 153, 0.1) 51%, transparent 52%),
-    linear-gradient(90deg, transparent 48%, rgba(34, 211, 238, 0.2) 49%, rgba(34, 211, 238, 0.2) 51%, transparent 52%),
+    linear-gradient(30deg, transparent 48%, rgba(255, 255, 255, 0.1) 49%, rgba(255, 255, 255, 0.1) 51%, transparent 52%),
+    linear-gradient(60deg, transparent 48%, rgba(255, 255, 255, 0.1) 49%, rgba(255, 255, 255, 0.1) 51%, transparent 52%),
+    linear-gradient(90deg, transparent 48%, rgba(255, 255, 255, 0.2) 49%, rgba(255, 255, 255, 0.2) 51%, transparent 52%),
     linear-gradient(
       120deg,
       transparent 48%,
-      rgba(244, 114, 182, 0.1) 49%,
-      rgba(244, 114, 182, 0.1) 51%,
+      rgba(255, 255, 255, 0.1) 49%,
+      rgba(255, 255, 255, 0.1) 51%,
       transparent 52%
     ),
-    linear-gradient(150deg, transparent 48%, rgba(34, 211, 238, 0.1) 49%, rgba(34, 211, 238, 0.1) 51%, transparent 52%);
+    linear-gradient(
+      150deg,
+      transparent 48%,
+      rgba(255, 255, 255, 0.1) 49%,
+      rgba(255, 255, 255, 0.1) 51%,
+      transparent 52%
+    );
   animation: radiateLines 6s linear infinite reverse;
   z-index: 1;
 }
@@ -190,15 +196,15 @@
   left: 50%;
   width: 150px;
   height: 150px;
-  background: radial-gradient(circle, rgba(244, 114, 182, 0.3) 0%, rgba(34, 211, 238, 0.4) 60%, transparent 80%);
+  background: radial-gradient(circle, rgba(34, 211, 238, 0.4) 0%, transparent 60%);
   transform: translate(-50%, -50%);
   animation: energyPulse 3s ease-in-out infinite;
   z-index: 1;
 }
 
-/* Service Card Blue-Pink - Balanced Blue-Pink */
+/* Service Card Blue-Pink - Lighter Blue with Pink Accent */
 .service-card-blue-pink {
-  background: linear-gradient(135deg, #ec4899 0%, #60a5fa 20%, #f472b6 40%, #7c3aed 60%, #ec4899 80%, #60a5fa 100%);
+  background: linear-gradient(135deg, #60a5fa 0%, #7c3aed 25%, #a855f7 50%, #ec4899 75%, #f472b6 100%);
   position: relative;
   overflow: hidden;
 }
@@ -213,19 +219,31 @@
   background: linear-gradient(
       45deg,
       transparent 40%,
-      rgba(236, 72, 153, 0.3) 41%,
-      rgba(236, 72, 153, 0.3) 43%,
+      rgba(255, 255, 255, 0.3) 41%,
+      rgba(255, 255, 255, 0.3) 43%,
       transparent 44%
     ),
-    linear-gradient(-45deg, transparent 40%, rgba(96, 165, 250, 0.2) 41%, rgba(96, 165, 250, 0.2) 43%, transparent 44%),
+    linear-gradient(
+      -45deg,
+      transparent 40%,
+      rgba(255, 255, 255, 0.2) 41%,
+      rgba(255, 255, 255, 0.2) 43%,
+      transparent 44%
+    ),
     linear-gradient(
       135deg,
       transparent 40%,
-      rgba(244, 114, 182, 0.2) 41%,
-      rgba(244, 114, 182, 0.2) 43%,
+      rgba(255, 255, 255, 0.2) 41%,
+      rgba(255, 255, 255, 0.2) 43%,
       transparent 44%
     ),
-    linear-gradient(-135deg, transparent 40%, rgba(236, 72, 153, 0.3) 41%, rgba(236, 72, 153, 0.3) 43%, transparent 44%);
+    linear-gradient(
+      -135deg,
+      transparent 40%,
+      rgba(255, 255, 255, 0.3) 41%,
+      rgba(255, 255, 255, 0.3) 43%,
+      transparent 44%
+    );
   animation: radiateLines 10s linear infinite;
   z-index: 1;
 }
@@ -237,7 +255,7 @@
   right: 20%;
   width: 100px;
   height: 100px;
-  background: radial-gradient(circle, rgba(236, 72, 153, 0.4) 0%, rgba(96, 165, 250, 0.2) 70%, transparent 90%);
+  background: radial-gradient(circle, rgba(236, 72, 153, 0.3) 0%, transparent 70%);
   animation: energyPulse 5s ease-in-out infinite;
   z-index: 1;
 }
@@ -342,23 +360,23 @@
 @keyframes vortexPulse {
   0%,
   100% {
-    box-shadow: 0 0 0 0 rgba(236, 72, 153, 0.7);
+    box-shadow: 0 0 0 0 rgba(96, 165, 250, 0.7);
   }
   70% {
-    box-shadow: 0 0 0 10px rgba(236, 72, 153, 0);
+    box-shadow: 0 0 0 10px rgba(96, 165, 250, 0);
   }
 }
 
-/* Vortex Glass Effect - Blue with Pink Accents */
+/* Vortex Glass Effect - Lighter Blue Theme */
 .glass-effect-vortex {
   background: rgba(0, 0, 0, 0.3);
   backdrop-filter: blur(20px);
-  border: 1px solid rgba(236, 72, 153, 0.3);
+  border: 1px solid rgba(96, 165, 250, 0.2);
 }
 
-/* Vortex Gradient Text - More Pink */
+/* Vortex Gradient Text */
 .gradient-text-vortex {
-  background: linear-gradient(135deg, #60a5fa 0%, #ec4899 50%, #f472b6 100%);
+  background: linear-gradient(135deg, #60a5fa 0%, #ec4899 100%);
   background-size: 200% 200%;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -372,17 +390,17 @@
 }
 
 .vortex-pink-glow {
-  box-shadow: 0 0 20px rgba(236, 72, 153, 0.4);
+  box-shadow: 0 0 20px rgba(236, 72, 153, 0.3);
 }
 
-/* Modern Card Hover - Pink-Blue Mix */
+/* Modern Card Hover - Vortex Style */
 .modern-card {
   transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .modern-card:hover {
   transform: translateY(-8px);
-  box-shadow: 0 20px 40px rgba(236, 72, 153, 0.2), 0 10px 20px rgba(96, 165, 250, 0.1);
+  box-shadow: 0 20px 40px rgba(96, 165, 250, 0.2);
 }
 
 /* Utility Classes */
@@ -426,7 +444,7 @@
   animation: vortexPulse 2s infinite;
 }
 
-/* Custom Scrollbar - Pink-Blue Mix */
+/* Custom Scrollbar - Lighter Vortex Style */
 ::-webkit-scrollbar {
   width: 6px;
 }
@@ -436,45 +454,45 @@
 }
 
 ::-webkit-scrollbar-thumb {
-  background: linear-gradient(135deg, #60a5fa, #ec4899, #f472b6);
+  background: linear-gradient(135deg, #60a5fa, #ec4899);
   border-radius: 3px;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background: linear-gradient(135deg, #ec4899, #60a5fa, #f472b6);
+  background: linear-gradient(135deg, #ec4899, #60a5fa);
 }
 
 /* Selection */
 ::selection {
-  background: rgba(236, 72, 153, 0.3);
+  background: rgba(96, 165, 250, 0.3);
   color: white;
 }
 
 /* Focus styles */
 *:focus {
-  outline: 2px solid #ec4899;
+  outline: 2px solid #60a5fa;
   outline-offset: 2px;
 }
 
-/* Vortex Button Styles - Blue with Pink Highlights */
+/* Vortex Button Styles - Lighter Blue */
 .vortex-button {
-  background: linear-gradient(135deg, #60a5fa, #ec4899, #3b82f6);
+  background: linear-gradient(135deg, #60a5fa, #3b82f6);
   transition: all 0.3s ease;
 }
 
 .vortex-button:hover {
-  background: linear-gradient(135deg, #ec4899, #60a5fa, #f472b6);
+  background: linear-gradient(135deg, #3b82f6, #60a5fa);
   transform: translateY(-2px);
-  box-shadow: 0 10px 25px rgba(236, 72, 153, 0.4);
+  box-shadow: 0 10px 25px rgba(96, 165, 250, 0.4);
 }
 
 .vortex-pink-button {
-  background: linear-gradient(135deg, #ec4899, #60a5fa, #be185d);
+  background: linear-gradient(135deg, #ec4899, #be185d);
   transition: all 0.3s ease;
 }
 
 .vortex-pink-button:hover {
-  background: linear-gradient(135deg, #f472b6, #ec4899, #60a5fa);
+  background: linear-gradient(135deg, #be185d, #ec4899);
   transform: translateY(-2px);
   box-shadow: 0 10px 25px rgba(236, 72, 153, 0.4);
 }

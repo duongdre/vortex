@@ -3,13 +3,13 @@
 export default function BrandsPage() {
   return (
     <div className="relative">
-      {/* Brands Blue-Pink Balanced Gradient Background */}
-      <div className="fixed inset-0 bg-gradient-to-br from-sky-500 via-pink-500 to-blue-600 -z-10" />
+      {/* Brands Lighter Vortex Blue-Pink Gradient Background */}
+      <div className="fixed inset-0 bg-gradient-to-br from-sky-500 via-blue-600 to-indigo-700 -z-10" />
 
       {/* Hero Section */}
       <section className="min-h-screen flex items-center justify-center px-4 pt-20">
         <div className="text-center max-w-5xl animate-fadeInUp">
-          <h1 className="text-5xl lg:text-7xl font-bold mb-8 bg-gradient-to-r from-white via-pink-200 to-sky-200 bg-clip-text text-transparent">
+          <h1 className="text-5xl lg:text-7xl font-bold mb-8 bg-gradient-to-r from-white via-sky-200 to-pink-200 bg-clip-text text-transparent">
             ALL-IN-ONE TIKTOK SHOP SOLUTIONS
           </h1>
           <p className="text-xl text-gray-300 mb-12 max-w-3xl mx-auto">
@@ -19,7 +19,7 @@ export default function BrandsPage() {
             <button className="vortex-button text-white px-8 py-4 rounded-full font-semibold border-none cursor-pointer">
               Get a Free Strategy Plan
             </button>
-            <button className="glass-effect-vortex border border-pink-400/50 text-white px-8 py-4 rounded-full font-semibold transition-all duration-300 hover:bg-pink-400/10 hover:border-pink-400">
+            <button className="glass-effect-vortex border border-sky-400/50 text-white px-8 py-4 rounded-full font-semibold transition-all duration-300 hover:bg-sky-400/10 hover:border-sky-400">
               Book an Appointment
             </button>
           </div>
@@ -29,7 +29,7 @@ export default function BrandsPage() {
       {/* Services Section */}
       <section className="py-24 px-4">
         <div className="max-w-7xl mx-auto">
-          <h2 className="text-4xl lg:text-6xl font-bold text-center mb-16 bg-gradient-to-r from-pink-400 via-sky-400 to-pink-400 bg-clip-text text-transparent">
+          <h2 className="text-4xl lg:text-6xl font-bold text-center mb-16 bg-gradient-to-r from-sky-400 to-pink-400 bg-clip-text text-transparent">
             TikTok Shop Partnership Services
           </h2>
 
@@ -40,14 +40,14 @@ export default function BrandsPage() {
                 title: "Affiliation Management",
                 description:
                   "We create powerful marketing strategies with precision. Boost affiliate success with our network of top-tier influencers.",
-                gradient: "from-sky-500 to-pink-500",
+                gradient: "from-sky-500 to-cyan-500",
               },
               {
                 icon: "📈",
                 title: "Ads Promotion",
                 description:
                   "We design magnetic advertising campaigns that create viral content. Our ads generate conversation and drive sales.",
-                gradient: "from-pink-400 to-sky-500",
+                gradient: "from-cyan-400 to-sky-500",
               },
               {
                 icon: "📺",
@@ -81,14 +81,14 @@ export default function BrandsPage() {
       {/* Achievements Section */}
       <section className="py-24 px-4">
         <div className="max-w-7xl mx-auto text-center">
-          <h2 className="text-4xl lg:text-6xl font-bold mb-16 bg-gradient-to-r from-sky-400 via-pink-400 to-cyan-400 bg-clip-text text-transparent">
+          <h2 className="text-4xl lg:text-6xl font-bold mb-16 bg-gradient-to-r from-cyan-400 to-pink-400 bg-clip-text text-transparent">
             Our Achievements
           </h2>
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-4xl mx-auto">
             {[
-              { number: "30K+", label: "Creators", gradient: "from-sky-500 to-pink-500" },
-              { number: "25K+", label: "Videos", gradient: "from-pink-400 to-sky-500" },
+              { number: "30K+", label: "Creators", gradient: "from-sky-500 to-cyan-500" },
+              { number: "25K+", label: "Videos", gradient: "from-cyan-400 to-sky-500" },
               { number: "53M+", label: "GMV", gradient: "from-sky-400 to-pink-400" },
             ].map((stat, index) => (
               <div key={index} className="glass-effect-vortex p-8 rounded-3xl modern-card">
@@ -107,7 +107,7 @@ export default function BrandsPage() {
       {/* Clients Section */}
       <section className="py-24 px-4">
         <div className="max-w-7xl mx-auto text-center">
-          <h2 className="text-4xl lg:text-6xl font-bold text-center mb-16 bg-gradient-to-r from-pink-400 via-sky-400 to-pink-400 bg-clip-text text-transparent">
+          <h2 className="text-4xl lg:text-6xl font-bold mb-16 bg-gradient-to-r from-sky-400 to-pink-400 bg-clip-text text-transparent">
             Our Clients
           </h2>
 
@@ -131,7 +131,7 @@ export default function BrandsPage() {
             ].map((client, index) => (
               <div
                 key={index}
-                className="glass-effect-vortex p-4 rounded-2xl h-20 flex items-center justify-center text-sm font-semibold text-gray-300 hover:text-white hover:bg-pink-500/10 transition-all duration-300 modern-card border border-pink-500/20"
+                className="glass-effect-vortex p-4 rounded-2xl h-20 flex items-center justify-center text-sm font-semibold text-gray-300 hover:text-white hover:bg-sky-500/10 transition-all duration-300 modern-card border border-sky-500/20"
               >
                 {client}
               </div>
