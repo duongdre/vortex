@@ -97,7 +97,7 @@ export default function BrandsPage() {
                 <div
                   className={`text-5xl font-bold bg-gradient-to-r ${stat.gradient} bg-clip-text text-transparent mb-2`}
                 >
-                  <AnimatedCounter end={stat.number} duration={2500} suffix={stat.suffix} />
+                  <AnimatedCounter end={stat.number} duration={5000} suffix={stat.suffix} />
                 </div>
                 <div className="text-xl text-gray-300">{stat.label}</div>
               </div>

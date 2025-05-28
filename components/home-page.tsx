@@ -130,7 +130,7 @@ export default function HomePage({ setCurrentPage }: HomePageProps) {
                   <div className="text-4xl font-bold bg-gradient-to-r from-sky-400 to-pink-400 bg-clip-text text-transparent mb-2">
                     <AnimatedCounter
                       end={stat.number}
-                      duration={2500}
+                      duration={5000}
                       prefix={stat.prefix || ""}
                       suffix={stat.suffix || ""}
                     />

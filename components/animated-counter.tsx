@@ -13,7 +13,7 @@ interface AnimatedCounterProps {
 
 export default function AnimatedCounter({
   end,
-  duration = 2000,
+  duration = 5000,
   decimals = 0,
   suffix = "",
   prefix = "",

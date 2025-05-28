@@ -184,7 +184,7 @@ export default function TestimonialsPage() {
                 <div className="text-4xl font-bold bg-gradient-to-r from-sky-400 to-pink-400 bg-clip-text text-transparent mb-2">
                   <AnimatedCounter
                     end={stat.value}
-                    duration={2500}
+                    duration={5000}
                     prefix={stat.prefix || ""}
                     suffix={stat.suffix || ""}
                   />
@@ -223,7 +223,7 @@ export default function TestimonialsPage() {
                 <div className="text-3xl mb-3">{niche.icon}</div>
                 <h3 className="text-sm font-bold text-white mb-1">{niche.category}</h3>
                 <p className="text-xs text-sky-400">
-                  <AnimatedCounter end={niche.count} duration={2000} suffix="+" /> creators
+                  <AnimatedCounter end={niche.count} duration={5000} suffix="+" /> creators
                 </p>
               </div>
             ))}
