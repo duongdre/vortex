@@ -23,13 +23,13 @@ export default function CreatorsPage() {
               <Image src="/images/tiktok-logo.png" alt="TikTok" width={40} height={40} />
             </div>
             <h1 className="text-5xl lg:text-7xl font-bold mb-8 bg-gradient-to-r from-white to-sky-200 bg-clip-text text-transparent">
-              TikTok Livestream Creator Program
+              Elite TikTok Creator Accelerator
             </h1>
             <p className="text-xl text-gray-300 mb-8 leading-relaxed">
-              As TikTok Live's <span className="text-sky-400 font-semibold">official partner</span>, NBCN helps creators
-              livestream on their TikTok account in our{" "}
-              <span className="text-pink-400 font-semibold">LA content studio</span>, grow a following, and monetize
-              their talent with our <span className="text-sky-400 font-semibold">FREE creator partnership</span>.
+              Join the <span className="text-sky-400 font-semibold">premier creator network</span> that's redefining
+              digital success. As TikTok's <span className="text-pink-400 font-semibold">strategic growth partner</span>
+              , VORTEX provides exclusive access to cutting-edge tools, premium brand collaborations, and
+              <span className="text-sky-400 font-semibold">zero-commission earnings</span> that put creators first.
             </p>
             <button className="vortex-button text-white px-8 py-4 rounded-full text-lg font-semibold border-none cursor-pointer flex items-center gap-3">
               <Image src="/images/vortex-icon.png" alt="VORTEX" width={24} height={24} className="rounded-full" />
@@ -81,17 +81,17 @@ export default function CreatorsPage() {
             {[
               {
                 number: "01",
-                title: "Livestream on TikTok",
+                title: "Advanced LIVE Strategy",
                 description:
-                  "Personal team + professional studio. Guiding creators through everything they need to know about TikTok Live.",
+                  "Master TikTok LIVE with our proprietary growth framework. Access professional studios, dedicated coaching teams, and real-time analytics that transform your streaming into a revenue powerhouse.",
                 gradient: "from-sky-500 to-cyan-500",
                 icon: <Image src="/images/tiktok-logo.png" alt="TikTok" width={24} height={24} />,
               },
               {
                 number: "02",
-                title: "Exclusive Events",
+                title: "Exclusive Brand Partnerships",
                 description:
-                  "Get exclusive traffic boosts and access to TikTok LIVE's official campaigns to maximize reach.",
+                  "Connect with premium brands through our curated partnership network. Enjoy priority access to high-value campaigns and collaborative opportunities that align with your creative vision.",
                 gradient: "from-pink-500 to-rose-500",
                 icon: (
                   <Image src="/images/vortex-icon.png" alt="VORTEX" width={24} height={24} className="rounded-full" />
@@ -99,8 +99,9 @@ export default function CreatorsPage() {
               },
               {
                 number: "03",
-                title: "Monetization Assistance",
-                description: "NBCN helps creators align their content with TikTok LIVE's monetization models.",
+                title: "Revenue Optimization",
+                description:
+                  "Maximize your earning potential with our comprehensive monetization strategies. From TikTok Shop integration to sponsored content optimization, we ensure every stream generates maximum value.",
                 gradient: "from-sky-400 to-pink-400",
                 icon: (
                   <svg width="24" height="24" viewBox="0 0 24 24" fill="white">
@@ -110,9 +111,9 @@ export default function CreatorsPage() {
               },
               {
                 number: "04",
-                title: "Content Guidance",
+                title: "Creative Excellence Program",
                 description:
-                  "Creators will receive personalized guidance on content production teams to help with logistics.",
+                  "Elevate your content with our creative development team. Receive personalized guidance on trending formats, viral strategies, and production techniques that set you apart from the competition.",
                 gradient: "from-cyan-500 to-sky-500",
                 icon: (
                   <Image src="/images/vortex-icon.png" alt="VORTEX" width={24} height={24} className="rounded-full" />

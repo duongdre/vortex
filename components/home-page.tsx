@@ -27,13 +27,13 @@ export default function HomePage() {
           </h1>
           <h2 className="text-2xl lg:text-4xl mb-8 text-white font-light drop-shadow-lg flex items-center justify-center gap-3">
             <Image src="/images/tiktok-logo.png" alt="TikTok" width={40} height={40} />
-            TikTok Creator Network
+            Where Digital Dreams Take Flight
           </h2>
           <p className="max-w-4xl text-lg lg:text-xl leading-relaxed text-gray-200 mb-12 drop-shadow-lg">
-            VORTEX was founded with the vision of helping TikTok CREATORS thrive in the digital landscape. Our
-            ever-expanding community is home to over 4,000+ vibrant creators, each making waves in the TikTok universe.
-            With a clear-cut mission to empower creators, we help TikTok creators and shop partners amplify audience
-            reach, elevate content quality, and turn passions into profitable ventures.
+            VORTEX is revolutionizing the creator economy through cutting-edge TikTok LIVE strategies and innovative
+            brand partnerships. Our thriving community of 4,000+ creators doesn't just follow trends—we create them.
+            From viral content creation to strategic monetization, we transform creative passion into sustainable
+            success stories.
           </p>
           <button className="vortex-button text-white px-8 py-4 rounded-full text-lg font-semibold border-none cursor-pointer shadow-2xl flex items-center gap-3 mx-auto">
             <Image src="/images/vortex-icon.png" alt="VORTEX" width={24} height={24} className="rounded-full" />
@@ -49,7 +49,7 @@ export default function HomePage() {
         <section className="py-24 px-4 relative overflow-hidden">
           <div className="max-w-7xl mx-auto relative z-10">
             <h2 className="text-4xl lg:text-6xl font-bold text-center mb-16 bg-gradient-to-r from-sky-400 to-pink-400 bg-clip-text text-transparent">
-              Our Achievements
+              Proven Excellence in Creator Growth
             </h2>
 
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 max-w-5xl mx-auto">
@@ -57,9 +57,10 @@ export default function HomePage() {
                 <div className="w-16 h-16 bg-gradient-to-r from-sky-500 to-cyan-500 rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300">
                   <Image src="/images/tiktok-logo.png" alt="TikTok" width={32} height={32} />
                 </div>
-                <h3 className="text-2xl font-bold text-white mb-4">TikTok Live Achievement</h3>
+                <h3 className="text-2xl font-bold text-white mb-4">TikTok LIVE Mastery</h3>
                 <p className="text-gray-300 leading-relaxed">
-                  Leading the industry with unprecedented live streaming success rates and audience engagement metrics.
+                  Pioneering next-generation livestream strategies that consistently deliver 300% higher engagement
+                  rates and breakthrough audience growth for our creator network.
                 </p>
               </div>
 
@@ -67,9 +68,10 @@ export default function HomePage() {
                 <div className="w-16 h-16 bg-gradient-to-r from-pink-500 to-rose-500 rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300">
                   <Image src="/images/vortex-icon.png" alt="VORTEX" width={32} height={32} className="rounded-full" />
                 </div>
-                <h3 className="text-2xl font-bold text-white mb-4">TikTok E-commerce Achievement</h3>
+                <h3 className="text-2xl font-bold text-white mb-4">Revenue Revolution</h3>
                 <p className="text-gray-300 leading-relaxed">
-                  Driving millions in revenue through innovative e-commerce strategies and creator partnerships.
+                  Transforming creator potential into profit through strategic e-commerce integration, generating
+                  millions in revenue while maintaining authentic brand partnerships.
                 </p>
               </div>
             </div>
