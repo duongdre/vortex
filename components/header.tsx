@@ -14,22 +14,23 @@ export default function Header({ currentPage, setCurrentPage }: HeaderProps) {
 
   const navigationItems = [
     { id: "home", label: "Home" },
+    { id: "about", label: "About Ash" },
     { id: "creators", label: "Creators" },
     { id: "brands", label: "Brands" },
-    { id: "sellers", label: "Sellers" },
-    { id: "story", label: "Story" },
+    { id: "testimonials", label: "Success Stories" },
+    { id: "story", label: "Our Journey" },
   ]
 
   const handleNavClick = (pageId: string) => {
     setCurrentPage(pageId)
-    setIsMobileMenuOpen(false) // Close mobile menu when navigating
+    setIsMobileMenuOpen(false)
   }
 
   return (
     <header className="fixed top-0 w-full z-50 glass-effect-vortex border-b border-sky-500/20">
       <div className="max-w-7xl mx-auto px-4 py-4 flex justify-between items-center">
         {/* VORTEX Logo */}
-        <div className="flex items-center gap-3">
+        <div className="flex items-center gap-3 cursor-pointer" onClick={() => handleNavClick("home")}>
           <Image
             src="/images/vortex-icon.png"
             alt="VORTEX Logo"
@@ -61,7 +62,7 @@ export default function Header({ currentPage, setCurrentPage }: HeaderProps) {
 
         {/* Tablet Navigation - Smaller buttons */}
         <nav className="hidden md:flex lg:hidden gap-1">
-          {navigationItems.map((item) => (
+          {navigationItems.slice(0, 4).map((item) => (
             <button
               key={item.id}
               onClick={() => handleNavClick(item.id)}
@@ -76,13 +77,15 @@ export default function Header({ currentPage, setCurrentPage }: HeaderProps) {
           ))}
         </nav>
 
-        {/* Right side - Login button and Mobile menu toggle */}
+        {/* Right side - Contact button and Mobile menu toggle */}
         <div className="flex items-center gap-3">
-          {/* Login Button - Responsive sizing */}
-          <button className="vortex-button px-4 lg:px-6 py-2 rounded-xl text-white font-semibold border-none cursor-pointer flex items-center gap-2 text-sm lg:text-base">
+          <button
+            onClick={() => handleNavClick("sellers")}
+            className="vortex-button px-4 lg:px-6 py-2 rounded-xl text-white font-semibold border-none cursor-pointer flex items-center gap-2 text-sm lg:text-base"
+          >
             <Image src="/images/tiktok-logo.png" alt="TikTok" width={16} height={16} className="lg:w-5 lg:h-5" />
-            <span className="hidden sm:inline">Login</span>
-            <span className="sm:hidden">👤</span>
+            <span className="hidden sm:inline">Contact Ash</span>
+            <span className="sm:hidden">📞</span>
           </button>
 
           {/* Mobile Menu Toggle */}
