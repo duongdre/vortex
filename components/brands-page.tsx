@@ -1,5 +1,7 @@
 "use client"
 
+import AnimatedCounter from "./animated-counter"
+
 export default function BrandsPage() {
   return (
     <div className="relative">
@@ -87,15 +89,15 @@ export default function BrandsPage() {
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-4xl mx-auto">
             {[
-              { number: "30K+", label: "Creators", gradient: "from-sky-500 to-cyan-500" },
-              { number: "25K+", label: "Videos", gradient: "from-cyan-400 to-sky-500" },
-              { number: "53M+", label: "GMV", gradient: "from-sky-400 to-pink-400" },
+              { number: 30000, label: "Creators", gradient: "from-sky-500 to-cyan-500", suffix: "+" },
+              { number: 25000, label: "Videos", gradient: "from-cyan-400 to-sky-500", suffix: "+" },
+              { number: 53, label: "GMV", gradient: "from-sky-400 to-pink-400", suffix: "M+" },
             ].map((stat, index) => (
               <div key={index} className="glass-effect-vortex p-8 rounded-3xl modern-card">
                 <div
                   className={`text-5xl font-bold bg-gradient-to-r ${stat.gradient} bg-clip-text text-transparent mb-2`}
                 >
-                  {stat.number}
+                  <AnimatedCounter end={stat.number} duration={5000} suffix={stat.suffix} />
                 </div>
                 <div className="text-xl text-gray-300">{stat.label}</div>
               </div>

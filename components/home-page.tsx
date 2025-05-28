@@ -1,6 +1,7 @@
 "use client"
 
 import Image from "next/image"
+import AnimatedCounter from "./animated-counter"
 
 interface HomePageProps {
   setCurrentPage: (page: string) => void
@@ -119,15 +120,20 @@ export default function HomePage({ setCurrentPage }: HomePageProps) {
 
             <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
               {[
-                { number: "4,000+", label: "Active Creators", icon: "👥" },
-                { number: "$50M+", label: "Creator Earnings", icon: "💰" },
-                { number: "500M+", label: "Total Views", icon: "👁️" },
-                { number: "0%", label: "Commission Fees", icon: "🎯" },
+                { number: 4000, label: "Active Creators", icon: "👥", suffix: "+" },
+                { number: 50, label: "Creator Earnings", icon: "💰", prefix: "$", suffix: "M+" },
+                { number: 500, label: "Total Views", icon: "👁️", suffix: "M+" },
+                { number: 0, label: "Commission Fees", icon: "🎯", suffix: "%" },
               ].map((stat, index) => (
                 <div key={index} className="glass-effect-vortex p-8 rounded-3xl modern-card text-center">
                   <div className="text-4xl mb-4">{stat.icon}</div>
                   <div className="text-4xl font-bold bg-gradient-to-r from-sky-400 to-pink-400 bg-clip-text text-transparent mb-2">
-                    {stat.number}
+                    <AnimatedCounter
+                      end={stat.number}
+                      duration={5000}
+                      prefix={stat.prefix || ""}
+                      suffix={stat.suffix || ""}
+                    />
                   </div>
                   <div className="text-xl text-gray-300">{stat.label}</div>
                 </div>
