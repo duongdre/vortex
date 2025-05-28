@@ -1,6 +1,6 @@
 "use client"
 
-import { useState } from "react"
+import { useState, useEffect } from "react"
 import Header from "@/components/header"
 import HomePage from "@/components/home-page"
 import AboutPage from "@/components/about-page"
@@ -12,6 +12,11 @@ import TestimonialsPage from "@/components/testimonials-page"
 
 export default function VortexWebsite() {
   const [currentPage, setCurrentPage] = useState("home")
+
+  // Scroll to top whenever page changes
+  useEffect(() => {
+    window.scrollTo({ top: 0, behavior: "smooth" })
+  }, [currentPage])
 
   return (
     <div className="min-h-screen text-white overflow-x-hidden">
