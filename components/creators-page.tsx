@@ -9,59 +9,53 @@ export default function CreatorsPage() {
 
       {/* Hero Section */}
       <section className="min-h-screen flex items-center px-4 pt-20">
-        <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 items-center">
+        <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
           <div className="animate-slideInFromLeft">
-            <div className="flex items-center gap-3 mb-4 sm:mb-6">
+            <div className="flex items-center gap-4 mb-6">
               <Image
                 src="/images/vortex-icon.png"
                 alt="VORTEX Logo"
-                width={40}
-                height={40}
-                className="rounded-full animate-modernPulse sm:w-[50px] sm:h-[50px]"
+                width={50}
+                height={50}
+                className="rounded-full animate-modernPulse"
               />
-              <Image src="/images/tiktok-logo.png" alt="TikTok" width={32} height={32} className="sm:w-[40px] sm:h-[40px]" />
+              <Image src="/images/tiktok-logo.png" alt="TikTok" width={40} height={40} />
             </div>
-            <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-7xl font-bold mb-6 sm:mb-8 bg-gradient-to-r from-white to-sky-200 bg-clip-text text-transparent">
+            <h1 className="text-5xl lg:text-7xl font-bold mb-8 bg-gradient-to-r from-white to-sky-200 bg-clip-text text-transparent">
               Join Ash's Elite Creator Network
             </h1>
-            <p className="text-base sm:text-lg md:text-xl text-gray-300 mb-6 sm:mb-8 leading-relaxed">
+            <p className="text-xl text-gray-300 mb-8 leading-relaxed">
               Experience the <span className="text-sky-400 font-semibold">Ash Davis difference</span>—where creators
               aren't just clients, they're family. As TikTok's{" "}
               <span className="text-pink-400 font-semibold">most trusted partner</span>, VORTEX provides exclusive
               access to Ash's proven strategies, premium brand collaborations, and
               <span className="text-sky-400 font-semibold">zero-commission earnings</span> that put your success first.
             </p>
-            <button className="vortex-button text-white px-4 sm:px-6 md:px-8 py-2 sm:py-3 md:py-4 rounded-full text-sm sm:text-base md:text-lg font-semibold border-none cursor-pointer flex items-center gap-2 sm:gap-3">
-              <Image
-                src="/images/vortex-icon.png"
-                alt="VORTEX"
-                width={16}
-                height={16}
-                className="rounded-full sm:w-[20px] sm:h-[20px] md:w-[24px] md:h-[24px]"
-              />
+            <button className="vortex-button text-white px-8 py-4 rounded-full text-lg font-semibold border-none cursor-pointer flex items-center gap-3">
+              <Image src="/images/vortex-icon.png" alt="VORTEX" width={24} height={24} className="rounded-full" />
               Apply to Join Ash's Network
             </button>
           </div>
 
-          <div className="animate-slideInFromRight flex justify-center mt-8 lg:mt-0">
+          <div className="animate-slideInFromRight flex justify-center">
             <div className="relative">
-              <div className="w-64 h-[480px] sm:w-72 sm:h-[540px] md:w-80 md:h-[600px] glass-effect-vortex rounded-[2rem] sm:rounded-[2.5rem] md:rounded-[3rem] p-4 sm:p-5 md:p-6 transform rotate-3 hover:rotate-0 transition-transform duration-500">
-                <div className="w-full h-full bg-gradient-to-b from-sky-500 to-cyan-600 rounded-[1.5rem] sm:rounded-[2rem] md:rounded-[2.5rem] relative overflow-hidden">
-                  <div className="absolute top-4 sm:top-5 md:top-6 right-4 sm:right-5 md:right-6 bg-pink-500 text-white px-3 py-1 sm:px-4 sm:py-2 rounded-full text-xs sm:text-sm font-bold animate-vortexPulse">
+              <div className="w-80 h-[600px] glass-effect-vortex rounded-[3rem] p-6 transform rotate-3 hover:rotate-0 transition-transform duration-500">
+                <div className="w-full h-full bg-gradient-to-b from-sky-500 to-cyan-600 rounded-[2.5rem] relative overflow-hidden">
+                  <div className="absolute top-6 right-6 bg-pink-500 text-white px-4 py-2 rounded-full text-sm font-bold animate-vortexPulse">
                     LIVE
                   </div>
-                  <div className="absolute bottom-16 sm:bottom-18 md:bottom-20 left-1/2 transform -translate-x-1/2 text-center">
-                    <div className="w-12 h-12 sm:w-14 sm:h-14 md:w-16 md:h-16 bg-black rounded-xl sm:rounded-2xl flex items-center justify-center text-2xl sm:text-3xl mb-3 sm:mb-4 mx-auto overflow-hidden">
+                  <div className="absolute bottom-20 left-1/2 transform -translate-x-1/2 text-center">
+                    <div className="w-16 h-16 bg-black rounded-2xl flex items-center justify-center text-3xl mb-4 mx-auto overflow-hidden">
                       <Image
                         src="/images/vortex-icon.png"
                         alt="VORTEX"
-                        width={30}
-                        height={30}
-                        className="rounded-full sm:w-[35px] sm:h-[35px] md:w-[40px] md:h-[40px]"
+                        width={40}
+                        height={40}
+                        className="rounded-full"
                       />
                     </div>
-                    <h3 className="text-base sm:text-lg md:text-xl font-bold text-white">VORTEX Creator</h3>
-                    <p className="text-xs sm:text-sm text-white/80">Ash Davis Network</p>
+                    <h3 className="text-white text-xl font-bold">VORTEX Creator</h3>
+                    <p className="text-white/80">Ash Davis Network</p>
                   </div>
                 </div>
               </div>
@@ -71,19 +65,19 @@ export default function CreatorsPage() {
       </section>
 
       {/* What Ash Offers Section */}
-      <section className="py-16 sm:py-20 md:py-24 px-4">
+      <section className="py-24 px-4">
         <div className="max-w-7xl mx-auto">
-          <div className="text-center mb-10 sm:mb-16 animate-fadeInUp">
-            <h2 className="text-3xl sm:text-4xl lg:text-6xl font-bold mb-4 sm:mb-6 bg-gradient-to-r from-sky-400 to-pink-400 bg-clip-text text-transparent">
+          <div className="text-center mb-16 animate-fadeInUp">
+            <h2 className="text-4xl lg:text-6xl font-bold mb-6 bg-gradient-to-r from-sky-400 to-pink-400 bg-clip-text text-transparent">
               The Ash Davis Advantage
             </h2>
-            <p className="text-lg sm:text-xl md:text-2xl text-gray-400 flex items-center justify-center gap-2 sm:gap-3">
-              <Image src="/images/tiktok-logo.png" alt="TikTok" width={24} height={24} className="sm:w-[30px] sm:h-[30px]" />
+            <p className="text-2xl text-gray-400 flex items-center justify-center gap-3">
+              <Image src="/images/tiktok-logo.png" alt="TikTok" width={30} height={30} />
               Personal mentorship from a proven industry leader
             </p>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-6 sm:gap-8">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
             {[
               {
                 number: "01",
@@ -128,14 +122,14 @@ export default function CreatorsPage() {
                 ),
               },
             ].map((feature, index) => (
-              <div key={index} className="glass-effect-vortex p-6 sm:p-8 rounded-3xl modern-card group">
+              <div key={index} className="glass-effect-vortex p-8 rounded-3xl modern-card group">
                 <div
-                  className={`w-12 h-12 sm:w-16 sm:h-16 bg-gradient-to-r ${feature.gradient} rounded-2xl flex items-center justify-center mb-4 sm:mb-6 group-hover:scale-110 transition-transform duration-300`}
+                  className={`w-16 h-16 bg-gradient-to-r ${feature.gradient} rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300`}
                 >
                   {feature.icon}
                 </div>
-                <h3 className="text-lg sm:text-xl md:text-2xl font-bold text-white mb-3 sm:mb-4">{feature.title}</h3>
-                <p className="text-sm sm:text-base text-gray-300 leading-relaxed">{feature.description}</p>
+                <h3 className="text-2xl font-bold text-white mb-4">{feature.title}</h3>
+                <p className="text-gray-300 leading-relaxed">{feature.description}</p>
               </div>
             ))}
           </div>
@@ -143,13 +137,13 @@ export default function CreatorsPage() {
       </section>
 
       {/* Application Process */}
-      <section className="py-16 sm:py-20 md:py-24 px-4">
+      <section className="py-24 px-4">
         <div className="max-w-7xl mx-auto">
-          <h2 className="text-3xl sm:text-4xl lg:text-6xl font-bold text-center mb-10 sm:mb-16 bg-gradient-to-r from-cyan-400 to-pink-400 bg-clip-text text-transparent">
+          <h2 className="text-4xl lg:text-6xl font-bold text-center mb-16 bg-gradient-to-r from-cyan-400 to-pink-400 bg-clip-text text-transparent">
             How to Join Ash's Network
           </h2>
 
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-4 sm:gap-6 md:gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
             {[
               {
                 step: "01",
@@ -176,11 +170,11 @@ export default function CreatorsPage() {
                 icon: "🚀",
               },
             ].map((step, index) => (
-              <div key={index} className="glass-effect-vortex p-4 sm:p-6 rounded-2xl modern-card text-center">
-                <div className="text-2xl sm:text-3xl md:text-4xl mb-2 sm:mb-4">{step.icon}</div>
-                <div className="text-base sm:text-lg md:text-2xl font-bold text-sky-400 mb-1 sm:mb-2">{step.step}</div>
-                <h3 className="text-sm sm:text-base md:text-lg font-bold text-white mb-2 sm:mb-3">{step.title}</h3>
-                <p className="text-xs sm:text-sm text-gray-300 leading-relaxed">{step.description}</p>
+              <div key={index} className="glass-effect-vortex p-6 rounded-2xl modern-card text-center">
+                <div className="text-4xl mb-4">{step.icon}</div>
+                <div className="text-2xl font-bold text-sky-400 mb-2">{step.step}</div>
+                <h3 className="text-lg font-bold text-white mb-3">{step.title}</h3>
+                <p className="text-gray-300 text-sm leading-relaxed">{step.description}</p>
               </div>
             ))}
           </div>
@@ -188,13 +182,13 @@ export default function CreatorsPage() {
       </section>
 
       {/* Enhanced FAQ Section */}
-      <section className="py-16 sm:py-20 md:py-24 px-4">
+      <section className="py-24 px-4">
         <div className="max-w-4xl mx-auto">
-          <h2 className="text-3xl sm:text-4xl lg:text-6xl font-bold text-center mb-10 sm:mb-16 bg-gradient-to-r from-cyan-400 to-pink-400 bg-clip-text text-transparent">
+          <h2 className="text-4xl lg:text-6xl font-bold text-center mb-16 bg-gradient-to-r from-cyan-400 to-pink-400 bg-clip-text text-transparent">
             Creator FAQ
           </h2>
 
-          <div className="space-y-4 sm:space-y-6">
+          <div className="space-y-6">
             {[
               {
                 question: "What's in it for me? Do you take a cut of my profits?",
@@ -218,12 +212,12 @@ export default function CreatorsPage() {
               },
             ].map((faq, index) => (
               <div key={index} className="glass-effect-vortex rounded-2xl overflow-hidden modern-card">
-                <div className="p-4 sm:p-6 cursor-pointer hover:bg-sky-500/5 transition-colors duration-300">
+                <div className="p-6 cursor-pointer hover:bg-sky-500/5 transition-colors duration-300">
                   <div className="flex justify-between items-center">
-                    <h3 className="text-base sm:text-lg font-semibold text-white pr-4">{faq.question}</h3>
+                    <h3 className="text-lg font-semibold text-white pr-4">{faq.question}</h3>
                     <span className="text-sky-400 text-xl">+</span>
                   </div>
-                  <p className="text-sm sm:text-base text-gray-300 mt-3 sm:mt-4 leading-relaxed">{faq.answer}</p>
+                  <p className="text-gray-300 mt-4 leading-relaxed">{faq.answer}</p>
                 </div>
               </div>
             ))}
@@ -232,17 +226,28 @@ export default function CreatorsPage() {
       </section>
 
       {/* CTA Section */}
-      <section className="py-16 sm:py-20 md:py-24 px-4">
+      <section className="py-24 px-4">
         <div className="max-w-4xl mx-auto text-center">
-          <div className="glass-effect-vortex p-6 sm:p-8 md:p-12 rounded-3xl modern-card">
-            <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold mb-4 sm:mb-6 md:mb-8 bg-gradient-to-r from-sky-400 to-pink-400 bg-clip-text text-transparent">
+          <div className="glass-effect-vortex p-12 rounded-3xl modern-card">
+            <h2 className="text-4xl lg:text-5xl font-bold mb-8 bg-gradient-to-r from-sky-400 to-pink-400 bg-clip-text text-transparent">
               Ready to Work with Ash?
             </h2>
-            <p className="text-base sm:text-lg md:text-xl text-gray-300 mb-6 sm:mb-8">
+            <p className="text-xl text-gray-300 mb-8">
               Join the exclusive network of creators who work directly with industry visionary Ash Davis. Your success
               story starts with one application.
             </p>
             <div className="flex flex-wrap gap-4 justify-center">
-              <button className="vortex-button text-white px-4 sm:px-6 md:px-8 py-2 sm:py-3 md:py-4 rounded-full text-sm sm:text-base font-semibold border-none cursor-pointer flex items-center gap-2 sm:gap-3">
-                <Image
-                  src="/images/vortex-icon\
+              <button className="vortex-button text-white px-8 py-4 rounded-full font-semibold border-none cursor-pointer flex items-center gap-3">
+                <Image src="/images/vortex-icon.png" alt="VORTEX" width={24} height={24} className="rounded-full" />
+                Apply Now
+              </button>
+              <button className="glass-effect-vortex border border-sky-400/50 text-sky-400 px-8 py-4 rounded-full font-semibold transition-all duration-300 hover:bg-sky-400/10">
+                Schedule Call with Ash
+              </button>
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
+  )
+}

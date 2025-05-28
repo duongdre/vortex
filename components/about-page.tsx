@@ -1,7 +1,5 @@
 "use client"
 
-import type React from "react"
-
 import { useState, useEffect, useCallback } from "react"
 import Image from "next/image"
 
@@ -40,34 +38,6 @@ export default function AboutPage() {
   // Pause auto-play on hover
   const handleMouseEnter = () => setIsAutoPlaying(false)
   const handleMouseLeave = () => setIsAutoPlaying(true)
-
-  // Touch handling for mobile swipe
-  const [touchStart, setTouchStart] = useState(0)
-  const [touchEnd, setTouchEnd] = useState(0)
-
-  const handleTouchStart = (e: React.TouchEvent) => {
-    setTouchStart(e.targetTouches[0].clientX)
-    setIsAutoPlaying(false)
-  }
-
-  const handleTouchMove = (e: React.TouchEvent) => {
-    setTouchEnd(e.targetTouches[0].clientX)
-  }
-
-  const handleTouchEnd = () => {
-    if (touchStart - touchEnd > 100) {
-      // Swipe left
-      nextCard()
-    }
-
-    if (touchStart - touchEnd < -100) {
-      // Swipe right
-      prevCard()
-    }
-
-    // Resume auto-play after 5 seconds
-    setTimeout(() => setIsAutoPlaying(true), 5000)
-  }
 
   const cardData = [
     {
@@ -122,39 +92,34 @@ export default function AboutPage() {
       <div className="fixed inset-0 bg-gradient-to-br from-sky-500 via-blue-600 to-indigo-700 -z-10" />
 
       {/* Hero Section */}
-      <section className="min-h-screen flex items-center px-4 pt-20 pb-12">
-        <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 items-center">
+      <section className="min-h-screen flex items-center px-4 pt-20">
+        <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
           <div className="animate-slideInFromLeft">
-            <h1 className="text-4xl sm:text-5xl lg:text-7xl font-bold mb-6 lg:mb-8 bg-gradient-to-r from-white to-sky-200 bg-clip-text text-transparent">
+            <h1 className="text-5xl lg:text-7xl font-bold mb-8 bg-gradient-to-r from-white to-sky-200 bg-clip-text text-transparent">
               Meet Ash Davis
             </h1>
-            <h2 className="text-xl sm:text-2xl lg:text-3xl text-sky-400 mb-4 lg:mb-6 font-semibold">
-              Founder & CEO of VORTEX
-            </h2>
-            <p className="text-lg sm:text-xl text-gray-300 mb-6 lg:mb-8 leading-relaxed">
+            <h2 className="text-2xl lg:text-3xl text-sky-400 mb-6 font-semibold">Founder & CEO of VORTEX</h2>
+            <p className="text-xl text-gray-300 mb-8 leading-relaxed">
               From a small-town dreamer to the visionary behind the world's most creator-friendly agency, Ash Davis has
               redefined what it means to support digital talent in the modern era.
             </p>
-            <div className="flex flex-wrap gap-3 sm:gap-4">
-              <button className="vortex-button text-white px-4 sm:px-6 py-2 sm:py-3 rounded-full font-semibold border-none cursor-pointer text-sm sm:text-base">
+            <div className="flex gap-4">
+              <button className="vortex-button text-white px-6 py-3 rounded-full font-semibold border-none cursor-pointer">
                 Watch Ash's Story
               </button>
-              <button className="glass-effect-vortex border border-sky-400/50 text-sky-400 px-4 sm:px-6 py-2 sm:py-3 rounded-full font-semibold transition-all duration-300 hover:bg-sky-400/10 text-sm sm:text-base">
+              <button className="glass-effect-vortex border border-sky-400/50 text-sky-400 px-6 py-3 rounded-full font-semibold transition-all duration-300 hover:bg-sky-400/10">
                 Connect on LinkedIn
               </button>
             </div>
           </div>
 
-          <div className="animate-slideInFromRight flex justify-center mt-8 lg:mt-0">
+          <div className="animate-slideInFromRight flex justify-center">
             <div className="relative w-full max-w-md">
               {/* Card Carousel Container */}
               <div
                 className="relative overflow-hidden rounded-3xl"
                 onMouseEnter={handleMouseEnter}
                 onMouseLeave={handleMouseLeave}
-                onTouchStart={handleTouchStart}
-                onTouchMove={handleTouchMove}
-                onTouchEnd={handleTouchEnd}
               >
                 {/* Cards Container */}
                 <div
@@ -166,7 +131,7 @@ export default function AboutPage() {
                 >
                   {cardData.map((card) => (
                     <div key={card.id} className="w-full flex-shrink-0">
-                      <div className="w-full h-72 sm:h-80 md:h-96 glass-effect-vortex rounded-3xl p-4 sm:p-6 transform hover:scale-105 transition-transform duration-300">
+                      <div className="w-full h-96 glass-effect-vortex rounded-3xl p-6 transform hover:scale-105 transition-transform duration-300">
                         <div
                           className={`w-full h-full bg-gradient-to-br ${card.bgGradient} rounded-2xl flex flex-col items-center justify-center relative overflow-hidden`}
                         >
@@ -179,19 +144,15 @@ export default function AboutPage() {
                           <div className="relative z-10 text-center">
                             {/* Icon */}
                             <div
-                              className={`w-16 h-16 sm:w-20 sm:h-20 md:w-24 md:h-24 bg-gradient-to-r ${card.gradient} rounded-full flex items-center justify-center mx-auto mb-3 sm:mb-4 shadow-lg`}
+                              className={`w-24 h-24 bg-gradient-to-r ${card.gradient} rounded-full flex items-center justify-center mx-auto mb-4 shadow-lg`}
                             >
-                              {card.icon ? (
-                                <span className="text-3xl sm:text-4xl">{card.icon}</span>
-                              ) : (
-                                card.iconComponent
-                              )}
+                              {card.icon ? <span className="text-4xl">{card.icon}</span> : card.iconComponent}
                             </div>
 
                             {/* Title and Subtitle */}
-                            <h3 className="text-xl sm:text-2xl font-bold text-white mb-1 sm:mb-2">{card.title}</h3>
+                            <h3 className="text-2xl font-bold text-white mb-2">{card.title}</h3>
                             <p
-                              className={`mb-2 sm:mb-4 font-medium text-sm sm:text-base ${
+                              className={`mb-4 font-medium ${
                                 card.id === 0
                                   ? "text-sky-400"
                                   : card.id === 1
@@ -205,24 +166,24 @@ export default function AboutPage() {
                             </p>
 
                             {/* Description */}
-                            <p className="text-gray-300 text-xs sm:text-sm text-center px-2 sm:px-4 mb-3 sm:mb-4 leading-relaxed">
+                            <p className="text-gray-300 text-sm text-center px-4 mb-4 leading-relaxed">
                               {card.description}
                             </p>
 
                             {/* Metric */}
                             {card.metric && (
-                              <div className="mt-2 sm:mt-4 text-center">
-                                <div className="text-base sm:text-lg font-bold text-white">{card.metric}</div>
+                              <div className="mt-4 text-center">
+                                <div className="text-lg font-bold text-white">{card.metric}</div>
                                 <div className="text-xs text-gray-400">{card.metricLabel}</div>
                               </div>
                             )}
 
                             {/* Animated Dots for first card */}
                             {card.id === 0 && (
-                              <div className="flex justify-center gap-2 mt-3 sm:mt-4">
-                                <div className="w-2 h-2 sm:w-3 sm:h-3 bg-sky-400 rounded-full animate-pulse"></div>
-                                <div className="w-2 h-2 sm:w-3 sm:h-3 bg-pink-400 rounded-full animate-pulse delay-100"></div>
-                                <div className="w-2 h-2 sm:w-3 sm:h-3 bg-cyan-400 rounded-full animate-pulse delay-200"></div>
+                              <div className="flex justify-center gap-2 mt-4">
+                                <div className="w-3 h-3 bg-sky-400 rounded-full animate-pulse"></div>
+                                <div className="w-3 h-3 bg-pink-400 rounded-full animate-pulse delay-100"></div>
+                                <div className="w-3 h-3 bg-cyan-400 rounded-full animate-pulse delay-200"></div>
                               </div>
                             )}
                           </div>
@@ -236,34 +197,34 @@ export default function AboutPage() {
               {/* Navigation Arrows */}
               <button
                 onClick={prevCard}
-                className="absolute left-2 top-1/2 transform -translate-y-1/2 w-8 h-8 sm:w-10 sm:h-10 md:w-12 md:h-12 glass-effect-vortex rounded-full flex items-center justify-center text-white hover:bg-sky-500/20 transition-all duration-300 border-none cursor-pointer shadow-lg hover:scale-110"
+                className="absolute left-2 top-1/2 transform -translate-y-1/2 w-12 h-12 glass-effect-vortex rounded-full flex items-center justify-center text-white hover:bg-sky-500/20 transition-all duration-300 border-none cursor-pointer shadow-lg hover:scale-110"
                 aria-label="Previous card"
               >
-                <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
                   <path d="M15.41 7.41L14 6l-6 6 6 6 1.41-1.41L10.83 12z" />
                 </svg>
               </button>
               <button
                 onClick={nextCard}
-                className="absolute right-2 top-1/2 transform -translate-y-1/2 w-8 h-8 sm:w-10 sm:h-10 md:w-12 md:h-12 glass-effect-vortex rounded-full flex items-center justify-center text-white hover:bg-sky-500/20 transition-all duration-300 border-none cursor-pointer shadow-lg hover:scale-110"
+                className="absolute right-2 top-1/2 transform -translate-y-1/2 w-12 h-12 glass-effect-vortex rounded-full flex items-center justify-center text-white hover:bg-sky-500/20 transition-all duration-300 border-none cursor-pointer shadow-lg hover:scale-110"
                 aria-label="Next card"
               >
-                <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
                   <path d="M8.59 16.59L10 18l6-6-6-6-1.41 1.41L13.17 12z" />
                 </svg>
               </button>
 
               {/* Auto-play Indicator */}
-              <div className="absolute top-3 right-3 sm:top-4 sm:right-4">
+              <div className="absolute top-4 right-4">
                 <div
-                  className={`w-2 h-2 sm:w-3 sm:h-3 rounded-full transition-all duration-300 ${
+                  className={`w-3 h-3 rounded-full transition-all duration-300 ${
                     isAutoPlaying ? "bg-green-400 animate-pulse" : "bg-gray-500"
                   }`}
                 />
               </div>
 
               {/* Progress Bar */}
-              <div className="absolute bottom-2 left-4 right-4 sm:left-6 sm:right-6">
+              <div className="absolute bottom-2 left-6 right-6">
                 <div className="w-full h-1 bg-white/20 rounded-full overflow-hidden">
                   <div
                     className="h-full bg-gradient-to-r from-sky-400 to-pink-400 rounded-full transition-all duration-700 ease-linear"
@@ -273,26 +234,19 @@ export default function AboutPage() {
                   />
                 </div>
               </div>
-
-              {/* Mobile swipe hint - only shows on small screens */}
-              <div className="absolute bottom-6 left-0 right-0 flex justify-center sm:hidden">
-                <div className="glass-effect-vortex px-3 py-1 rounded-full text-xs text-white/70 animate-pulse">
-                  Swipe to navigate
-                </div>
-              </div>
             </div>
           </div>
         </div>
       </section>
 
       {/* Ash's Journey */}
-      <section className="py-16 sm:py-20 md:py-24 px-4">
+      <section className="py-24 px-4">
         <div className="max-w-7xl mx-auto">
-          <h2 className="text-3xl sm:text-4xl lg:text-6xl font-bold text-center mb-12 sm:mb-16 bg-gradient-to-r from-sky-400 to-pink-400 bg-clip-text text-transparent">
+          <h2 className="text-4xl lg:text-6xl font-bold text-center mb-16 bg-gradient-to-r from-sky-400 to-pink-400 bg-clip-text text-transparent">
             The Journey to VORTEX
           </h2>
 
-          <div className="space-y-12 sm:space-y-16">
+          <div className="space-y-16">
             {[
               {
                 year: "2018",
@@ -345,29 +299,23 @@ export default function AboutPage() {
             ].map((milestone, index) => (
               <div
                 key={index}
-                className={`flex flex-col ${
-                  milestone.side === "right" ? "md:flex-row-reverse" : "md:flex-row"
-                } items-center gap-4 md:gap-8`}
+                className={`flex items-center gap-8 ${milestone.side === "right" ? "flex-row-reverse" : ""}`}
               >
-                <div className="flex-1 w-full">
+                <div className="flex-1">
                   <div
-                    className={`glass-effect-vortex p-6 sm:p-8 rounded-3xl modern-card ${
-                      milestone.side === "right" ? "md:text-right" : ""
-                    }`}
+                    className={`glass-effect-vortex p-8 rounded-3xl modern-card ${milestone.side === "right" ? "text-right" : ""}`}
                   >
-                    <div
-                      className={`flex items-center gap-4 mb-4 ${milestone.side === "right" ? "md:justify-end" : ""}`}
-                    >
-                      <div className="text-3xl sm:text-4xl">{milestone.icon}</div>
+                    <div className={`flex items-center gap-4 mb-4 ${milestone.side === "right" ? "justify-end" : ""}`}>
+                      <div className="text-4xl">{milestone.icon}</div>
                       <div>
-                        <div className="text-xl sm:text-2xl font-bold text-sky-400">{milestone.year}</div>
-                        <h3 className="text-lg sm:text-xl font-bold text-white">{milestone.title}</h3>
+                        <div className="text-2xl font-bold text-sky-400">{milestone.year}</div>
+                        <h3 className="text-xl font-bold text-white">{milestone.title}</h3>
                       </div>
                     </div>
-                    <p className="text-sm sm:text-base text-gray-300 leading-relaxed">{milestone.description}</p>
+                    <p className="text-gray-300 leading-relaxed">{milestone.description}</p>
                   </div>
                 </div>
-                <div className="w-3 h-3 sm:w-4 sm:h-4 bg-gradient-to-r from-sky-500 to-pink-500 rounded-full flex-shrink-0 md:block hidden"></div>
+                <div className="w-4 h-4 bg-gradient-to-r from-sky-500 to-pink-500 rounded-full flex-shrink-0"></div>
               </div>
             ))}
           </div>
@@ -375,19 +323,19 @@ export default function AboutPage() {
       </section>
 
       {/* Ash's Philosophy */}
-      <section className="py-16 sm:py-20 md:py-24 px-4">
+      <section className="py-24 px-4">
         <div className="max-w-4xl mx-auto text-center">
-          <h2 className="text-3xl sm:text-4xl lg:text-6xl font-bold mb-12 sm:mb-16 bg-gradient-to-r from-cyan-400 to-pink-400 bg-clip-text text-transparent">
+          <h2 className="text-4xl lg:text-6xl font-bold mb-16 bg-gradient-to-r from-cyan-400 to-pink-400 bg-clip-text text-transparent">
             Ash's Philosophy
           </h2>
 
-          <div className="glass-effect-vortex p-6 sm:p-8 md:p-12 rounded-3xl modern-card">
-            <div className="text-4xl sm:text-5xl md:text-6xl mb-6 sm:mb-8">💭</div>
-            <blockquote className="text-xl sm:text-2xl lg:text-3xl text-white font-light leading-relaxed mb-6 sm:mb-8 italic">
+          <div className="glass-effect-vortex p-12 rounded-3xl modern-card">
+            <div className="text-6xl mb-8">💭</div>
+            <blockquote className="text-2xl lg:text-3xl text-white font-light leading-relaxed mb-8 italic">
               "Success isn't about taking from creators—it's about giving them everything they need to succeed. When
               creators win, everyone wins."
             </blockquote>
-            <div className="space-y-4 sm:space-y-6 text-base sm:text-lg text-gray-300">
+            <div className="space-y-6 text-lg text-gray-300">
               <p>
                 Ash believes that the creator economy should be built on trust, transparency, and genuine partnership.
                 That's why VORTEX operates on a zero-commission model—creators keep 100% of what they earn.
@@ -402,13 +350,13 @@ export default function AboutPage() {
       </section>
 
       {/* Personal Side */}
-      <section className="py-16 sm:py-20 md:py-24 px-4">
+      <section className="py-24 px-4">
         <div className="max-w-7xl mx-auto">
-          <h2 className="text-3xl sm:text-4xl lg:text-6xl font-bold text-center mb-12 sm:mb-16 bg-gradient-to-r from-sky-400 to-pink-400 bg-clip-text text-transparent">
+          <h2 className="text-4xl lg:text-6xl font-bold text-center mb-16 bg-gradient-to-r from-sky-400 to-pink-400 bg-clip-text text-transparent">
             Beyond Business
           </h2>
 
-          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4 sm:gap-6 md:gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {[
               {
                 icon: "🎮",
@@ -447,10 +395,10 @@ export default function AboutPage() {
                   "Has traveled to 30+ countries, studying how different cultures approach social media and digital creativity.",
               },
             ].map((interest, index) => (
-              <div key={index} className="glass-effect-vortex p-4 sm:p-6 rounded-2xl modern-card">
-                <div className="text-3xl sm:text-4xl mb-3 sm:mb-4">{interest.icon}</div>
-                <h3 className="text-lg sm:text-xl font-bold text-white mb-2 sm:mb-3">{interest.title}</h3>
-                <p className="text-xs sm:text-sm text-gray-300 leading-relaxed">{interest.description}</p>
+              <div key={index} className="glass-effect-vortex p-6 rounded-2xl modern-card">
+                <div className="text-4xl mb-4">{interest.icon}</div>
+                <h3 className="text-xl font-bold text-white mb-3">{interest.title}</h3>
+                <p className="text-gray-300 text-sm leading-relaxed">{interest.description}</p>
               </div>
             ))}
           </div>
