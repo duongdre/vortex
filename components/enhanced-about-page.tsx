@@ -248,13 +248,45 @@ export default function EnhancedAboutPage() {
       <section className="py-24 px-4">
         <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
           <div className="relative">
-            <div className="w-full h-[600px] rounded-3xl overflow-hidden shadow-2xl">
-              <Image
-                src="/placeholder.svg?height=600&width=400&text=Ash+Davis+Portrait"
-                alt="Ash Davis - Founder of VORTEX"
-                fill
-                className="object-cover"
-              />
+            <div className="w-full h-[600px] rounded-3xl overflow-hidden shadow-2xl bg-gradient-to-br from-pink-100 to-sky-100 flex items-center justify-center">
+              <div className="text-center">
+                {/* Cute Chibi TikTok Live Stream */}
+                <div className="relative">
+                  {/* Phone Frame */}
+                  <div className="w-64 h-96 bg-black rounded-[2.5rem] p-4 shadow-2xl">
+                    {/* Screen */}
+                    <div className="w-full h-full bg-gradient-to-b from-purple-400 to-pink-400 rounded-[2rem] relative overflow-hidden">
+                      {/* Live Badge */}
+                      <div className="absolute top-4 left-4 bg-red-500 text-white px-3 py-1 rounded-full text-xs font-bold animate-pulse">
+                        LIVE
+                      </div>
+
+                      {/* Viewer Count */}
+                      <div className="absolute top-4 right-4 bg-black/50 text-white px-2 py-1 rounded-full text-xs">
+                        👁️ 1.2K
+                      </div>
+
+                      {/* Chibi Character */}
+                      <div className="absolute bottom-20 left-1/2 transform -translate-x-1/2">
+                        <div className="text-6xl animate-bounce">🧑‍💻</div>
+                      </div>
+
+                      {/* Chat Messages */}
+                      <div className="absolute bottom-4 left-2 right-2 space-y-1">
+                        <div className="bg-black/30 text-white text-xs px-2 py-1 rounded-lg">💖 Amazing content!</div>
+                        <div className="bg-black/30 text-white text-xs px-2 py-1 rounded-lg">🔥 Love this stream!</div>
+                      </div>
+
+                      {/* Floating Hearts */}
+                      <div className="absolute right-2 bottom-16 space-y-2">
+                        <div className="text-red-500 animate-bounce">❤️</div>
+                        <div className="text-pink-500 animate-bounce delay-100">💕</div>
+                        <div className="text-red-400 animate-bounce delay-200">💖</div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
             </div>
             <div className="absolute top-6 right-6 bg-pink-500 text-white px-4 py-2 rounded-full text-sm font-bold animate-vortexPulse">
               LIVE
@@ -365,14 +397,57 @@ export default function EnhancedAboutPage() {
               </div>
             </div>
 
-            {/* Lifestyle Photo */}
-            <div className="relative w-full h-80 rounded-3xl overflow-hidden shadow-xl">
-              <Image
-                src="/placeholder.svg?height=320&width=400&text=Creator+Success+Story"
-                alt="Ash Davis Lifestyle"
-                fill
-                className="object-cover"
-              />
+            {/* Cute Chibi TikTok Live Success */}
+            <div className="relative w-full h-80 rounded-3xl overflow-hidden shadow-xl bg-gradient-to-br from-yellow-100 to-orange-100 flex items-center justify-center">
+              <div className="text-center">
+                {/* Success Scene */}
+                <div className="relative">
+                  {/* Multiple Phones showing success */}
+                  <div className="flex gap-4 items-center justify-center">
+                    {/* Phone 1 */}
+                    <div className="w-20 h-32 bg-black rounded-xl p-1 transform rotate-12">
+                      <div className="w-full h-full bg-gradient-to-b from-green-400 to-emerald-400 rounded-lg flex flex-col items-center justify-center">
+                        <div className="text-xs text-white font-bold">LIVE</div>
+                        <div className="text-lg">😊</div>
+                        <div className="text-xs text-white">5.2K</div>
+                      </div>
+                    </div>
+
+                    {/* Phone 2 - Center */}
+                    <div className="w-24 h-36 bg-black rounded-xl p-1">
+                      <div className="w-full h-full bg-gradient-to-b from-purple-400 to-pink-400 rounded-lg flex flex-col items-center justify-center">
+                        <div className="text-xs text-white font-bold bg-red-500 px-2 rounded">LIVE</div>
+                        <div className="text-2xl animate-bounce">🎉</div>
+                        <div className="text-xs text-white">12.8K</div>
+                        <div className="flex gap-1 mt-1">
+                          <span className="text-xs">💰</span>
+                          <span className="text-xs">🎯</span>
+                          <span className="text-xs">🚀</span>
+                        </div>
+                      </div>
+                    </div>
+
+                    {/* Phone 3 */}
+                    <div className="w-20 h-32 bg-black rounded-xl p-1 transform -rotate-12">
+                      <div className="w-full h-full bg-gradient-to-b from-blue-400 to-cyan-400 rounded-lg flex flex-col items-center justify-center">
+                        <div className="text-xs text-white font-bold">LIVE</div>
+                        <div className="text-lg">🌟</div>
+                        <div className="text-xs text-white">8.7K</div>
+                      </div>
+                    </div>
+                  </div>
+
+                  {/* Success Elements */}
+                  <div className="absolute -top-8 left-1/2 transform -translate-x-1/2">
+                    <div className="text-2xl animate-bounce">🎊</div>
+                  </div>
+
+                  <div className="absolute -bottom-4 left-1/2 transform -translate-x-1/2">
+                    <div className="bg-yellow-400 text-black px-3 py-1 rounded-full text-xs font-bold">SUCCESS!</div>
+                  </div>
+                </div>
+              </div>
+
               <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent" />
               <div className="absolute bottom-4 left-4">
                 <p className="text-white font-semibold">Living the Creator Life</p>
