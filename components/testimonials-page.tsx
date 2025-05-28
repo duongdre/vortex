@@ -1,6 +1,7 @@
 "use client"
 
 import Image from "next/image"
+import AnimatedCounter from "./animated-counter"
 
 export default function TestimonialsPage() {
   return (
@@ -150,33 +151,43 @@ export default function TestimonialsPage() {
             {[
               {
                 metric: "Average Growth",
-                value: "340%",
+                value: 340,
                 description: "Follower increase in first 6 months",
                 icon: "📈",
+                suffix: "%",
               },
               {
                 metric: "Creator Retention",
-                value: "94%",
+                value: 94,
                 description: "Creators stay with VORTEX long-term",
                 icon: "🤝",
+                suffix: "%",
               },
               {
                 metric: "Brand Partnerships",
-                value: "2,500+",
+                value: 2500,
                 description: "Successful collaborations facilitated",
                 icon: "🎯",
+                suffix: "+",
               },
               {
                 metric: "Average Earnings",
-                value: "$85K",
+                value: 85,
                 description: "Annual creator income increase",
                 icon: "💰",
+                prefix: "$",
+                suffix: "K",
               },
             ].map((stat, index) => (
               <div key={index} className="glass-effect-vortex p-8 rounded-3xl modern-card text-center">
                 <div className="text-4xl mb-4">{stat.icon}</div>
                 <div className="text-4xl font-bold bg-gradient-to-r from-sky-400 to-pink-400 bg-clip-text text-transparent mb-2">
-                  {stat.value}
+                  <AnimatedCounter
+                    end={stat.value}
+                    duration={2500}
+                    prefix={stat.prefix || ""}
+                    suffix={stat.suffix || ""}
+                  />
                 </div>
                 <h3 className="text-lg font-bold text-white mb-2">{stat.metric}</h3>
                 <p className="text-sm text-gray-400">{stat.description}</p>
@@ -195,23 +206,25 @@ export default function TestimonialsPage() {
 
           <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-6">
             {[
-              { category: "Gaming", icon: "🎮", count: "450+" },
-              { category: "Beauty", icon: "💄", count: "380+" },
-              { category: "Fitness", icon: "💪", count: "320+" },
-              { category: "Food", icon: "🍳", count: "290+" },
-              { category: "Comedy", icon: "😂", count: "410+" },
-              { category: "Education", icon: "📚", count: "180+" },
-              { category: "Music", icon: "🎵", count: "220+" },
-              { category: "Fashion", icon: "👗", count: "350+" },
-              { category: "Tech", icon: "💻", count: "160+" },
-              { category: "Travel", icon: "✈️", count: "140+" },
-              { category: "Art", icon: "🎨", count: "200+" },
-              { category: "Lifestyle", icon: "🌟", count: "380+" },
+              { category: "Gaming", icon: "🎮", count: 450 },
+              { category: "Beauty", icon: "💄", count: 380 },
+              { category: "Fitness", icon: "💪", count: 320 },
+              { category: "Food", icon: "🍳", count: 290 },
+              { category: "Comedy", icon: "😂", count: 410 },
+              { category: "Education", icon: "📚", count: 180 },
+              { category: "Music", icon: "🎵", count: 220 },
+              { category: "Fashion", icon: "👗", count: 350 },
+              { category: "Tech", icon: "💻", count: 160 },
+              { category: "Travel", icon: "✈️", count: 140 },
+              { category: "Art", icon: "🎨", count: 200 },
+              { category: "Lifestyle", icon: "🌟", count: 380 },
             ].map((niche, index) => (
               <div key={index} className="glass-effect-vortex p-6 rounded-2xl modern-card text-center">
                 <div className="text-3xl mb-3">{niche.icon}</div>
                 <h3 className="text-sm font-bold text-white mb-1">{niche.category}</h3>
-                <p className="text-xs text-sky-400">{niche.count} creators</p>
+                <p className="text-xs text-sky-400">
+                  <AnimatedCounter end={niche.count} duration={2000} suffix="+" /> creators
+                </p>
               </div>
             ))}
           </div>
