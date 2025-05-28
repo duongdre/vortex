@@ -35,13 +35,6 @@ export default function AboutPage() {
     setTimeout(() => setIsAutoPlaying(true), 5000)
   }, [totalCards])
 
-  const goToCard = useCallback((index: number) => {
-    setIsAutoPlaying(false)
-    setCurrentCard(index)
-    // Resume auto-play after 5 seconds of manual interaction
-    setTimeout(() => setIsAutoPlaying(true), 5000)
-  }, [])
-
   // Pause auto-play on hover
   const handleMouseEnter = () => setIsAutoPlaying(false)
   const handleMouseLeave = () => setIsAutoPlaying(true)
@@ -199,22 +192,6 @@ export default function AboutPage() {
                     </div>
                   ))}
                 </div>
-              </div>
-
-              {/* Navigation Dots */}
-              <div className="flex justify-center gap-3 mt-6">
-                {cardData.map((_, index) => (
-                  <button
-                    key={index}
-                    onClick={() => goToCard(index)}
-                    className={`w-3 h-3 rounded-full transition-all duration-300 border-none cursor-pointer transform hover:scale-125 ${
-                      currentCard === index
-                        ? "bg-gradient-to-r from-sky-400 to-pink-400 shadow-lg"
-                        : "bg-gray-600 hover:bg-gray-500"
-                    }`}
-                    aria-label={`Go to card ${index + 1}`}
-                  />
-                ))}
               </div>
 
               {/* Navigation Arrows */}
