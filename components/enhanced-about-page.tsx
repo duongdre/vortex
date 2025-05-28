@@ -382,17 +382,20 @@ export default function EnhancedAboutPage() {
           </div>
 
           <div className="space-y-6">
-            {/* TikTok Video Embed Placeholder */}
-            <div className="relative w-full h-80 bg-gradient-to-br from-sky-500/20 to-pink-500/20 rounded-3xl overflow-hidden group cursor-pointer">
-              <div className="absolute inset-0 bg-black/20 group-hover:bg-black/40 transition-colors duration-300 flex items-center justify-center">
-                <div className="w-20 h-20 bg-white/20 rounded-full flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
-                  <span className="text-3xl">▶️</span>
-                </div>
-              </div>
+            {/* Welcome to VORTEX Video */}
+            <div className="relative w-full h-80 rounded-3xl overflow-hidden group cursor-pointer shadow-xl">
+              <video
+                className="w-full h-full object-cover"
+                controls
+                poster="/placeholder.svg?height=320&width=400&text=Welcome+to+VORTEX"
+              >
+                <source src="/videos/welcome-to-vortex.mp4" type="video/mp4" />
+                Your browser does not support the video tag.
+              </video>
               <div className="absolute bottom-4 left-4 right-4">
                 <div className="bg-black/50 backdrop-blur-sm rounded-lg p-3">
-                  <h3 className="text-white font-bold">Ash's Success Story</h3>
-                  <p className="text-gray-300 text-sm">Watch how I built VORTEX from zero</p>
+                  <h3 className="text-white font-bold">Welcome to VORTEX</h3>
+                  <p className="text-gray-300 text-sm">Discover the VORTEX difference</p>
                 </div>
               </div>
             </div>
