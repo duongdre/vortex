@@ -426,13 +426,15 @@ export default function EnhancedAboutPage() {
                 </div>
               )}
 
-              {/* Video Info Overlay */}
-              <div className="absolute bottom-4 left-4 right-4 pointer-events-none">
-                <div className="bg-black/50 backdrop-blur-sm rounded-lg p-3">
-                  <h3 className="text-white font-bold">Welcome to VORTEX</h3>
-                  <p className="text-gray-300 text-sm">Discover the VORTEX difference</p>
+              {/* Video Info Overlay - Only visible when video is paused */}
+              {!isVideoPlaying && (
+                <div className="absolute bottom-4 left-4 right-4 pointer-events-none">
+                  <div className="bg-black/50 backdrop-blur-sm rounded-lg p-3">
+                    <h3 className="text-white font-bold">Welcome to VORTEX</h3>
+                    <p className="text-gray-300 text-sm">Discover the VORTEX difference</p>
+                  </div>
                 </div>
-              </div>
+              )}
             </div>
 
             {/* Cute Chibi TikTok Live Success */}
