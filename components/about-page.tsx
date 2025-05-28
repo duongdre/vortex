@@ -1,6 +1,27 @@
 "use client"
 
+import { useState, useEffect } from "react"
+import Image from "next/image"
+
 export default function AboutPage() {
+  const [currentCard, setCurrentCard] = useState(0)
+
+  // Auto-slide functionality
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setCurrentCard((prev) => (prev + 1) % 4)
+    }, 4000) // Change card every 4 seconds
+
+    return () => clearInterval(interval)
+  }, [])
+
+  const nextCard = () => {
+    setCurrentCard((prev) => (prev + 1) % 4)
+  }
+
+  const prevCard = () => {
+    setCurrentCard((prev) => (prev - 1 + 4) % 4)
+  }
   return (
     <div className="relative">
       <div className="fixed inset-0 bg-gradient-to-br from-sky-500 via-blue-600 to-indigo-700 -z-10" />
@@ -28,23 +49,124 @@ export default function AboutPage() {
           </div>
 
           <div className="animate-slideInFromRight flex justify-center">
-            <div className="relative">
-              <div className="w-96 h-96 glass-effect-vortex rounded-3xl p-6 transform hover:scale-105 transition-transform duration-500">
-                <div className="w-full h-full bg-gradient-to-br from-sky-500/20 to-pink-500/20 rounded-2xl flex items-center justify-center">
-                  <div className="text-center">
-                    <div className="w-32 h-32 bg-gradient-to-r from-sky-500 to-pink-500 rounded-full flex items-center justify-center mx-auto mb-6">
-                      <span className="text-6xl">👨‍💼</span>
+            <div className="relative w-full max-w-md">
+              {/* Card Carousel Container */}
+              <div className="overflow-hidden rounded-3xl">
+                <div
+                  className="flex transition-transform duration-500 ease-in-out"
+                  style={{ transform: `translateX(-${currentCard * 100}%)` }}
+                >
+                  {/* Card 1: Personal Profile */}
+                  <div className="w-full flex-shrink-0">
+                    <div className="w-full h-96 glass-effect-vortex rounded-3xl p-6 transform hover:scale-105 transition-transform duration-500">
+                      <div className="w-full h-full bg-gradient-to-br from-sky-500/20 to-pink-500/20 rounded-2xl flex flex-col items-center justify-center">
+                        <div className="w-24 h-24 bg-gradient-to-r from-sky-500 to-pink-500 rounded-full flex items-center justify-center mx-auto mb-4">
+                          <span className="text-4xl">👨‍💼</span>
+                        </div>
+                        <h3 className="text-2xl font-bold text-white mb-2">Ash Davis</h3>
+                        <p className="text-sky-400 mb-4">Founder & CEO</p>
+                        <p className="text-gray-300 text-sm text-center px-4">
+                          Visionary entrepreneur who revolutionized the creator economy
+                        </p>
+                        <div className="flex justify-center gap-2 mt-4">
+                          <div className="w-3 h-3 bg-sky-400 rounded-full animate-pulse"></div>
+                          <div className="w-3 h-3 bg-pink-400 rounded-full animate-pulse delay-100"></div>
+                          <div className="w-3 h-3 bg-cyan-400 rounded-full animate-pulse delay-200"></div>
+                        </div>
+                      </div>
                     </div>
-                    <h3 className="text-2xl font-bold text-white mb-2">Ash Davis</h3>
-                    <p className="text-sky-400 mb-4">Visionary Leader</p>
-                    <div className="flex justify-center gap-2">
-                      <div className="w-3 h-3 bg-sky-400 rounded-full animate-pulse"></div>
-                      <div className="w-3 h-3 bg-pink-400 rounded-full animate-pulse delay-100"></div>
-                      <div className="w-3 h-3 bg-cyan-400 rounded-full animate-pulse delay-200"></div>
+                  </div>
+
+                  {/* Card 2: TikTok Journey */}
+                  <div className="w-full flex-shrink-0">
+                    <div className="w-full h-96 glass-effect-vortex rounded-3xl p-6 transform hover:scale-105 transition-transform duration-500">
+                      <div className="w-full h-full bg-gradient-to-br from-pink-500/20 to-purple-500/20 rounded-2xl flex flex-col items-center justify-center">
+                        <div className="w-24 h-24 bg-gradient-to-r from-pink-500 to-purple-500 rounded-full flex items-center justify-center mx-auto mb-4">
+                          <Image src="/images/tiktok-logo.png" alt="TikTok" width={40} height={40} />
+                        </div>
+                        <h3 className="text-2xl font-bold text-white mb-2">TikTok Pioneer</h3>
+                        <p className="text-pink-400 mb-4">2018 - Present</p>
+                        <p className="text-gray-300 text-sm text-center px-4">
+                          Discovered TikTok's potential early and built the first creator-first agency
+                        </p>
+                        <div className="mt-4 text-center">
+                          <div className="text-lg font-bold text-white">4,000+</div>
+                          <div className="text-xs text-gray-400">Creators Managed</div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                  {/* Card 3: Business Innovation */}
+                  <div className="w-full flex-shrink-0">
+                    <div className="w-full h-96 glass-effect-vortex rounded-3xl p-6 transform hover:scale-105 transition-transform duration-500">
+                      <div className="w-full h-full bg-gradient-to-br from-cyan-500/20 to-blue-500/20 rounded-2xl flex flex-col items-center justify-center">
+                        <div className="w-24 h-24 bg-gradient-to-r from-cyan-500 to-blue-500 rounded-full flex items-center justify-center mx-auto mb-4">
+                          <span className="text-4xl">💡</span>
+                        </div>
+                        <h3 className="text-2xl font-bold text-white mb-2">Zero Commission</h3>
+                        <p className="text-cyan-400 mb-4">Revolutionary Model</p>
+                        <p className="text-gray-300 text-sm text-center px-4">
+                          Created the industry's first 0% commission model for creators
+                        </p>
+                        <div className="mt-4 text-center">
+                          <div className="text-lg font-bold text-white">$50M+</div>
+                          <div className="text-xs text-gray-400">Creator Earnings</div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                  {/* Card 4: Industry Impact */}
+                  <div className="w-full flex-shrink-0">
+                    <div className="w-full h-96 glass-effect-vortex rounded-3xl p-6 transform hover:scale-105 transition-transform duration-500">
+                      <div className="w-full h-full bg-gradient-to-br from-yellow-500/20 to-orange-500/20 rounded-2xl flex flex-col items-center justify-center">
+                        <div className="w-24 h-24 bg-gradient-to-r from-yellow-500 to-orange-500 rounded-full flex items-center justify-center mx-auto mb-4">
+                          <span className="text-4xl">🏆</span>
+                        </div>
+                        <h3 className="text-2xl font-bold text-white mb-2">Industry Leader</h3>
+                        <p className="text-yellow-400 mb-4">Award Winner</p>
+                        <p className="text-gray-300 text-sm text-center px-4">
+                          Named "Creator Economy Innovator of the Year" by TikTok
+                        </p>
+                        <div className="mt-4 text-center">
+                          <div className="text-lg font-bold text-white">500M+</div>
+                          <div className="text-xs text-gray-400">Total Views</div>
+                        </div>
+                      </div>
                     </div>
                   </div>
                 </div>
               </div>
+
+              {/* Navigation Dots */}
+              <div className="flex justify-center gap-2 mt-6">
+                {[0, 1, 2, 3].map((index) => (
+                  <button
+                    key={index}
+                    onClick={() => setCurrentCard(index)}
+                    className={`w-3 h-3 rounded-full transition-all duration-300 border-none cursor-pointer ${
+                      currentCard === index
+                        ? "bg-gradient-to-r from-sky-400 to-pink-400"
+                        : "bg-gray-600 hover:bg-gray-500"
+                    }`}
+                  />
+                ))}
+              </div>
+
+              {/* Navigation Arrows */}
+              <button
+                onClick={prevCard}
+                className="absolute left-2 top-1/2 transform -translate-y-1/2 w-10 h-10 glass-effect-vortex rounded-full flex items-center justify-center text-white hover:bg-sky-500/20 transition-colors duration-300 border-none cursor-pointer"
+              >
+                ←
+              </button>
+              <button
+                onClick={nextCard}
+                className="absolute right-2 top-1/2 transform -translate-y-1/2 w-10 h-10 glass-effect-vortex rounded-full flex items-center justify-center text-white hover:bg-sky-500/20 transition-colors duration-300 border-none cursor-pointer"
+              >
+                →
+              </button>
             </div>
           </div>
         </div>

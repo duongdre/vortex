@@ -24,13 +24,21 @@ export default function Header({ currentPage, setCurrentPage }: HeaderProps) {
   const handleNavClick = (pageId: string) => {
     setCurrentPage(pageId)
     setIsMobileMenuOpen(false)
+
+    // Scroll to top when navigating to a new page
+    window.scrollTo({ top: 0, behavior: "smooth" })
   }
 
   return (
     <header className="fixed top-0 w-full z-50 glass-effect-vortex border-b border-sky-500/20">
       <div className="max-w-7xl mx-auto px-4 py-4 flex justify-between items-center">
         {/* VORTEX Logo */}
-        <div className="flex items-center gap-3 cursor-pointer" onClick={() => handleNavClick("home")}>
+        <div
+          className="flex items-center gap-3 cursor-pointer"
+          onClick={() => {
+            handleNavClick("home")
+          }}
+        >
           <Image
             src="/images/vortex-icon.png"
             alt="VORTEX Logo"

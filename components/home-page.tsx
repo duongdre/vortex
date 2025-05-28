@@ -7,6 +7,11 @@ interface HomePageProps {
 }
 
 export default function HomePage({ setCurrentPage }: HomePageProps) {
+  const handlePageNavigation = (page: string) => {
+    setCurrentPage(page)
+    window.scrollTo({ top: 0, behavior: "smooth" })
+  }
+
   return (
     <div className="relative">
       {/* Hero Section with Responsive Neon Tunnel Background */}
@@ -40,14 +45,14 @@ export default function HomePage({ setCurrentPage }: HomePageProps) {
           </p>
           <div className="flex flex-wrap gap-4 justify-center mb-12">
             <button
-              onClick={() => setCurrentPage("about")}
+              onClick={() => handlePageNavigation("about")}
               className="vortex-button text-white px-8 py-4 rounded-full text-lg font-semibold border-none cursor-pointer shadow-2xl flex items-center gap-3"
             >
               <Image src="/images/vortex-icon.png" alt="VORTEX" width={24} height={24} className="rounded-full" />
               Meet Ash Davis
             </button>
             <button
-              onClick={() => setCurrentPage("creators")}
+              onClick={() => handlePageNavigation("creators")}
               className="glass-effect-vortex border border-sky-400/50 text-white px-8 py-4 rounded-full text-lg font-semibold transition-all duration-300 hover:bg-sky-400/10 hover:border-sky-400"
             >
               Join Our Network
@@ -76,7 +81,7 @@ export default function HomePage({ setCurrentPage }: HomePageProps) {
                   creators actually wanted to join.
                 </p>
                 <button
-                  onClick={() => setCurrentPage("story")}
+                  onClick={() => handlePageNavigation("story")}
                   className="vortex-pink-button text-white px-6 py-3 rounded-full font-semibold border-none cursor-pointer"
                 >
                   Read Our Full Story
@@ -169,7 +174,7 @@ export default function HomePage({ setCurrentPage }: HomePageProps) {
                   <h3 className="text-2xl font-bold text-white mb-4">{service.title}</h3>
                   <p className="text-gray-300 leading-relaxed mb-6">{service.description}</p>
                   <button
-                    onClick={() => setCurrentPage(service.page)}
+                    onClick={() => handlePageNavigation(service.page)}
                     className="w-full bg-black/50 backdrop-blur-sm border border-white/20 hover:bg-black/70 text-white py-3 rounded-xl font-semibold transition-all duration-300 transform hover:scale-105 cursor-pointer"
                   >
                     {service.cta}
@@ -193,21 +198,21 @@ export default function HomePage({ setCurrentPage }: HomePageProps) {
 
             <div className="flex flex-wrap gap-6 justify-center">
               <button
-                onClick={() => setCurrentPage("creators")}
+                onClick={() => handlePageNavigation("creators")}
                 className="vortex-button px-8 py-4 rounded-full text-white font-semibold border-none cursor-pointer flex items-center gap-3"
               >
                 <Image src="/images/tiktok-logo.png" alt="TikTok" width={20} height={20} />
                 Apply as Creator
               </button>
               <button
-                onClick={() => setCurrentPage("brands")}
+                onClick={() => handlePageNavigation("brands")}
                 className="vortex-pink-button px-8 py-4 rounded-full text-white font-semibold border-none cursor-pointer flex items-center gap-3"
               >
                 <span className="text-xl">🤝</span>
                 Partner with Us
               </button>
               <button
-                onClick={() => setCurrentPage("sellers")}
+                onClick={() => handlePageNavigation("sellers")}
                 className="glass-effect-vortex border border-sky-400/50 text-white px-8 py-4 rounded-full font-semibold transition-all duration-300 hover:bg-sky-400/10 hover:border-sky-400"
               >
                 Contact Ash Directly
