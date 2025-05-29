@@ -34,9 +34,16 @@ export default function HomePage({ setCurrentPage }: HomePageProps) {
           <h1 className="text-6xl lg:text-8xl font-bold mb-8 bg-gradient-to-r from-white via-blue-300 to-pink-200 bg-clip-text text-transparent animate-textShimmer bg-[length:200%_auto] drop-shadow-2xl">
             VORTEX
           </h1>
-          <h2 className="text-2xl lg:text-4xl mb-8 text-white font-light drop-shadow-lg flex items-center justify-center gap-3">
-            <Image src="/images/tiktok-logo.png" alt="TikTok" width={40} height={40} />
-            Where Creators Become Legends
+          <h2 className="text-2xl lg:text-4xl mb-8 text-white font-light drop-shadow-lg">
+            <a
+              href="https://www.tiktok.com/@ash.vortex"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="flex flex-col sm:flex-row items-center justify-center gap-3 hover:opacity-80 transition-opacity"
+            >
+              <Image src="/images/tiktok-logo.png" alt="TikTok" width={40} height={40} className="mb-2 sm:mb-0" />
+              <span>Where Creators Become Legends</span>
+            </a>
           </h2>
           <p className="max-w-4xl text-lg lg:text-xl leading-relaxed text-gray-200 mb-8 drop-shadow-lg">
             Founded by visionary entrepreneur <span className="text-sky-400 font-semibold">Ash Davis</span>, VORTEX has

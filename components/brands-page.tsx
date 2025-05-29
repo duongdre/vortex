@@ -141,6 +141,29 @@ export default function BrandsPage() {
           </div>
         </div>
       </section>
+
+      {/* Sponsor CTA Section */}
+      <section className="py-24 px-4">
+        <div className="max-w-4xl mx-auto text-center">
+          <div className="glass-effect-vortex p-12 rounded-3xl modern-card">
+            <h2 className="text-4xl lg:text-5xl font-bold mb-8 bg-gradient-to-r from-sky-400 to-pink-400 bg-clip-text text-transparent">
+              Want to Sponsor?
+            </h2>
+            <p className="text-xl text-gray-300 mb-8">
+              Looking to partner with VORTEX for your next campaign? Our team is ready to create custom solutions that
+              deliver real results.
+            </p>
+            <div className="flex flex-wrap gap-4 justify-center">
+              <button className="vortex-button text-white px-8 py-4 rounded-full font-semibold border-none cursor-pointer">
+                Contact Me Today
+              </button>
+              <button className="glass-effect-vortex border border-sky-400/50 text-sky-400 px-8 py-4 rounded-full font-semibold transition-all duration-300 hover:bg-sky-400/10">
+                View Sponsorship Packages
+              </button>
+            </div>
+          </div>
+        </div>
+      </section>
     </div>
   )
 }
