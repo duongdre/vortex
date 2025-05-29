@@ -11,33 +11,27 @@
   position: relative;
 }
 
-/* Mobile Animation - Gentle zoom with proper cropping - NO TEXT MOVEMENT */
+/* Mobile Animation - Gentle zoom with proper cropping */
 @media (max-width: 767px) {
   .neon-tunnel-responsive {
     background-attachment: scroll;
     background-size: cover;
     animation: mobileTunnelZoom 12s ease-in-out infinite;
   }
-
-  /* Ensure hero content stays fixed during animation */
-  .hero-content {
-    position: relative;
-    z-index: 10;
-  }
 }
 
-/* Mobile gentle animation - keeps cover, no stretching, NO TEXT MOVEMENT */
+/* Mobile gentle animation - keeps cover, no stretching */
 @keyframes mobileTunnelZoom {
   0%,
   100% {
-    background-size: cover;
+    transform: scale(1);
   }
   50% {
-    background-size: 110% 110%;
+    transform: scale(1.05);
   }
 }
 
-/* Tablet Animation - Medium intensity - NO TEXT MOVEMENT */
+/* Tablet Animation - Medium intensity */
 @media (min-width: 768px) and (max-width: 1024px) {
   .neon-tunnel-responsive {
     background-attachment: fixed;
@@ -48,14 +42,16 @@
 @keyframes tabletTunnelZoom {
   0%,
   100% {
+    transform: scale(1);
     background-size: cover;
   }
   50% {
-    background-size: 115% 115%;
+    transform: scale(1.08);
+    background-size: 105% 105%;
   }
 }
 
-/* Desktop Animation - Full intensity - NO TEXT MOVEMENT */
+/* Desktop Animation - Full intensity */
 @media (min-width: 1025px) {
   .neon-tunnel-responsive {
     background-attachment: fixed;
@@ -66,11 +62,20 @@
 @keyframes desktopTunnelZoom {
   0%,
   100% {
+    transform: scale(1);
     background-size: cover;
   }
   50% {
-    background-size: 120% 120%;
+    transform: scale(1.1);
+    background-size: 110% 110%;
   }
+}
+
+/* Ensure hero content stays stable during background animation */
+.hero-content {
+  position: relative;
+  z-index: 10;
+  transform: none !important;
 }
 
 /* Vortex Service Card Backgrounds - Lighter Blue Dominant with Pink Accents */
