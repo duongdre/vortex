@@ -106,42 +106,6 @@ export default function BrandsPage() {
         </div>
       </section>
 
-      {/* Clients Section */}
-      <section className="py-24 px-4">
-        <div className="max-w-7xl mx-auto text-center">
-          <h2 className="text-4xl lg:text-6xl font-bold mb-16 bg-gradient-to-r from-sky-400 to-pink-400 bg-clip-text text-transparent">
-            Our Clients
-          </h2>
-
-          <div className="grid grid-cols-3 md:grid-cols-5 lg:grid-cols-8 gap-6">
-            {[
-              "GNC",
-              "Brookstone",
-              "CROCS",
-              "Zimba",
-              "Glitzkoin",
-              "MOFT",
-              "DREO",
-              "CIDER",
-              "OSEE",
-              "OLIVE",
-              "AER",
-              "ESR",
-              "Urban Division",
-              "PACSUN",
-              "Sensei",
-            ].map((client, index) => (
-              <div
-                key={index}
-                className="glass-effect-vortex p-4 rounded-2xl h-20 flex items-center justify-center text-sm font-semibold text-gray-300 hover:text-white hover:bg-sky-500/10 transition-all duration-300 modern-card border border-sky-500/20"
-              >
-                {client}
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
       {/* Sponsor CTA Section */}
       <section className="py-24 px-4">
         <div className="max-w-4xl mx-auto text-center">

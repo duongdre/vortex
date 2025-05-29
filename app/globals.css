@@ -11,27 +11,33 @@
   position: relative;
 }
 
-/* Mobile Animation - Gentle zoom with proper cropping */
+/* Mobile Animation - Gentle zoom with proper cropping - NO TEXT MOVEMENT */
 @media (max-width: 767px) {
   .neon-tunnel-responsive {
     background-attachment: scroll;
     background-size: cover;
     animation: mobileTunnelZoom 12s ease-in-out infinite;
   }
+
+  /* Ensure hero content stays fixed during animation */
+  .hero-content {
+    position: relative;
+    z-index: 10;
+  }
 }
 
-/* Mobile gentle animation - keeps cover, no stretching */
+/* Mobile gentle animation - keeps cover, no stretching, NO TEXT MOVEMENT */
 @keyframes mobileTunnelZoom {
   0%,
   100% {
-    transform: scale(1);
+    background-size: cover;
   }
   50% {
-    transform: scale(1.05);
+    background-size: 110% 110%;
   }
 }
 
-/* Tablet Animation - Medium intensity */
+/* Tablet Animation - Medium intensity - NO TEXT MOVEMENT */
 @media (min-width: 768px) and (max-width: 1024px) {
   .neon-tunnel-responsive {
     background-attachment: fixed;
@@ -42,16 +48,14 @@
 @keyframes tabletTunnelZoom {
   0%,
   100% {
-    transform: scale(1);
     background-size: cover;
   }
   50% {
-    transform: scale(1.08);
-    background-size: 105% 105%;
+    background-size: 115% 115%;
   }
 }
 
-/* Desktop Animation - Full intensity */
+/* Desktop Animation - Full intensity - NO TEXT MOVEMENT */
 @media (min-width: 1025px) {
   .neon-tunnel-responsive {
     background-attachment: fixed;
@@ -62,12 +66,10 @@
 @keyframes desktopTunnelZoom {
   0%,
   100% {
-    transform: scale(1);
     background-size: cover;
   }
   50% {
-    transform: scale(1.1);
-    background-size: 110% 110%;
+    background-size: 120% 120%;
   }
 }
 
