@@ -106,38 +106,25 @@ export default function BrandsPage() {
         </div>
       </section>
 
-      {/* Clients Section */}
+      {/* Sponsor CTA Section */}
       <section className="py-24 px-4">
-        <div className="max-w-7xl mx-auto text-center">
-          <h2 className="text-4xl lg:text-6xl font-bold mb-16 bg-gradient-to-r from-sky-400 to-pink-400 bg-clip-text text-transparent">
-            Our Clients
-          </h2>
-
-          <div className="grid grid-cols-3 md:grid-cols-5 lg:grid-cols-8 gap-6">
-            {[
-              "GNC",
-              "Brookstone",
-              "CROCS",
-              "Zimba",
-              "Glitzkoin",
-              "MOFT",
-              "DREO",
-              "CIDER",
-              "OSEE",
-              "OLIVE",
-              "AER",
-              "ESR",
-              "Urban Division",
-              "PACSUN",
-              "Sensei",
-            ].map((client, index) => (
-              <div
-                key={index}
-                className="glass-effect-vortex p-4 rounded-2xl h-20 flex items-center justify-center text-sm font-semibold text-gray-300 hover:text-white hover:bg-sky-500/10 transition-all duration-300 modern-card border border-sky-500/20"
-              >
-                {client}
-              </div>
-            ))}
+        <div className="max-w-4xl mx-auto text-center">
+          <div className="glass-effect-vortex p-12 rounded-3xl modern-card">
+            <h2 className="text-4xl lg:text-5xl font-bold mb-8 bg-gradient-to-r from-sky-400 to-pink-400 bg-clip-text text-transparent">
+              Want to Sponsor?
+            </h2>
+            <p className="text-xl text-gray-300 mb-8">
+              Looking to partner with VORTEX for your next campaign? Our team is ready to create custom solutions that
+              deliver real results.
+            </p>
+            <div className="flex flex-wrap gap-4 justify-center">
+              <button className="vortex-button text-white px-8 py-4 rounded-full font-semibold border-none cursor-pointer">
+                Contact Me Today
+              </button>
+              <button className="glass-effect-vortex border border-sky-400/50 text-sky-400 px-8 py-4 rounded-full font-semibold transition-all duration-300 hover:bg-sky-400/10">
+                View Sponsorship Packages
+              </button>
+            </div>
           </div>
         </div>
       </section>

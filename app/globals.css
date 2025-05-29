@@ -71,6 +71,13 @@
   }
 }
 
+/* Ensure hero content stays stable during background animation */
+.hero-content {
+  position: relative;
+  z-index: 10;
+  transform: none !important;
+}
+
 /* Vortex Service Card Backgrounds - Lighter Blue Dominant with Pink Accents */
 @keyframes radiateLines {
   0% {
